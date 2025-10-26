@@ -1,0 +1,26 @@
+{
+    "window.commandCenter": true,
+    "workbench.colorTheme": "Quiet Light",
+    "remote.SSH.remotePlatform": {
+        "bizspy": "linux",
+        "mexell-web": "linux",
+        "mexell-server": "linux",
+        "teachyou": "linux",
+        "Mexell-Dashboard": "linux",
+        "WAS": "linux",
+        "solisindustrial": "linux",
+        "mexell-middle-remote": "linux",
+        "mexell-front-remote": "linux",
+        "Solisindustrial-Front": "linux"
+    },
+    "redhat.telemetry.enabled": true,
+    "vs-kubernetes": {
+        "vscode-kubernetes.helm-path-linux": "/root/.local/state/vs-kubernetes/tools/helm/linux-amd64/helm",
+        "vscode-kubernetes.kubectl-path-linux": "/root/.local/state/vs-kubernetes/tools/kubectl/kubectl",
+        "vscode-kubernetes.minikube-path-linux": "/root/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube"
+    },
+    "remote.autoForwardPortsSource": "hybrid",
+    "cursor.agent_layout_browser_beta_setting": true,
+    "cursor.enable_git_worktrees_setting": true,
+    "cursor.composer.shouldChimeAfterChatFinishes": true
+}

@@ -1,0 +1,70 @@
+2025-10-25 03:26:52.156 [info] 
+
+
+
+
+2025-10-25 03:26:52.175 [info] Extension host agent started.
+2025-10-25 03:26:52.338 [info] [127.0.0.1][9f90fb01][ManagementConnection] New connection established.
+2025-10-25 03:26:52.344 [info] [127.0.0.1][f6011e52][ExtensionHostConnection] New connection established.
+2025-10-25 03:26:52.372 [info] Getting extensions control
+2025-10-25 03:26:52.460 [info] [127.0.0.1][f6011e52][ExtensionHostConnection] <3167> Launched Extension Host Process.
+2025-10-25 03:29:59.828 [info] Getting Manifest... ms-azuretools.vscode-docker
+2025-10-25 03:30:00.819 [info] Getting Manifest... ms-azuretools.vscode-docker
+2025-10-25 03:30:01.230 [info] Installing extension: ms-azuretools.vscode-docker {"isMachineScoped":false,"installOnlyNewlyAddedFromExtensionPack":true,"isApplicationScoped":false,"profileLocation":{"$mid":1,"fsPath":"/root/.cursor-server/extensions/extensions.json","external":"file:///root/.cursor-server/extensions/extensions.json","path":"/root/.cursor-server/extensions/extensions.json","scheme":"file"},"productVersion":{"version":"1.7.54","date":"2025-10-21T19:07:38.476Z","vscodeVersion":"1.99.3"}}
+2025-10-25 03:30:01.737 [info] Extension is already requested to install ms-azuretools.vscode-docker file:///root/.cursor-server/extensions/extensions.json
+2025-10-25 03:30:02.326 [info] Getting Manifest... ms-azuretools.vscode-containers
+2025-10-25 03:30:03.623 [info] Installing extension: ms-azuretools.vscode-containers {"isMachineScoped":false,"installOnlyNewlyAddedFromExtensionPack":true,"isApplicationScoped":false,"profileLocation":{"$mid":1,"fsPath":"/root/.cursor-server/extensions/extensions.json","external":"file:///root/.cursor-server/extensions/extensions.json","path":"/root/.cursor-server/extensions/extensions.json","scheme":"file"},"productVersion":{"version":"1.7.54","date":"2025-10-21T19:07:38.476Z","vscodeVersion":"1.99.3"},"context":{"dependecyOrPackExtensionInstall":true}}
+2025-10-25 03:30:03.657 [info] Started downloading extension: ms-azuretools.vscode-docker 2.0.0 file:///root/.cursor-server/data/CachedExtensionVSIXs/ms-azuretools.vscode-docker-2.0.0-universal
+2025-10-25 03:30:03.660 [info] Started downloading extension: ms-azuretools.vscode-containers 2.1.0 file:///root/.cursor-server/data/CachedExtensionVSIXs/ms-azuretools.vscode-containers-2.1.0-universal
+2025-10-25 03:30:04.507 [info] Extracted extension to file:///root/.cursor-server/extensions/ms-azuretools.vscode-docker-2.0.0-universal: ms-azuretools.vscode-docker
+2025-10-25 03:30:04.511 [info] Renamed to /root/.cursor-server/extensions/ms-azuretools.vscode-docker-2.0.0-universal
+2025-10-25 03:30:06.870 [info] Extracted extension to file:///root/.cursor-server/extensions/ms-azuretools.vscode-containers-2.1.0-universal: ms-azuretools.vscode-containers
+2025-10-25 03:30:06.900 [info] Renamed to /root/.cursor-server/extensions/ms-azuretools.vscode-containers-2.1.0-universal
+2025-10-25 03:30:06.928 [info] Extension installed successfully: ms-azuretools.vscode-docker file:///root/.cursor-server/extensions/extensions.json
+2025-10-25 03:30:06.928 [info] Extension installed successfully: ms-azuretools.vscode-containers file:///root/.cursor-server/extensions/extensions.json
+2025-10-25 03:30:09.307 [info] Downloaded extension to file:///root/.cursor-server/data/CachedExtensionVSIXs/958eedfa-d2d4-4eb3-808f-d27ceabc1303
+2025-10-25 03:30:09.311 [info] Installing extension: ms-azuretools.vscode-containers {"isMachineScoped":false,"installPreReleaseVersion":false,"donotVerifySignature":true,"pinned":false,"donotIncludePackAndDependencies":true,"keepExisting":true,"installOnlyNewlyAddedFromExtensionPack":false,"isApplicationScoped":false,"profileLocation":{"$mid":1,"fsPath":"/root/.cursor-server/extensions/extensions.json","external":"file:///root/.cursor-server/extensions/extensions.json","path":"/root/.cursor-server/extensions/extensions.json","scheme":"file"},"productVersion":{"version":"1.7.54","date":"2025-10-21T19:07:38.476Z","vscodeVersion":"1.99.3"}}
+2025-10-25 03:30:09.312 [info] Installing the extension without checking dependencies and pack ms-azuretools.vscode-containers
+2025-10-25 03:30:09.322 [info] Deleted existing extension from disk ms-azuretools.vscode-containers /root/.cursor-server/extensions/ms-azuretools.vscode-containers-2.1.0-universal
+2025-10-25 03:30:09.663 [info] Extracted extension to file:///root/.cursor-server/extensions/ms-azuretools.vscode-containers-2.1.0: ms-azuretools.vscode-containers
+2025-10-25 03:30:09.682 [info] Renamed to /root/.cursor-server/extensions/ms-azuretools.vscode-containers-2.1.0
+2025-10-25 03:30:09.703 [error] Error: Unable to read file '/root/.cursor-server/extensions/ms-azuretools.vscode-containers-2.1.0-universal/package.json' (Error: Unable to resolve nonexistent file '/root/.cursor-server/extensions/ms-azuretools.vscode-containers-2.1.0-universal/package.json')
+    at Gc.restoreReadError (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/server-main.js:68:9002)
+    at Gc.doReadFileStream (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/server-main.js:68:8783)
+    at async Gc.doReadFile (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/server-main.js:68:8033)
+    at async Vc.scanExtensionManifest (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/server-main.js:54:47260)
+    at async Vc.scanExtension (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/server-main.js:54:45561)
+    at async il.scanExistingExtension (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/server-main.js:54:36126)
+    at async zh.scanUserExtensionAtLocation (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/server-main.js:55:26957)
+    at async Promise.all (index 0)
+    at async KS.onDidRemoveExtensions (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/server-main.js:55:12015)
+2025-10-25 03:30:09.704 [info] Extension not found at the location file:///root/.cursor-server/extensions/ms-azuretools.vscode-containers-2.1.0-universal
+2025-10-25 03:30:09.711 [info] Extension installed successfully: ms-azuretools.vscode-containers file:///root/.cursor-server/extensions/extensions.json
+2025-10-25 03:30:09.791 [info] Extensions added from another source ms-azuretools.vscode-containers file:///root/.cursor-server/extensions/extensions.json
+2025-10-25 03:30:10.584 [info] Downloaded extension to file:///root/.cursor-server/data/CachedExtensionVSIXs/16abb699-8bfc-4523-a1cc-74ee143ca8c6
+2025-10-25 03:30:10.586 [info] Installing extension: ms-azuretools.vscode-docker {"isMachineScoped":false,"installPreReleaseVersion":false,"donotVerifySignature":true,"pinned":false,"donotIncludePackAndDependencies":true,"keepExisting":true,"installOnlyNewlyAddedFromExtensionPack":false,"isApplicationScoped":false,"profileLocation":{"$mid":1,"fsPath":"/root/.cursor-server/extensions/extensions.json","external":"file:///root/.cursor-server/extensions/extensions.json","path":"/root/.cursor-server/extensions/extensions.json","scheme":"file"},"productVersion":{"version":"1.7.54","date":"2025-10-21T19:07:38.476Z","vscodeVersion":"1.99.3"}}
+2025-10-25 03:30:10.587 [info] Installing the extension without checking dependencies and pack ms-azuretools.vscode-docker
+2025-10-25 03:30:10.595 [info] Deleted existing extension from disk ms-azuretools.vscode-docker /root/.cursor-server/extensions/ms-azuretools.vscode-docker-2.0.0-universal
+2025-10-25 03:30:10.610 [info] Extracted extension to file:///root/.cursor-server/extensions/ms-azuretools.vscode-docker-2.0.0: ms-azuretools.vscode-docker
+2025-10-25 03:30:10.614 [info] Renamed to /root/.cursor-server/extensions/ms-azuretools.vscode-docker-2.0.0
+2025-10-25 03:30:10.621 [error] Error: Unable to read file '/root/.cursor-server/extensions/ms-azuretools.vscode-docker-2.0.0-universal/package.json' (Error: Unable to resolve nonexistent file '/root/.cursor-server/extensions/ms-azuretools.vscode-docker-2.0.0-universal/package.json')
+    at Gc.restoreReadError (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/server-main.js:68:9002)
+    at Gc.doReadFileStream (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/server-main.js:68:8783)
+    at async Gc.doReadFile (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/server-main.js:68:8033)
+    at async Vc.scanExtensionManifest (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/server-main.js:54:47260)
+    at async Vc.scanExtension (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/server-main.js:54:45561)
+    at async il.scanExistingExtension (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/server-main.js:54:36126)
+    at async zh.scanUserExtensionAtLocation (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/server-main.js:55:26957)
+    at async Promise.all (index 0)
+    at async KS.onDidRemoveExtensions (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/server-main.js:55:12015)
+2025-10-25 03:30:10.621 [info] Extension not found at the location file:///root/.cursor-server/extensions/ms-azuretools.vscode-docker-2.0.0-universal
+2025-10-25 03:30:10.633 [info] Extension installed successfully: ms-azuretools.vscode-docker file:///root/.cursor-server/extensions/extensions.json
+2025-10-25 03:30:10.655 [info] Extensions added from another source ms-azuretools.vscode-docker file:///root/.cursor-server/extensions/extensions.json
+2025-10-25 03:31:52.177 [info] New EH opened, aborting shutdown
+2025-10-25 10:48:43.961 [info] [127.0.0.1][f6011e52][ExtensionHostConnection] The client has reconnected.
+2025-10-25 10:48:43.972 [info] [127.0.0.1][9f90fb01][ManagementConnection] The client has reconnected.
+2025-10-25 10:53:07.985 [info] [127.0.0.1][9f90fb01][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2025-10-25 13:52:42.273 [info] [127.0.0.1][f6011e52][ExtensionHostConnection] <3167> Extension Host Process exited with code: 0, signal: null.
+2025-10-25 13:52:42.274 [info] Last EH closed, waiting before shutting down
+2025-10-25 13:53:12.150 [info] [127.0.0.1][9f90fb01][ManagementConnection] The reconnection grace time of 3h has expired, so the connection will be disposed.
+2025-10-25 13:57:42.276 [info] Last EH closed, shutting down

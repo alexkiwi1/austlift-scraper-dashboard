@@ -1,0 +1,30 @@
+2025-10-26 02:55:28.954 [info] Handling CreateClient action
+2025-10-26 02:55:28.954 [info] Starting new stdio process with command: npx -y @wonderwhy-er/desktop-commander@latest
+2025-10-26 02:55:28.954 [info] Handling CreateClient action
+2025-10-26 02:55:28.954 [info] Starting new stdio process with command: npx -y @wonderwhy-er/desktop-commander@latest
+2025-10-26 02:55:28.954 [error] Client error for command A system error occurred (spawn npx ENOENT)
+2025-10-26 02:55:28.954 [error] Client error for command A system error occurred (spawn npx ENOENT)
+2025-10-26 02:55:28.954 [info] Client closed for command
+2025-10-26 02:55:28.954 [info] Client closed for command
+2025-10-26 02:55:29.063 [info] Handling ListOfferings action, server stored: false
+2025-10-26 02:55:29.064 [error] No server info found
+2025-10-26 02:55:29.064 [info] Handling ListOfferings action, server stored: false
+2025-10-26 02:55:29.064 [error] No server info found
+2025-10-26 02:55:29.104 [info] Handling ListOfferings action, server stored: false
+2025-10-26 02:55:29.104 [error] No server info found
+2025-10-26 02:55:29.104 [info] Handling ListOfferings action, server stored: false
+2025-10-26 02:55:29.104 [error] No server info found
+2025-10-26 02:55:29.104 [info] Handling ListOfferings action, server stored: false
+2025-10-26 02:55:29.104 [error] No server info found
+2025-10-26 02:55:29.104 [info] Handling ListOfferings action, server stored: false
+2025-10-26 02:55:29.104 [error] No server info found
+2025-10-26 02:55:29.104 [info] Handling ListOfferings action, server stored: false
+2025-10-26 02:55:29.104 [error] No server info found
+2025-10-26 02:55:29.104 [info] Handling ListOfferings action, server stored: false
+2025-10-26 02:55:29.104 [error] No server info found
+2025-10-26 02:55:34.787 [info] Handling ListOfferings action, server stored: false
+2025-10-26 02:55:34.788 [error] No server info found
+2025-10-26 02:55:37.501 [info] Handling ListOfferings action, server stored: false
+2025-10-26 02:55:37.501 [error] No server info found
+2025-10-26 02:55:59.520 [info] Handling ListOfferings action, server stored: false
+2025-10-26 02:55:59.520 [error] No server info found

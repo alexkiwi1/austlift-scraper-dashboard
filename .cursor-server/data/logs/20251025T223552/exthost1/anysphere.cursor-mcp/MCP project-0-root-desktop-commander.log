@@ -1,0 +1,13 @@
+2025-10-26 02:55:36.251 [info] Handling CreateClient action
+2025-10-26 02:55:36.251 [info] Starting new stdio process with command: npx -y @wonderwhy-er/desktop-commander@latest
+2025-10-26 02:55:36.251 [error] Client error for command A system error occurred (spawn npx ENOENT)
+2025-10-26 02:55:36.251 [info] Client closed for command
+2025-10-26 02:55:37.547 [info] Handling ListOfferings action, server stored: false
+2025-10-26 02:55:37.548 [error] No server info found
+2025-10-26 02:55:57.059 [info] Handling DeleteClient action
+2025-10-26 02:55:59.451 [info] Handling CreateClient action
+2025-10-26 02:55:59.451 [info] Starting new stdio process with command: npx -y @wonderwhy-er/desktop-commander@latest
+2025-10-26 02:55:59.451 [error] Client error for command A system error occurred (spawn npx ENOENT)
+2025-10-26 02:55:59.453 [info] Client closed for command
+2025-10-26 02:55:59.554 [info] Handling ListOfferings action, server stored: false
+2025-10-26 02:55:59.554 [error] No server info found

@@ -1,0 +1,17 @@
+2025-10-25 03:21:00.452 [info] [main] Log level: Info
+2025-10-25 03:21:00.452 [info] [main] Validating found git in: "git"
+2025-10-25 03:21:00.452 [info] [main] Using git "2.43.0" from "git"
+2025-10-25 03:21:00.452 [info] [Model][doInitialScan] Initial repository scan started
+2025-10-25 03:21:00.452 [info] [Model][doInitialScan] Initial repository scan completed - repositories (0), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2025-10-25 03:21:00.452 [info] > git config --get remote.origin.url [10ms]
+2025-10-25 03:21:00.580 [info] > git symbolic-ref --short refs/remotes/origin/HEAD [3ms]
+2025-10-25 03:21:00.580 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-25 03:21:00.590 [info] > git rev-parse --verify origin/main [2ms]
+2025-10-25 03:21:00.590 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-25 03:21:00.598 [info] > git rev-parse --verify origin/master [2ms]
+2025-10-25 03:21:00.598 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-25 03:21:00.606 [info] > git rev-parse --verify origin/develop [2ms]
+2025-10-25 03:21:00.606 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-25 03:21:00.613 [info] > git branch -r [2ms]
+2025-10-25 03:21:00.613 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-25 03:21:00.622 [info] > git config --get init.defaultBranch [2ms]

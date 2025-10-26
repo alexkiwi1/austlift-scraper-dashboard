@@ -1,0 +1,30 @@
+2025-10-26 02:55:28.906 [info] Handling CreateClient action
+2025-10-26 02:55:28.906 [info] Starting new stdio process with command: npx mcp-remote@0.1.21 http://10.100.0.39:9000/mcp --header x-lunar-consumer-tag: Claude-Alex-M --allow-http
+2025-10-26 02:55:28.906 [info] Handling CreateClient action
+2025-10-26 02:55:28.906 [info] Starting new stdio process with command: npx mcp-remote@0.1.21 http://10.100.0.39:9000/mcp --header x-lunar-consumer-tag: Claude-Alex-M --allow-http
+2025-10-26 02:55:28.906 [error] Client error for command A system error occurred (spawn npx ENOENT)
+2025-10-26 02:55:28.906 [error] Client error for command A system error occurred (spawn npx ENOENT)
+2025-10-26 02:55:28.906 [info] Client closed for command
+2025-10-26 02:55:28.906 [info] Client closed for command
+2025-10-26 02:55:28.950 [info] Handling ListOfferings action, server stored: false
+2025-10-26 02:55:28.950 [error] No server info found
+2025-10-26 02:55:28.950 [info] Handling ListOfferings action, server stored: false
+2025-10-26 02:55:28.950 [error] No server info found
+2025-10-26 02:55:29.064 [info] Handling ListOfferings action, server stored: false
+2025-10-26 02:55:29.064 [error] No server info found
+2025-10-26 02:55:29.064 [info] Handling ListOfferings action, server stored: false
+2025-10-26 02:55:29.064 [error] No server info found
+2025-10-26 02:55:29.064 [info] Handling ListOfferings action, server stored: false
+2025-10-26 02:55:29.064 [error] No server info found
+2025-10-26 02:55:29.064 [info] Handling ListOfferings action, server stored: false
+2025-10-26 02:55:29.064 [error] No server info found
+2025-10-26 02:55:29.064 [info] Handling ListOfferings action, server stored: false
+2025-10-26 02:55:29.064 [error] No server info found
+2025-10-26 02:55:29.064 [info] Handling ListOfferings action, server stored: false
+2025-10-26 02:55:29.064 [error] No server info found
+2025-10-26 02:55:34.745 [info] Handling ListOfferings action, server stored: false
+2025-10-26 02:55:34.745 [error] No server info found
+2025-10-26 02:55:37.281 [info] Handling ListOfferings action, server stored: false
+2025-10-26 02:55:37.281 [error] No server info found
+2025-10-26 02:55:59.490 [info] Handling ListOfferings action, server stored: false
+2025-10-26 02:55:59.490 [error] No server info found

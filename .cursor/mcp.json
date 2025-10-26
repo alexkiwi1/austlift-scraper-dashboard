@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "mcpx": {
+      "command": "npx",
+      "args": [
+        "mcp-remote@0.1.21",
+        "http://10.100.0.39:9000/mcp",
+        "--header",
+        "x-lunar-consumer-tag: Claude-Alex-M",
+        "--allow-http"
+      ],
+      "env": {}
+    },
+    "desktop-commander": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@wonderwhy-er/desktop-commander@latest"
+      ]
+    }
+  }
+}
