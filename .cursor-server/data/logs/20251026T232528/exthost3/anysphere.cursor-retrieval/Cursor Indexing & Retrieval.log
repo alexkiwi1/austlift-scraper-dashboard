@@ -13,3 +13,21 @@
 2025-10-27 21:18:25.306 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
 2025-10-27 21:18:35.870 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
 2025-10-27 21:18:41.185 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 21:18:57.616 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 21:19:02.852 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 21:20:53.698 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 21:21:51.378 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 21:21:53.174 [info] multiCodebaseIndexingJob dispose
+2025-10-27 21:21:53.174 [info] Aborting indexing job.
+2025-10-27 21:21:53.174 [error] We currently do not allow indexing the home directory.
+2025-10-27 21:21:53.174 [info] Indexing job successfully done or aborted.
+2025-10-27 21:26:00.352 [info] Get user commits took 19.95842799998354ms for 10 commits
+2025-10-27 21:27:19.172 [info] multiCodebaseIndexingJob dispose
+2025-10-27 21:27:19.172 [info] Aborting indexing job.
+2025-10-27 21:27:19.172 [error] We currently do not allow indexing the home directory.
+2025-10-27 21:27:19.172 [info] Indexing job successfully done or aborted.
+2025-10-27 21:28:02.004 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 21:28:33.781 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 21:28:38.967 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 21:32:19.083 [info] multiCodebaseIndexingJob dispose
+2025-10-27 21:32:19.083 [info] Aborting indexing job.

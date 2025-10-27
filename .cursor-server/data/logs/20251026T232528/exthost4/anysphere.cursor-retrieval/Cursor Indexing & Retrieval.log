@@ -1,0 +1,17 @@
+2025-10-27 21:33:08.735 [info] Creating Indexing Repo client:  https://repo42.cursor.sh
+2025-10-27 21:33:08.736 [info] Creating repo client with backend url: https://repo42.cursor.sh
+2025-10-27 21:33:08.736 [info] Using existing keys for an index
+2025-10-27 21:33:08.736 [info] InternalRepoInfo constructor with preferredEmbeddingModel 0
+2025-10-27 21:33:09.158 [warning] Failed to get symbolic ref: Failed to execute git
+2025-10-27 21:33:09.173 [warning] Failed to get symbolic ref: Failed to execute git
+2025-10-27 21:33:09.432 [info] Picked default branch from method 1.
+2025-10-27 21:33:09.436 [info] Picked default branch from method 1.
+2025-10-27 21:33:09.655 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 21:33:11.913 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 21:33:12.286 [error] We currently do not allow indexing the home directory.
+2025-10-27 21:33:12.299 [info] Indexing job successfully done or aborted.
+2025-10-27 21:33:14.895 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 21:33:19.896 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 21:33:26.860 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 21:34:46.122 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 21:35:01.905 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
