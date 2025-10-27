@@ -81,9 +81,7 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
     if (!message) return { scraped: 0, parents: 0, variations: 0 };
 
     // Parse "V1: Scraped 269 products (0 parents, 269 variations)"
-    const match = message.match(
-      /Scraped (\d+) products \((\d+) parents, (\d+) variations\)/
-    );
+    const match = message.match(/Scraped (\d+) products \((\d+) parents, (\d+) variations\)/);
     if (match) {
       return {
         scraped: parseInt(match[1], 10),
@@ -569,13 +567,6 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
                             <div
                               className='flex justify-between items-center p-3 cursor-pointer hover:bg-gray-100 transition-colors'
                               onClick={() => toggleJobMinimize(jobId)}
-                              onKeyDown={e => {
-                                if (e.key === 'Enter' || e.key === ' ') {
-                                  toggleJobMinimize(jobId);
-                                }
-                              }}
-                              role='button'
-                              tabIndex={0}
                             >
                               <div className='flex items-center space-x-2'>
                                 <span className='text-xs text-gray-500'>
@@ -626,29 +617,27 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
                                   </div>
                                 )}
 
-                                {job.status === 'completed' &&
-                                  stats.scraped > 0 && (
-                                    <div className='mt-2 p-2 bg-green-50 rounded border border-green-200'>
-                                      <div className='text-xs text-green-700'>
-                                        ✅ Successfully scraped:
-                                      </div>
-                                      <div className='text-xs text-green-600 mt-1'>
-                                        • {stats.scraped} total products
-                                      </div>
-                                      <div className='text-xs text-green-600'>
-                                        • {stats.variations} variations
-                                      </div>
+                                {job.status === 'completed' && stats.scraped > 0 && (
+                                  <div className='mt-2 p-2 bg-green-50 rounded border border-green-200'>
+                                    <div className='text-xs text-green-700'>
+                                      ✅ Successfully scraped:
                                     </div>
-                                  )}
+                                    <div className='text-xs text-green-600 mt-1'>
+                                      • {stats.scraped} total products
+                                    </div>
+                                    <div className='text-xs text-green-600'>
+                                      • {stats.variations} variations
+                                    </div>
+                                  </div>
+                                )}
 
-                                {job.status === 'failed' &&
-                                  job.error_message && (
-                                    <div className='mt-2 p-2 bg-red-50 rounded border border-red-200'>
-                                      <div className='text-xs text-red-700'>
-                                        ❌ {job.error_message}
-                                      </div>
+                                {job.status === 'failed' && job.error_message && (
+                                  <div className='mt-2 p-2 bg-red-50 rounded border border-red-200'>
+                                    <div className='text-xs text-red-700'>
+                                      ❌ {job.error_message}
                                     </div>
-                                  )}
+                                  </div>
+                                )}
                               </div>
                             )}
                           </div>

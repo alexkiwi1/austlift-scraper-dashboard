@@ -569,7 +569,7 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
                             <div
                               className='flex justify-between items-center p-3 cursor-pointer hover:bg-gray-100 transition-colors'
                               onClick={() => toggleJobMinimize(jobId)}
-                              onKeyDown={e => {
+                              onKeyDown={(e) => {
                                 if (e.key === 'Enter' || e.key === ' ') {
                                   toggleJobMinimize(jobId);
                                 }

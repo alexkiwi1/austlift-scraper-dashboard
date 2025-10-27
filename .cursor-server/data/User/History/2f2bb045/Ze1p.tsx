@@ -81,9 +81,7 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
     if (!message) return { scraped: 0, parents: 0, variations: 0 };
 
     // Parse "V1: Scraped 269 products (0 parents, 269 variations)"
-    const match = message.match(
-      /Scraped (\d+) products \((\d+) parents, (\d+) variations\)/
-    );
+    const match = message.match(/Scraped (\d+) products \((\d+) parents, (\d+) variations\)/);
     if (match) {
       return {
         scraped: parseInt(match[1], 10),
@@ -556,104 +554,62 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
                       <h5 className='font-medium text-gray-700'>
                         Scraping Progress
                       </h5>
-                      {Object.entries(scrapingJobs).map(([jobId, job]) => {
-                        const isMinimized = minimizedJobs.has(jobId);
-                        const stats = parseJobMessage(job.message);
-
-                        return (
-                          <div
-                            key={jobId}
-                            className='border rounded-lg bg-gray-50'
-                          >
-                            {/* Header - Always visible */}
-                            <div
-                              className='flex justify-between items-center p-3 cursor-pointer hover:bg-gray-100 transition-colors'
-                              onClick={() => toggleJobMinimize(jobId)}
-                              onKeyDown={e => {
-                                if (e.key === 'Enter' || e.key === ' ') {
-                                  toggleJobMinimize(jobId);
-                                }
-                              }}
-                              role='button'
-                              tabIndex={0}
+                      {Object.entries(scrapingJobs).map(([jobId, job]) => (
+                        <div
+                          key={jobId}
+                          className='border rounded-lg p-3 bg-gray-50'
+                        >
+                          <div className='flex justify-between items-center mb-2'>
+                            <span className='text-sm font-medium text-gray-700'>
+                              Job {jobId.substring(0, 8)}...
+                            </span>
+                            <span
+                              className={`text-xs font-bold px-2 py-1 rounded ${getJobStatusClass(job.status)}`}
                             >
-                              <div className='flex items-center space-x-2'>
-                                <span className='text-xs text-gray-500'>
-                                  {isMinimized ? '▶' : '▼'}
-                                </span>
-                                <span className='text-sm font-medium text-gray-700'>
-                                  Job {jobId.substring(0, 8)}...
-                                </span>
-                                <span
-                                  className={`text-xs font-bold px-2 py-1 rounded ${getJobStatusClass(job.status)}`}
-                                >
-                                  {job.status.toUpperCase()}
-                                </span>
-                              </div>
-                              {job.status === 'completed' && (
-                                <span className='text-xs font-semibold text-green-700'>
-                                  {stats.scraped} products scraped
-                                </span>
-                              )}
-                            </div>
-
-                            {/* Details - Hidden when minimized */}
-                            {!isMinimized && (
-                              <div className='px-3 pb-3'>
-                                {job.total_products > 0 ? (
-                                  <>
-                                    <div className='w-full bg-gray-200 rounded-full h-2 mb-2'>
-                                      <div
-                                        className='bg-blue-600 h-2 rounded-full transition-all duration-300'
-                                        style={{
-                                          width: `${job.progress_percentage}%`,
-                                        }}
-                                      />
-                                    </div>
-                                    <div className='flex justify-between text-xs text-gray-600'>
-                                      <span>
-                                        {job.current_product} /{' '}
-                                        {job.total_products} products
-                                      </span>
-                                      <span>
-                                        {job.progress_percentage.toFixed(1)}%
-                                      </span>
-                                    </div>
-                                  </>
-                                ) : (
-                                  <div className='text-xs text-gray-600'>
-                                    {job.message || 'Initializing...'}
-                                  </div>
-                                )}
-
-                                {job.status === 'completed' &&
-                                  stats.scraped > 0 && (
-                                    <div className='mt-2 p-2 bg-green-50 rounded border border-green-200'>
-                                      <div className='text-xs text-green-700'>
-                                        ✅ Successfully scraped:
-                                      </div>
-                                      <div className='text-xs text-green-600 mt-1'>
-                                        • {stats.scraped} total products
-                                      </div>
-                                      <div className='text-xs text-green-600'>
-                                        • {stats.variations} variations
-                                      </div>
-                                    </div>
-                                  )}
-
-                                {job.status === 'failed' &&
-                                  job.error_message && (
-                                    <div className='mt-2 p-2 bg-red-50 rounded border border-red-200'>
-                                      <div className='text-xs text-red-700'>
-                                        ❌ {job.error_message}
-                                      </div>
-                                    </div>
-                                  )}
-                              </div>
-                            )}
+                              {job.status.toUpperCase()}
+                            </span>
                           </div>
-                        );
-                      })}
+
+                          {job.total_products > 0 ? (
+                            <>
+                              <div className='w-full bg-gray-200 rounded-full h-2 mb-2'>
+                                <div
+                                  className='bg-blue-600 h-2 rounded-full transition-all duration-300'
+                                  style={{
+                                    width: `${job.progress_percentage}%`,
+                                  }}
+                                />
+                              </div>
+                              <div className='flex justify-between text-xs text-gray-600'>
+                                <span>
+                                  {job.current_product} / {job.total_products}{' '}
+                                  products
+                                </span>
+                                <span>
+                                  {job.progress_percentage.toFixed(1)}%
+                                </span>
+                              </div>
+                            </>
+                          ) : (
+                            <div className='text-xs text-gray-600'>
+                              {job.message || 'Initializing...'}
+                            </div>
+                          )}
+
+                          {job.status === 'completed' && (
+                            <div className='mt-2 text-xs text-green-700'>
+                              ✅ Scraped {job.products_count} products (
+                              {job.variations_count} variations)
+                            </div>
+                          )}
+
+                          {job.status === 'failed' && job.error_message && (
+                            <div className='mt-2 text-xs text-red-700'>
+                              ❌ {job.error_message}
+                            </div>
+                          )}
+                        </div>
+                      ))}
                     </div>
                   )}
 
