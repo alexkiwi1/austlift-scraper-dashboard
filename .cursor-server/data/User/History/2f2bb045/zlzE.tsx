@@ -315,7 +315,7 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
       status: 'loading',
       message: 'Initializing previous steps...',
     });
-
+    
     // Only run handleStep2 if it hasn't been completed yet
     if (step2Status.status !== 'success') {
       await handleStep2();
@@ -369,7 +369,7 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
       status: 'loading',
       message: 'Initializing previous steps...',
     });
-
+    
     // Only run handleStep3 if it hasn't been completed yet
     if (step3Status.status !== 'success') {
       await handleStep3();
