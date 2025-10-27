@@ -1,0 +1,23 @@
+0 verbose cli /usr/bin/node /usr/lib/node_modules/npm/bin/npm-cli.js
+1 info using npm@10.9.4
+2 info using node@v22.21.0
+3 silly config load:file:/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/root/.npmrc
+5 silly config load:file:/usr/etc/npmrc
+6 verbose title npm exec mcp-remote@0.1.21 http://10.100.0.39:9000/mcp --header x-lunar-consumer-tag: Claude-Cursor-i7 --allow-http
+7 verbose argv "exec" "--" "mcp-remote@0.1.21" "http://10.100.0.39:9000/mcp" "--header" "x-lunar-consumer-tag: Claude-Cursor-i7" "--allow-http"
+8 verbose logfile logs-max:10 dir:/root/.npm/_logs/2025-10-27T21_08_06_739Z-
+9 verbose logfile /root/.npm/_logs/2025-10-27T21_08_06_739Z-debug-0.log
+10 silly logfile start cleaning logs, removing 3 files
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+13 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: node_modules
+14 http fetch GET 200 https://registry.npmjs.org/mcp-remote 353ms (cache revalidated)
+15 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+16 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+17 verbose cwd /root
+18 verbose os Linux 6.8.12-9-pve
+19 verbose node v22.21.0
+20 verbose npm  v10.9.4
+21 verbose exit 0
+22 info ok

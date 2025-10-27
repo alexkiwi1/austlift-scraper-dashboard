@@ -1,0 +1,421 @@
+2025-10-27 21:16:22.922 [info] Handling CreateClient action
+2025-10-27 21:16:22.922 [info] Starting new stdio process with command: npx mcp-remote@0.1.21 http://10.100.0.39:9000/mcp --header x-lunar-consumer-tag: Claude-Cursor-i7 --allow-http
+2025-10-27 21:16:22.922 [info] Handling CreateClient action
+2025-10-27 21:16:22.922 [info] Starting new stdio process with command: npx mcp-remote@0.1.21 http://10.100.0.39:9000/mcp --header x-lunar-consumer-tag: Claude-Cursor-i7 --allow-http
+2025-10-27 21:16:31.300 [info] Handling ListOfferings action, server stored: false
+2025-10-27 21:16:31.301 [error] No server info found
+2025-10-27 21:16:31.665 [info] Handling ListOfferings action, server stored: false
+2025-10-27 21:16:31.665 [error] No server info found
+2025-10-27 21:16:31.667 [info] Handling ListOfferings action, server stored: false
+2025-10-27 21:16:31.667 [error] No server info found
+2025-10-27 21:16:31.667 [info] Handling ListOfferings action, server stored: false
+2025-10-27 21:16:31.667 [error] No server info found
+2025-10-27 21:16:32.065 [error] [664282] Using automatically selected callback port: 13135
+[664282] Using custom headers: {"x-lunar-consumer-tag":"Claude-Cursor-i7"}
+
+2025-10-27 21:16:32.067 [error] [664282] [664282] Connecting to remote server: http://10.100.0.39:9000/mcp
+[664282] Using transport strategy: http-first
+
+2025-10-27 21:16:32.088 [error] [664277] Using automatically selected callback port: 13135
+[664277] Using custom headers: {"x-lunar-consumer-tag":"Claude-Cursor-i7"}
+[664277] [664277] Connecting to remote server: http://10.100.0.39:9000/mcp
+[664277] Using transport strategy: http-first
+
+2025-10-27 21:16:32.223 [error] [664282] Connected to remote server using StreamableHTTPClientTransport
+[664282] Local STDIO server running
+[664282] Proxy established successfully between local STDIO and remote StreamableHTTPClientTransport
+[664282] Press Ctrl+C to exit
+
+2025-10-27 21:16:32.224 [error] [664282] [Local→Remote] initialize
+
+2025-10-27 21:16:32.224 [error] [664282] {
+  "jsonrpc": "2.0",
+  "id": 0,
+  "method": "initialize",
+  "params": {
+    "protocolVersion": "2025-06-18",
+    "capabilities": {
+      "tools": true,
+      "prompts": true,
+      "resources": true,
+      "logging": false,
+      "elicitation": {},
+      "roots": {
+        "listChanged": false
+      }
+    },
+    "clientInfo": {
+      "name": "cursor-vscode (via mcp-remote 0.1.21)",
+      "version": "1.0.0"
+    }
+  }
+}
+
+2025-10-27 21:16:32.226 [error] [664277] Connected to remote server using StreamableHTTPClientTransport
+
+2025-10-27 21:16:32.227 [error] [664277] Local STDIO server running
+
+2025-10-27 21:16:32.227 [error] [664277] Proxy established successfully between local STDIO and remote StreamableHTTPClientTransport
+
+2025-10-27 21:16:32.227 [error] [664277] Press Ctrl+C to exit
+
+2025-10-27 21:16:32.232 [error] [664277] [Local→Remote] initialize
+[664277] {
+  "jsonrpc": "2.0",
+  "id": 0,
+  "method": "initialize",
+  "params": {
+    "protocolVersion": "2025-06-18",
+    "capabilities": {
+      "tools": true,
+      "prompts": true,
+      "resources": true,
+      "logging": false,
+      "elicitation": {},
+      "roots": {
+        "listChanged": false
+      }
+    },
+    "clientInfo": {
+      "name": "cursor-vscode (via mcp-remote 0.1.21)",
+      "version": "1.0.0"
+    }
+  }
+}
+
+2025-10-27 21:16:32.265 [error] [664282] [Remote→Local] 0
+
+2025-10-27 21:16:32.267 [info] Successfully connected to stdio server
+2025-10-27 21:16:32.267 [info] Storing stdio client user-mcpx
+2025-10-27 21:16:32.267 [info] CreateClient completed, server stored: true
+2025-10-27 21:16:32.273 [error] [664282] [Local→Remote] notifications/initialized
+
+2025-10-27 21:16:32.273 [error] [664282] [Local→Remote] notifications/initialized
+
+2025-10-27 21:16:32.294 [info] Handling ListOfferings action, server stored: true
+2025-10-27 21:16:32.294 [info] Connected to stdio server, fetching offerings
+2025-10-27 21:16:32.296 [error] [664277] [Remote→Local] 0
+
+2025-10-27 21:16:32.301 [info] Successfully connected to stdio server
+2025-10-27 21:16:32.301 [info] A second client was created while connecting, discarding it.
+2025-10-27 21:16:32.301 [info] CreateClient completed, server stored: true
+2025-10-27 21:16:32.306 [error] [664282] [Local→Remote] tools/list
+
+2025-10-27 21:16:32.306 [error] [664282] [Local→Remote] tools/list
+
+2025-10-27 21:16:32.306 [error] [664277] [Local→Remote] notifications/initialized
+
+2025-10-27 21:16:32.306 [error] [664277] [Local→Remote] notifications/initialized
+
+2025-10-27 21:16:32.308 [info] Handling ListOfferings action, server stored: true
+2025-10-27 21:16:32.309 [info] Handling ListOfferings action, server stored: true
+2025-10-27 21:16:32.309 [info] Handling ListOfferings action, server stored: true
+2025-10-27 21:16:32.309 [info] Connected to stdio server, fetching offerings
+2025-10-27 21:16:32.309 [info] Connected to stdio server, fetching offerings
+2025-10-27 21:16:32.309 [info] Connected to stdio server, fetching offerings
+2025-10-27 21:16:32.317 [error] [664282] [Local→Remote] tools/list
+
+2025-10-27 21:16:32.317 [error] [664282] [Local→Remote] tools/list
+
+2025-10-27 21:16:32.322 [info] Handling ListOfferings action, server stored: true
+2025-10-27 21:16:32.323 [info] Connected to stdio server, fetching offerings
+2025-10-27 21:16:32.330 [error] [664282] [Local→Remote] tools/list
+[664282] [Local→Remote] tools/list
+
+2025-10-27 21:16:32.330 [error] [664282] [Local→Remote] tools/list
+[664282] [Local→Remote] tools/list
+
+2025-10-27 21:16:32.344 [info] Handling ListOfferings action, server stored: true
+2025-10-27 21:16:32.345 [info] Handling ListOfferings action, server stored: true
+2025-10-27 21:16:32.345 [info] Handling ListOfferings action, server stored: true
+2025-10-27 21:16:32.345 [info] Connected to stdio server, fetching offerings
+2025-10-27 21:16:32.345 [info] Connected to stdio server, fetching offerings
+2025-10-27 21:16:32.345 [info] Connected to stdio server, fetching offerings
+2025-10-27 21:16:32.350 [error] [664282] [Local→Remote] tools/list
+[664282] [Local→Remote] tools/list
+[664282] [Local→Remote] tools/list
+[664282] [Local→Remote] tools/list
+
+2025-10-27 21:16:32.350 [error] [664282] [Local→Remote] tools/list
+[664282] [Local→Remote] tools/list
+[664282] [Local→Remote] tools/list
+[664282] [Local→Remote] tools/list
+
+2025-10-27 21:16:32.366 [error] [664277] 
+Shutting down...
+
+2025-10-27 21:16:32.366 [error] [664277] 
+Shutting down...
+
+2025-10-27 21:16:37.257 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:16:37.257 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:16:37.260 [error] [664282] [Local→Remote] 0
+
+2025-10-27 21:16:37.260 [error] [664282] [Local→Remote] 0
+
+2025-10-27 21:16:42.261 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:16:42.261 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:16:42.263 [error] [664282] [Local→Remote] 1
+
+2025-10-27 21:16:42.263 [error] [664282] [Local→Remote] 1
+
+2025-10-27 21:16:42.451 [error] [664282] [Remote→Local] 8
+
+2025-10-27 21:16:42.451 [error] [664282] [Remote→Local] 8
+
+2025-10-27 21:16:42.453 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-27 21:16:42.453 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-27 21:16:42.454 [error] [664282] [Remote→Local] 5
+
+2025-10-27 21:16:42.454 [error] [664282] [Remote→Local] 5
+
+2025-10-27 21:16:42.456 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-27 21:16:42.456 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-27 21:16:42.458 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-27 21:16:42.458 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-27 21:16:42.458 [error] [664282] [Remote→Local] 4
+
+2025-10-27 21:16:42.458 [error] [664282] [Remote→Local] 4
+
+2025-10-27 21:16:42.459 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-27 21:16:42.459 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-27 21:16:42.460 [error] [664282] [Remote→Local] 3
+
+2025-10-27 21:16:42.460 [error] [664282] [Remote→Local] 3
+
+2025-10-27 21:16:42.461 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-27 21:16:42.461 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-27 21:16:42.461 [error] [664282] [Remote→Local] 2
+
+2025-10-27 21:16:42.461 [error] [664282] [Remote→Local] 2
+
+2025-10-27 21:16:42.462 [error] [664282] [Remote→Local] 1
+
+2025-10-27 21:16:42.462 [error] [664282] [Remote→Local] 1
+
+2025-10-27 21:16:42.464 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-27 21:16:42.464 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-27 21:16:42.464 [error] [664282] [Remote→Local] 6
+
+2025-10-27 21:16:42.464 [error] [664282] [Remote→Local] 6
+
+2025-10-27 21:16:42.465 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-27 21:16:42.465 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-27 21:16:42.466 [error] [664282] [Remote→Local] 7
+
+2025-10-27 21:16:42.466 [error] [664282] [Remote→Local] 7
+
+2025-10-27 21:16:42.467 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-27 21:16:42.467 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-27 21:16:47.261 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:16:47.261 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:16:47.262 [error] [664282] [Local→Remote] 2
+
+2025-10-27 21:16:47.262 [error] [664282] [Local→Remote] 2
+
+2025-10-27 21:16:52.262 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:16:52.262 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:16:52.264 [error] [664282] [Local→Remote] 3
+
+2025-10-27 21:16:52.264 [error] [664282] [Local→Remote] 3
+
+2025-10-27 21:16:57.263 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:16:57.263 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:16:57.264 [error] [664282] [Local→Remote] 4
+
+2025-10-27 21:16:57.264 [error] [664282] [Local→Remote] 4
+
+2025-10-27 21:17:02.264 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:17:02.264 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:17:02.265 [error] [664282] [Local→Remote] 5
+
+2025-10-27 21:17:02.265 [error] [664282] [Local→Remote] 5
+
+2025-10-27 21:17:07.264 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:17:07.264 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:17:07.266 [error] [664282] [Local→Remote] 6
+
+2025-10-27 21:17:07.266 [error] [664282] [Local→Remote] 6
+
+2025-10-27 21:17:12.265 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:17:12.265 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:17:12.266 [error] [664282] [Local→Remote] 7
+
+2025-10-27 21:17:12.266 [error] [664282] [Local→Remote] 7
+
+2025-10-27 21:17:17.265 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:17:17.266 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:17:17.267 [error] [664282] [Local→Remote] 8
+
+2025-10-27 21:17:17.267 [error] [664282] [Local→Remote] 8
+
+2025-10-27 21:17:22.265 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:17:22.265 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:17:22.266 [error] [664282] [Local→Remote] 9
+
+2025-10-27 21:17:22.266 [error] [664282] [Local→Remote] 9
+
+2025-10-27 21:17:27.273 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:17:27.274 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:17:27.276 [error] [664282] [Local→Remote] 10
+
+2025-10-27 21:17:27.276 [error] [664282] [Local→Remote] 10
+
+2025-10-27 21:17:32.266 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:17:32.266 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:17:32.267 [error] [664282] [Local→Remote] 11
+
+2025-10-27 21:17:32.267 [error] [664282] [Local→Remote] 11
+
+2025-10-27 21:17:37.266 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:17:37.266 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:17:37.268 [error] [664282] [Local→Remote] 12
+
+2025-10-27 21:17:37.268 [error] [664282] [Local→Remote] 12
+
+2025-10-27 21:17:42.267 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:17:42.267 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:17:42.268 [error] [664282] [Local→Remote] 13
+
+2025-10-27 21:17:42.268 [error] [664282] [Local→Remote] 13
+
+2025-10-27 21:17:47.267 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:17:47.267 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:17:47.268 [error] [664282] [Local→Remote] 14
+
+2025-10-27 21:17:47.268 [error] [664282] [Local→Remote] 14
+
+2025-10-27 21:17:52.268 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:17:52.268 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:17:52.269 [error] [664282] [Local→Remote] 15
+
+2025-10-27 21:17:52.269 [error] [664282] [Local→Remote] 15
+
+2025-10-27 21:17:57.269 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:17:57.269 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:17:57.270 [error] [664282] [Local→Remote] 16
+
+2025-10-27 21:17:57.270 [error] [664282] [Local→Remote] 16
+
+2025-10-27 21:18:02.269 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:18:02.269 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:18:02.271 [error] [664282] [Local→Remote] 17
+
+2025-10-27 21:18:02.271 [error] [664282] [Local→Remote] 17
+
+2025-10-27 21:18:07.269 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:18:07.269 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:18:07.271 [error] [664282] [Local→Remote] 18
+
+2025-10-27 21:18:07.271 [error] [664282] [Local→Remote] 18
+
+2025-10-27 21:18:12.271 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:18:12.271 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:18:12.272 [error] [664282] [Local→Remote] 19
+
+2025-10-27 21:18:12.272 [error] [664282] [Local→Remote] 19
+
+2025-10-27 21:18:17.272 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:18:17.272 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:18:17.273 [error] [664282] [Local→Remote] 20
+
+2025-10-27 21:18:17.273 [error] [664282] [Local→Remote] 20
+
+2025-10-27 21:18:22.273 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:18:22.273 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:18:22.274 [error] [664282] [Local→Remote] 21
+
+2025-10-27 21:18:22.274 [error] [664282] [Local→Remote] 21
+
+2025-10-27 21:18:27.274 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:18:27.274 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:18:27.275 [error] [664282] [Local→Remote] 22
+
+2025-10-27 21:18:27.275 [error] [664282] [Local→Remote] 22
+
+2025-10-27 21:18:32.275 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:18:32.275 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:18:32.277 [error] [664282] [Local→Remote] 23
+
+2025-10-27 21:18:32.277 [error] [664282] [Local→Remote] 23
+
+2025-10-27 21:18:37.274 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:18:37.274 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:18:37.275 [error] [664282] [Local→Remote] 24
+
+2025-10-27 21:18:37.275 [error] [664282] [Local→Remote] 24
+
+2025-10-27 21:18:42.274 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:18:42.274 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:18:42.276 [error] [664282] [Local→Remote] 25
+
+2025-10-27 21:18:42.276 [error] [664282] [Local→Remote] 25
+
+2025-10-27 21:18:47.275 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:18:47.275 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:18:47.276 [error] [664282] [Local→Remote] 26
+
+2025-10-27 21:18:47.276 [error] [664282] [Local→Remote] 26
+
+2025-10-27 21:18:52.275 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:18:52.275 [error] [664282] [Remote→Local] ping
+
+2025-10-27 21:18:52.276 [error] [664282] [Local→Remote] 27
+
+2025-10-27 21:18:52.276 [error] [664282] [Local→Remote] 27
+

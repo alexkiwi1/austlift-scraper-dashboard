@@ -1,0 +1,1144 @@
+import React, { useState, useCallback, useEffect } from 'react';
+import { Home, XCircle } from 'lucide-react';
+import ProductsTable from './ProductsTable';
+import type {
+  Category,
+  ProductsByCategoryEndpoint,
+  ProductsByCategoryResponse,
+  ScrapeResponse,
+  ScrapeJob,
+  StepState,
+  ErrorState,
+} from '../types';
+
+/**
+ * Main dashboard component for the Austlift Scraper
+ * Manages the 4-step workflow for product data management
+ * @returns {React.JSX.Element} JSX element containing the complete dashboard interface
+ */
+const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
+  const [activeSection, setActiveSection] = useState<string>('home');
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [step0Status, setStep0Status] = useState<StepState>({
+    status: 'idle',
+    message: '',
+  });
+  const [productCount, setProductCount] = useState<number>(0);
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState<boolean>(false);
+  const [backupCreated, setBackupCreated] = useState<boolean>(false);
+  const [backupFilename, setBackupFilename] = useState<string>('');
+  const [step1Status, setStep1Status] = useState<StepState>({
+    status: 'idle',
+    message: '',
+  });
+  const [step2Status, setStep2Status] = useState<StepState>({
+    status: 'idle',
+    message: '',
+  });
+  const [step3Status, setStep3Status] = useState<StepState>({
+    status: 'idle',
+    message: '',
+  });
+  const [step4Status, setStep4Status] = useState<StepState>({
+    status: 'idle',
+    message: '',
+  });
+  const [showStep4Dropdown, setShowStep4Dropdown] = useState<boolean>(false);
+  const [step4Products, setStep4Products] = useState<
+    ProductsByCategoryEndpoint[]
+  >([]);
+  const [isTableMinimized, setIsTableMinimized] = useState<boolean>(false);
+  const [error, setError] = useState<ErrorState>({
+    hasError: false,
+    message: '',
+  });
+  const [scrapingJobs, setScrapingJobs] = useState<{
+    [jobId: string]: ScrapeJob;
+  }>({});
+  const [minimizedJobs, setMinimizedJobs] = useState<Set<string>>(new Set());
+
+  /**
+   * Gets the appropriate CSS class for step status
+   * @param {StepState} status - The step status
+   * @param {string} defaultColor - The default color class
+   * @returns {string} CSS class string
+   */
+  const getStatusColor = (status: StepState, defaultColor: string): string => {
+    if (status.status === 'success') return 'text-green-600';
+    if (status.status === 'error') return 'text-red-600';
+    return defaultColor;
+  };
+
+  /**
+   * Gets the appropriate CSS class for job status badge
+   * @param {string} status - The job status
+   * @returns {string} CSS class string for status badge
+   */
+  const getJobStatusClass = (status: string): string => {
+    if (status === 'completed') return 'bg-green-100 text-green-700';
+    if (status === 'failed') return 'bg-red-100 text-red-700';
+    return 'bg-blue-100 text-blue-700';
+  };
+
+  /**
+   * Parses the job message to extract scraped product counts
+   * @param {string} message - The job message string
+   * @returns {object} Object with scraped products and variations counts
+   */
+  const parseJobMessage = (
+    message?: string
+  ): { scraped: number; parents: number; variations: number } => {
+    if (!message) return { scraped: 0, parents: 0, variations: 0 };
+
+    // Parse "V1: Scraped 269 products (0 parents, 269 variations)"
+    const match = message.match(
+      /Scraped (\d+) products \((\d+) parents, (\d+) variations\)/
+    );
+    if (match) {
+      return {
+        scraped: parseInt(match[1], 10),
+        parents: parseInt(match[2], 10),
+        variations: parseInt(match[3], 10),
+      };
+    }
+
+    // Fallback for other message formats
+    return { scraped: 0, parents: 0, variations: 0 };
+  };
+
+  /**
+   * Toggles the minimized state of a job card
+   * @param {string} jobId - The job ID to toggle
+   */
+  const toggleJobMinimize = (jobId: string): void => {
+    setMinimizedJobs(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(jobId)) {
+        newSet.delete(jobId);
+      } else {
+        newSet.add(jobId);
+      }
+      return newSet;
+    });
+  };
+
+  /**
+   * Fetches categories from the API
+   * @returns {Promise<void>} Promise that resolves when categories are loaded
+   * @throws {Error} When API request fails
+   */
+  const fetchCategories = useCallback(async (): Promise<void> => {
+    try {
+      console.log('fetchCategories called');
+      setError({ hasError: false, message: '' });
+      const response = await fetch('/categories/fetch');
+      console.log('Fetch response status:', response.status);
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+      const data = await response.json();
+      console.log(
+        'Categories fetched:',
+        data.categories?.length || 0,
+        'categories'
+      );
+      setCategories(data.categories || []);
+    } catch (err) {
+      const errorMessage =
+        err instanceof Error ? err.message : 'Failed to fetch categories';
+      setError({ hasError: true, message: errorMessage });
+      console.error('Error fetching categories:', err);
+    }
+  }, []);
+
+  /**
+   * Fetches the current product count from the database
+   * @returns {Promise<void>} Promise that resolves when count is fetched
+   */
+  const fetchProductCount = useCallback(async (): Promise<void> => {
+    console.debug('[Step 0] Fetching product count...');
+    try {
+      const response = await fetch('/products/count');
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+      const data = await response.json();
+      setProductCount(data.count);
+      console.debug('[Step 0] Product count:', data.count);
+    } catch (err) {
+      console.error('[Step 0] Error fetching product count:', err);
+      setProductCount(0);
+    }
+  }, []);
+
+  // Fetch categories and product count on component mount
+  useEffect(() => {
+    console.log('Fetching categories on mount...');
+    fetchCategories();
+    fetchProductCount();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  /**
+   * Polls a scraping job for progress updates
+   * @param {string} jobId - The job ID to poll
+   * @returns {Promise<void>} Promise that resolves when polling completes or job finishes
+   */
+  const pollJobProgress = useCallback(async (jobId: string): Promise<void> => {
+    try {
+      const response = await fetch(`/jobs/${jobId}`);
+      if (!response.ok) {
+        console.error(`Failed to fetch job ${jobId}: ${response.status}`);
+        return;
+      }
+
+      const jobStatus: ScrapeJob = await response.json();
+
+      // Update job status in state
+      setScrapingJobs(prev => ({
+        ...prev,
+        [jobId]: jobStatus,
+      }));
+
+      // Continue polling if job is still running
+      if (jobStatus.status === 'running' || jobStatus.status === 'started') {
+        setTimeout(() => {
+          pollJobProgress(jobId);
+        }, 2000); // Poll every 2 seconds
+      }
+    } catch (err) {
+      console.error(`Error polling job progress for ${jobId}:`, err);
+    }
+  }, []);
+
+  /**
+   * Refreshes categories from the API
+   * @returns {Promise<void>} Promise that resolves when categories are refreshed
+   * @throws {Error} When API request fails
+   */
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const refreshCategories = useCallback(async (): Promise<void> => {
+    try {
+      setError({ hasError: false, message: '' });
+      const response = await fetch('/categories/refresh', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+      });
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+      const data = await response.json();
+      setCategories(data.categories || []);
+    } catch (err) {
+      const errorMessage =
+        err instanceof Error ? err.message : 'Failed to refresh categories';
+      setError({ hasError: true, message: errorMessage });
+      console.error('Error refreshing categories:', err);
+    }
+  }, []);
+
+  /**
+   * Creates a backup of all products and downloads as JSON file
+   * @returns {Promise<boolean>} Promise that resolves to true if backup succeeds
+   */
+  const createBackup = async (): Promise<boolean> => {
+    console.debug('[Step 0] Creating backup...');
+    setStep0Status({
+      status: 'loading',
+      message: `Creating backup of ${productCount} products...`,
+    });
+
+    try {
+      const startTime = Date.now();
+
+      // Fetch all products from all categories
+      const allProducts: ProductsByCategoryEndpoint[] = [];
+
+      // eslint-disable-next-line no-restricted-syntax
+      for (const category of categories) {
+        // eslint-disable-next-line no-await-in-loop
+        const response = await fetch(
+          `/products/by-category/${category.id}?limit=10000&offset=0`
+        );
+        if (!response.ok) {
+          throw new Error(`Failed to fetch category ${category.name}`);
+        }
+        // eslint-disable-next-line no-await-in-loop
+        const data: ProductsByCategoryResponse = await response.json();
+        allProducts.push(...data.products);
+      }
+
+      const duration = Date.now() - startTime;
+      console.debug(
+        `[Step 0] Fetched ${allProducts.length} products in ${duration}ms`
+      );
+
+      // Create backup object with metadata
+      const backup = {
+        metadata: {
+          backup_date: new Date().toISOString(),
+          product_count: allProducts.length,
+          categories: categories.map(c => ({ id: c.id, name: c.name })),
+          version: '1.0',
+        },
+        products: allProducts,
+      };
+
+      // Convert to JSON and create downloadable file
+      const json = JSON.stringify(backup, null, 2);
+      const blob = new Blob([json], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+
+      // Generate filename with timestamp
+      const timestamp = new Date()
+        .toISOString()
+        .replace(/[:.]/g, '-')
+        .slice(0, -5);
+      const filename = `austlift-products-backup-${timestamp}.json`;
+
+      // Trigger download
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+
+      setBackupFilename(filename);
+      setBackupCreated(true);
+
+      console.debug(`[Step 0] Backup created: ${filename}`);
+
+      setStep0Status({
+        status: 'success',
+        message: `✅ Backup created: ${filename} (${allProducts.length} products)`,
+      });
+
+      return true;
+    } catch (err) {
+      const errorMessage =
+        err instanceof Error ? err.message : 'Failed to create backup';
+      console.error('[Step 0] Backup error:', err);
+
+      setStep0Status({
+        status: 'error',
+        message: `❌ Backup failed: ${errorMessage}`,
+      });
+
+      return false;
+    }
+  };
+
+  /**
+   * Handles Step 0 - Clear all products with backup
+   * Creates backup first, then allows deletion with confirmations
+   * @returns {Promise<void>} Promise that resolves when step is complete
+   */
+  const handleStep0 = async (): Promise<void> => {
+    console.debug('[Step 0] Button clicked');
+
+    // Step 1: Create backup first
+    if (!backupCreated) {
+      console.debug('[Step 0] Creating backup before deletion');
+      const success = await createBackup();
+      if (!success) {
+        return; // Stop if backup fails
+      }
+      setStep0Status({
+        status: 'idle',
+        message:
+          '✅ Backup complete. Click "Delete All Products" to proceed with deletion.',
+      });
+      return;
+    }
+
+    // Step 2: First confirmation
+    if (!showDeleteConfirm) {
+      console.debug('[Step 0] Showing first confirmation');
+      setShowDeleteConfirm(true);
+      setStep0Status({
+        status: 'idle',
+        message: `⚠️ WARNING: ${productCount} products will be deleted. Click again to confirm.`,
+      });
+      return;
+    }
+
+    console.debug('[Step 0] Second click - proceeding with deletion');
+
+    // Step 3: Final confirmation (browser confirm)
+    // eslint-disable-next-line no-alert
+    const confirmed = window.confirm(
+      `🚨 FINAL WARNING 🚨\n\n` +
+        `This will PERMANENTLY delete ALL ${productCount} products from the database.\n\n` +
+        `Backup saved as: ${backupFilename}\n\n` +
+        `Are you absolutely sure you want to continue?`
+    );
+
+    if (!confirmed) {
+      console.debug('[Step 0] User cancelled deletion');
+      setShowDeleteConfirm(false);
+      setStep0Status({
+        status: 'idle',
+        message: 'Deletion cancelled. Backup file is saved.',
+      });
+      return;
+    }
+
+    console.debug('[Step 0] User confirmed - starting deletion');
+    setStep0Status({
+      status: 'loading',
+      message: `Deleting ${productCount} products...`,
+    });
+
+    try {
+      const startTime = Date.now();
+      console.debug('[Step 0] DELETE /products request started');
+
+      const response = await fetch('/products', {
+        method: 'DELETE',
+      });
+
+      const duration = Date.now() - startTime;
+      console.debug(`[Step 0] DELETE request completed in ${duration}ms`);
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      console.debug('[Step 0] Delete response:', data);
+
+      setStep0Status({
+        status: 'success',
+        message: `✅ Successfully deleted ${data.count} products in ${(duration / 1000).toFixed(2)}s. Backup: ${backupFilename}`,
+      });
+
+      // Reset states
+      setShowDeleteConfirm(false);
+      setBackupCreated(false);
+      setProductCount(0);
+
+      console.debug('[Step 0] Deletion complete');
+    } catch (err) {
+      const errorMessage =
+        err instanceof Error ? err.message : 'Failed to delete products';
+      console.error('[Step 0] Delete error:', err);
+
+      setStep0Status({
+        status: 'error',
+        message: `❌ Error: ${errorMessage}. Backup file is still saved: ${backupFilename}`,
+      });
+      setShowDeleteConfirm(false);
+      setError({ hasError: true, message: errorMessage });
+    }
+  };
+
+  /**
+   * Handles Step 1 - Review Categories
+   * Fetches and refreshes categories, updates status
+   * @returns {Promise<void>} Promise that resolves when step is complete
+   */
+  const handleStep1 = async (): Promise<void> => {
+    // If categories already loaded, skip fetch and refresh
+    if (categories.length > 0) {
+      setStep1Status({
+        status: 'success',
+        message: `✅ Step 1 Complete! ${categories.length} categories loaded`,
+      });
+      return;
+    }
+
+    // Wait for categories to load (from useEffect)
+    if (categories.length === 0) {
+      setStep1Status({
+        status: 'loading',
+        message: 'Waiting for categories to load...',
+      });
+      // Wait a moment for useEffect to complete
+      await new Promise<void>(resolve => {
+        setTimeout(() => resolve(), 500);
+      });
+    }
+
+    setStep1Status({
+      status: 'success',
+      message: `✅ Step 1 Complete! ${categories.length} categories loaded`,
+    });
+  };
+
+  /**
+   * Handles Step 2 - Start Scraping
+   * Initializes Step 1, selects all categories, and starts scraping
+   * @returns {Promise<void>} Promise that resolves when step is complete
+   */
+  const handleStep2 = async (): Promise<void> => {
+    setStep2Status({ status: 'loading', message: 'Initializing Step 1...' });
+    await handleStep1();
+
+    setStep2Status({
+      status: 'loading',
+      message: 'Starting scraping for all 10 categories...',
+    });
+
+    try {
+      const jobIds: string[] = [];
+      let completedCategories = 0;
+
+      // Scrape all categories sequentially
+      // eslint-disable-next-line no-restricted-syntax
+      for (const [index, category] of categories.entries()) {
+        setStep2Status({
+          status: 'loading',
+          message: `Scraping category ${index + 1}/${categories.length}: ${category.name}...`,
+        });
+
+        // eslint-disable-next-line no-await-in-loop
+        const response = await fetch('/scrape', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            category_url: category.url,
+            max_pages: 100, // Scrape all pages per category
+            scrape_variations: true,
+            use_auth: true,
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error(
+            `HTTP ${response.status}: ${response.statusText} for ${category.name}`
+          );
+        }
+
+        // eslint-disable-next-line no-await-in-loop
+        const data: ScrapeResponse = await response.json();
+        jobIds.push(data.job_id);
+        completedCategories += 1;
+
+        // Start polling progress for this job
+        pollJobProgress(data.job_id);
+      }
+
+      setStep2Status({
+        status: 'success',
+        message: `✅ Complete! Started scraping all ${completedCategories} categories. Monitoring progress...`,
+      });
+    } catch (err) {
+      const errorMessage =
+        err instanceof Error ? err.message : 'Failed to start scraping';
+      setStep2Status({ status: 'error', message: `❌ Error: ${errorMessage}` });
+      setError({ hasError: true, message: errorMessage });
+      console.error('Error starting scraping:', err);
+    }
+  };
+
+  /**
+   * Handles Step 3 - Review Products
+   * Initializes previous steps and loads products from all categories
+   * @returns {Promise<void>} Promise that resolves when step is complete
+   */
+  const handleStep3 = async (): Promise<void> => {
+    setStep3Status({
+      status: 'loading',
+      message: 'Initializing previous steps...',
+    });
+
+    // Only run handleStep2 if it hasn't been completed yet
+    if (step2Status.status !== 'success') {
+      await handleStep2();
+    }
+
+    setStep3Status({
+      status: 'loading',
+      message: 'Loading products from all categories...',
+    });
+    try {
+      const allProducts: ProductsByCategoryEndpoint[] = [];
+      let totalProducts = 0;
+
+      // Fetch products from each category to get complete data
+      // eslint-disable-next-line no-restricted-syntax
+      for (const category of categories) {
+        // eslint-disable-next-line no-await-in-loop
+        const response = await fetch(
+          `/products/by-category/${category.id}?limit=1000&offset=0`
+        );
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        // eslint-disable-next-line no-await-in-loop
+        const data: ProductsByCategoryResponse = await response.json();
+        allProducts.push(...data.products);
+        totalProducts += data.total;
+      }
+
+      // Store products for Step 4 to reuse
+      setStep4Products(allProducts);
+
+      setStep3Status({
+        status: 'success',
+        message: `✅ Complete! Found ${totalProducts} products across ${categories.length} categories`,
+      });
+    } catch (err) {
+      const errorMessage =
+        err instanceof Error ? err.message : 'Failed to load products';
+      setStep3Status({
+        status: 'error',
+        message: `❌ Error loading products: ${errorMessage}`,
+      });
+      setError({ hasError: true, message: errorMessage });
+      console.error('Error loading products:', err);
+    }
+  };
+
+  /**
+   * Handles Step 4 - Show Products Table
+   * Initializes previous steps and loads all products for table display
+   * @returns {Promise<void>} Promise that resolves when step is complete
+   */
+  const handleStep4 = async (): Promise<void> => {
+    setStep4Status({
+      status: 'loading',
+      message: 'Initializing previous steps...',
+    });
+
+    // Only run handleStep3 if it hasn't been completed yet
+    if (step3Status.status !== 'success') {
+      await handleStep3();
+    }
+
+    // If products are already loaded from Step 3, reuse them
+    if (step4Products.length > 0) {
+      setStep4Status({
+        status: 'success',
+        message: `✅ Reusing existing data! Showing ${step4Products.length} products from ${categories.length} categories`,
+      });
+      setShowStep4Dropdown(true);
+      setIsTableMinimized(false);
+      return;
+    }
+
+    setStep4Status({
+      status: 'loading',
+      message: 'Loading products from all categories...',
+    });
+    try {
+      const allProducts: ProductsByCategoryEndpoint[] = [];
+
+      // Fetch products from all categories to get complete data with images
+      // eslint-disable-next-line no-restricted-syntax
+      for (const category of categories) {
+        // eslint-disable-next-line no-await-in-loop
+        const response = await fetch(
+          `/products/by-category/${category.id}?limit=1000&offset=0`
+        );
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        // eslint-disable-next-line no-await-in-loop
+        const data: ProductsByCategoryResponse = await response.json();
+        allProducts.push(...data.products);
+      }
+
+      if (allProducts.length === 0) {
+        setStep4Products([]);
+        setStep4Status({
+          status: 'error',
+          message: '⚠️ No products available for display',
+        });
+        return;
+      }
+
+      setStep4Products(allProducts);
+      setStep4Status({
+        status: 'success',
+        message: `✅ ALL products loaded! Showing ${allProducts.length} products from ${categories.length} categories`,
+      });
+      setShowStep4Dropdown(true);
+      setIsTableMinimized(false);
+    } catch (err) {
+      const errorMessage =
+        err instanceof Error ? err.message : 'Failed to load products';
+      setStep4Status({
+        status: 'error',
+        message: `❌ Error loading products: ${errorMessage}`,
+      });
+      setStep4Products([]);
+      setError({ hasError: true, message: errorMessage });
+      console.error('Error loading products:', err);
+    }
+  };
+
+  return (
+    <div className='min-h-screen bg-gray-50 flex'>
+      {/* Sidebar */}
+      <div className='w-64 bg-white shadow-lg'>
+        <div className='p-6'>
+          <h1 className='text-xl font-bold text-gray-900'>Austlift Scraper</h1>
+        </div>
+
+        <nav className='mt-6'>
+          <div className='px-3 space-y-1'>
+            <button
+              type='button'
+              onClick={() => setActiveSection('home')}
+              className={`w-full flex items-center space-x-3 p-3 rounded-lg text-sm font-medium transition-colors ${
+                activeSection === 'home'
+                  ? 'bg-blue-100 text-blue-700'
+                  : 'text-gray-600 hover:bg-gray-100'
+              }`}
+            >
+              <Home className='w-5 h-5' />
+              <span>Home</span>
+            </button>
+          </div>
+        </nav>
+      </div>
+
+      {/* Main Content */}
+      <div className='flex-1 p-6'>
+        <div>
+          {activeSection === 'home' && (
+            <div className='space-y-6'>
+              {/* Error Display */}
+              {error.hasError && (
+                <div className='bg-red-50 border border-red-200 rounded-lg p-4'>
+                  <div className='flex items-center'>
+                    <XCircle className='w-5 h-5 text-red-400 mr-2' />
+                    <div>
+                      <h3 className='text-sm font-medium text-red-800'>
+                        Error
+                      </h3>
+                      <p className='text-sm text-red-700'>{error.message}</p>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Welcome Section */}
+              <div className='bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg shadow-lg p-8 text-white'>
+                <div className='flex items-center space-x-4 mb-4'>
+                  <div className='p-3 bg-white bg-opacity-20 rounded-lg'>
+                    <Home className='w-8 h-8' />
+                  </div>
+                  <div>
+                    <h1 className='text-3xl font-bold'>
+                      Austlift Scraper Dashboard
+                    </h1>
+                    <p className='text-blue-100 text-lg'>
+                      Complete Product Data Management Workflow
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Workflow Steps */}
+              <div className='bg-white rounded-lg shadow-sm p-6'>
+                <h3 className='text-lg font-semibold text-gray-900 mb-4'>
+                  Product Data Management Workflow
+                </h3>
+                <div className='space-y-4'>
+                  {/* Step 0: Clear All Products (Optional) */}
+                  <div className='flex items-start justify-between p-4 border-2 border-red-200 rounded-lg bg-white'>
+                    <div className='flex items-start space-x-3 flex-1'>
+                      <div className='w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0'>
+                        <span className='text-red-600 font-semibold'>⚠️ 0</span>
+                      </div>
+                      <div className='flex-1'>
+                        <div className='flex items-center gap-2 mb-1'>
+                          <h4 className='font-medium text-gray-900'>
+                            Clear All Products (with Backup)
+                          </h4>
+                          <span className='px-2 py-1 bg-yellow-100 text-yellow-800 text-xs font-semibold rounded'>
+                            OPTIONAL - DESTRUCTIVE
+                          </span>
+                        </div>
+                        <p className='text-sm text-gray-600'>
+                          Create a backup and delete all existing products from
+                          the database
+                        </p>
+                        <div className='mt-2 space-y-1'>
+                          <p className='text-sm text-gray-700'>
+                            📊 Current products:{' '}
+                            <strong>{productCount.toLocaleString()}</strong>
+                          </p>
+                          {backupCreated && (
+                            <p className='text-sm text-green-700'>
+                              ✅ Backup created:{' '}
+                              <strong>{backupFilename}</strong>
+                            </p>
+                          )}
+                        </div>
+                        {/* Process Flow Indicator */}
+                        <div className='mt-3 p-2 bg-gray-50 border border-gray-200 rounded text-xs'>
+                          <p className='font-semibold text-gray-700 mb-1'>
+                            Process Flow:
+                          </p>
+                          <ol className='text-gray-600 space-y-0.5 list-decimal list-inside'>
+                            <li
+                              className={
+                                backupCreated
+                                  ? 'text-green-600 font-medium'
+                                  : ''
+                              }
+                            >
+                              {backupCreated ? '✅' : '1️⃣'} Create JSON backup
+                            </li>
+                            <li
+                              className={(() => {
+                                if (backupCreated && showDeleteConfirm)
+                                  return 'text-yellow-600 font-medium';
+                                if (backupCreated) return '';
+                                return 'text-gray-400';
+                              })()}
+                            >
+                              {showDeleteConfirm ? '⚠️' : '2️⃣'} Confirm deletion
+                            </li>
+                            <li className='text-gray-400'>
+                              3️⃣ Delete products
+                            </li>
+                          </ol>
+                        </div>
+                        {/* Status Message */}
+                        {step0Status.message && (
+                          <div
+                            className={`mt-2 p-2 rounded text-xs ${(() => {
+                              if (step0Status.status === 'success')
+                                return 'bg-green-50 text-green-800 border border-green-200';
+                              if (step0Status.status === 'error')
+                                return 'bg-red-50 text-red-800 border border-red-200';
+                              if (step0Status.status === 'loading')
+                                return 'bg-blue-50 text-blue-800 border border-blue-200';
+                              return 'bg-yellow-50 text-yellow-800 border border-yellow-200';
+                            })()}`}
+                          >
+                            {step0Status.message}
+                          </div>
+                        )}
+                        {/* Warning Notice */}
+                        <div className='mt-2 p-2 bg-red-50 border border-red-200 rounded text-xs'>
+                          <p className='text-red-800'>
+                            <strong>⚠️ WARNING:</strong> Deletion is
+                            IRREVERSIBLE. Backup JSON file will be downloaded.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      type='button'
+                      onClick={handleStep0}
+                      disabled={
+                        step0Status.status === 'loading' || productCount === 0
+                      }
+                      className={`ml-4 px-4 py-2 rounded-lg font-semibold transition-colors whitespace-nowrap flex-shrink-0 ${(() => {
+                        if (showDeleteConfirm)
+                          return 'bg-red-600 hover:bg-red-700 text-white animate-pulse';
+                        if (backupCreated)
+                          return 'bg-red-500 hover:bg-red-600 text-white';
+                        return 'bg-blue-500 hover:bg-blue-600 text-white';
+                      })()} disabled:bg-gray-300 disabled:cursor-not-allowed`}
+                    >
+                      {(() => {
+                        if (step0Status.status === 'loading') {
+                          return (
+                            <div className='flex items-center gap-2'>
+                              <div className='animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full' />
+                              {backupCreated
+                                ? 'Deleting...'
+                                : 'Creating Backup...'}
+                            </div>
+                          );
+                        }
+                        if (showDeleteConfirm) {
+                          return '🔴 CLICK AGAIN';
+                        }
+                        if (backupCreated) {
+                          return '🗑️ Delete Products';
+                        }
+                        return '💾 Create Backup & Clear';
+                      })()}
+                    </button>
+                  </div>
+
+                  {/* Step 1 */}
+                  <div className='flex items-center justify-between p-4 border border-gray-200 rounded-lg'>
+                    <div className='flex items-center space-x-3'>
+                      <div className='w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center'>
+                        <span className='text-blue-600 font-semibold'>1</span>
+                      </div>
+                      <div>
+                        <h4 className='font-medium text-gray-900'>
+                          Review Category List
+                        </h4>
+                        <p className='text-sm text-gray-600'>
+                          Fetch and review all available product categories
+                        </p>
+                        {step1Status.message && (
+                          <p
+                            className={`text-sm ${getStatusColor(step1Status, 'text-blue-600')}`}
+                          >
+                            {step1Status.message}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                    <button
+                      type='button'
+                      onClick={handleStep1}
+                      className='px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors'
+                    >
+                      Start Review
+                    </button>
+                  </div>
+
+                  {/* Step 2 */}
+                  <div className='flex items-center justify-between p-4 border border-gray-200 rounded-lg'>
+                    <div className='flex items-center space-x-3'>
+                      <div className='w-8 h-8 bg-green-100 rounded-full flex items-center justify-center'>
+                        <span className='text-green-600 font-semibold'>2</span>
+                      </div>
+                      <div>
+                        <h4 className='font-medium text-gray-900'>
+                          Scrape Product Lists
+                        </h4>
+                        <p className='text-sm text-gray-600'>
+                          Start scraping all 10 categories (up to 100 pages
+                          each)
+                        </p>
+                        {step2Status.message && (
+                          <p
+                            className={`text-sm ${getStatusColor(step2Status, 'text-green-600')}`}
+                          >
+                            {step2Status.message}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                    <button
+                      type='button'
+                      onClick={handleStep2}
+                      className='px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors'
+                    >
+                      Start Scraping
+                    </button>
+                  </div>
+
+                  {/* Progress Display for Active Jobs */}
+                  {Object.keys(scrapingJobs).length > 0 && (
+                    <div className='mt-4 space-y-3'>
+                      <h5 className='font-medium text-gray-700'>
+                        Scraping Progress
+                      </h5>
+                      {Object.entries(scrapingJobs).map(([jobId, job]) => {
+                        const isMinimized = minimizedJobs.has(jobId);
+                        const stats = parseJobMessage(job.message);
+
+                        return (
+                          <div
+                            key={jobId}
+                            className='border rounded-lg bg-gray-50'
+                          >
+                            {/* Header - Always visible */}
+                            <div
+                              className='flex justify-between items-center p-3 cursor-pointer hover:bg-gray-100 transition-colors'
+                              onClick={() => toggleJobMinimize(jobId)}
+                              onKeyDown={e => {
+                                if (e.key === 'Enter' || e.key === ' ') {
+                                  toggleJobMinimize(jobId);
+                                }
+                              }}
+                              role='button'
+                              tabIndex={0}
+                            >
+                              <div className='flex items-center space-x-2'>
+                                <span className='text-xs text-gray-500'>
+                                  {isMinimized ? '▶' : '▼'}
+                                </span>
+                                <span className='text-sm font-medium text-gray-700'>
+                                  Job {jobId.substring(0, 8)}...
+                                </span>
+                                <span
+                                  className={`text-xs font-bold px-2 py-1 rounded ${getJobStatusClass(job.status)}`}
+                                >
+                                  {job.status.toUpperCase()}
+                                </span>
+                              </div>
+                              {job.status === 'completed' && (
+                                <span className='text-xs font-semibold text-green-700'>
+                                  {stats.scraped} products scraped
+                                </span>
+                              )}
+                            </div>
+
+                            {/* Details - Hidden when minimized */}
+                            {!isMinimized && (
+                              <div className='px-3 pb-3'>
+                                {job.total_products > 0 ? (
+                                  <>
+                                    <div className='w-full bg-gray-200 rounded-full h-2 mb-2'>
+                                      <div
+                                        className='bg-blue-600 h-2 rounded-full transition-all duration-300'
+                                        style={{
+                                          width: `${job.progress_percentage}%`,
+                                        }}
+                                      />
+                                    </div>
+                                    <div className='flex justify-between text-xs text-gray-600'>
+                                      <span>
+                                        {job.current_product} /{' '}
+                                        {job.total_products} products
+                                      </span>
+                                      <span>
+                                        {job.progress_percentage.toFixed(1)}%
+                                      </span>
+                                    </div>
+                                  </>
+                                ) : (
+                                  <div className='text-xs text-gray-600'>
+                                    {job.message || 'Initializing...'}
+                                  </div>
+                                )}
+
+                                {job.status === 'completed' &&
+                                  stats.scraped > 0 && (
+                                    <div className='mt-2 p-2 bg-green-50 rounded border border-green-200'>
+                                      <div className='text-xs text-green-700'>
+                                        ✅ Successfully scraped:
+                                      </div>
+                                      <div className='text-xs text-green-600 mt-1'>
+                                        • {stats.scraped} total products
+                                      </div>
+                                      <div className='text-xs text-green-600'>
+                                        • {stats.variations} variations
+                                      </div>
+                                    </div>
+                                  )}
+
+                                {job.status === 'failed' && (
+                                  <div className='mt-2 p-2 bg-red-50 rounded border border-red-200'>
+                                    <div className='text-xs text-red-700'>
+                                      ❌{' '}
+                                      {job.error_message ||
+                                        job.message ||
+                                        'Scraping failed'}
+                                    </div>
+                                  </div>
+                                )}
+                              </div>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  )}
+
+                  {/* Step 3 */}
+                  <div className='flex items-center justify-between p-4 border border-gray-200 rounded-lg'>
+                    <div className='flex items-center space-x-3'>
+                      <div className='w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center'>
+                        <span className='text-purple-600 font-semibold'>3</span>
+                      </div>
+                      <div>
+                        <h4 className='font-medium text-gray-900'>
+                          Review Scraped Products
+                        </h4>
+                        <p className='text-sm text-gray-600'>
+                          Review and validate scraped product data
+                        </p>
+                        {step3Status.message && (
+                          <p
+                            className={`text-sm ${getStatusColor(step3Status, 'text-purple-600')}`}
+                          >
+                            {step3Status.message}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                    <button
+                      type='button'
+                      onClick={handleStep3}
+                      className='px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors'
+                    >
+                      Review Products
+                    </button>
+                  </div>
+
+                  {/* Step 4 */}
+                  <div className='flex items-center justify-between p-4 border border-gray-200 rounded-lg'>
+                    <div className='flex items-center space-x-3'>
+                      <div className='w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center'>
+                        <span className='text-orange-600 font-semibold'>4</span>
+                      </div>
+                      <div>
+                        <h4 className='font-medium text-gray-900'>
+                          View Products Table
+                        </h4>
+                        <p className='text-sm text-gray-600'>
+                          Display all scraped products in a table format
+                        </p>
+                        {step4Status.message && (
+                          <p
+                            className={`text-sm ${getStatusColor(step4Status, 'text-orange-600')}`}
+                          >
+                            {step4Status.message}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                    <button
+                      type='button'
+                      onClick={handleStep4}
+                      className='px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors'
+                    >
+                      View Table
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Products Table */}
+              {showStep4Dropdown && (
+                <div className='bg-white rounded-lg shadow-sm p-6'>
+                  <div className='flex items-center justify-between mb-4'>
+                    <h3 className='text-lg font-semibold text-gray-900'>
+                      Products Table ({step4Products.length} products)
+                    </h3>
+                    <div className='flex items-center space-x-2'>
+                      <button
+                        type='button'
+                        onClick={() => setIsTableMinimized(!isTableMinimized)}
+                        className='px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200 transition-colors'
+                      >
+                        {isTableMinimized ? 'Expand' : 'Minimize'}
+                      </button>
+                      <button
+                        type='button'
+                        onClick={() => setShowStep4Dropdown(false)}
+                        className='text-gray-400 hover:text-gray-600'
+                      >
+                        <XCircle className='w-5 h-5' />
+                      </button>
+                    </div>
+                  </div>
+
+                  <ProductsTable
+                    products={step4Products}
+                    isMinimized={isTableMinimized}
+                    onToggleMinimize={() =>
+                      setIsTableMinimized(!isTableMinimized)
+                    }
+                    onClose={() => setShowStep4Dropdown(false)}
+                    columns={[]}
+                  />
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AustliftScraperDashboard;

@@ -1,0 +1,888 @@
+2025-10-27 21:08:06.549 [info] Handling CreateClient action
+2025-10-27 21:08:06.549 [info] Starting new stdio process with command: npx mcp-remote@0.1.21 http://10.100.0.39:9000/mcp --header x-lunar-consumer-tag: Claude-Cursor-i7 --allow-http
+2025-10-27 21:08:14.561 [info] Handling ListOfferings action, server stored: false
+2025-10-27 21:08:14.561 [error] No server info found
+2025-10-27 21:08:15.252 [error] [659530] Using automatically selected callback port: 13135
+
+2025-10-27 21:08:15.254 [error] [659530] Using custom headers: {"x-lunar-consumer-tag":"Claude-Cursor-i7"}
+
+2025-10-27 21:08:15.256 [error] [659530] [659530] Connecting to remote server: http://10.100.0.39:9000/mcp
+
+2025-10-27 21:08:15.257 [error] [659530] Using transport strategy: http-first
+
+2025-10-27 21:08:15.508 [error] [659530] Connected to remote server using StreamableHTTPClientTransport
+[659530] Local STDIO server running
+[659530] Proxy established successfully between local STDIO and remote StreamableHTTPClientTransport
+[659530] Press Ctrl+C to exit
+[659530] [Local→Remote] initialize
+[659530] {
+  "jsonrpc": "2.0",
+  "id": 0,
+  "method": "initialize",
+  "params": {
+    "protocolVersion": "2025-06-18",
+    "capabilities": {
+      "tools": true,
+      "prompts": true,
+      "resources": true,
+      "logging": false,
+      "elicitation": {},
+      "roots": {
+        "listChanged": false
+      }
+    },
+    "clientInfo": {
+      "name": "cursor-vscode (via mcp-remote 0.1.21)",
+      "version": "1.0.0"
+    }
+  }
+}
+
+2025-10-27 21:08:15.523 [error] [659530] [Remote→Local] 0
+
+2025-10-27 21:08:15.525 [info] Successfully connected to stdio server
+2025-10-27 21:08:15.525 [info] Storing stdio client project-0-root-mcpx
+2025-10-27 21:08:15.526 [info] CreateClient completed, server stored: true
+2025-10-27 21:08:15.529 [error] [659530] [Local→Remote] notifications/initialized
+
+2025-10-27 21:08:15.529 [error] [659530] [Local→Remote] notifications/initialized
+
+2025-10-27 21:08:15.761 [info] Handling CreateClient action
+2025-10-27 21:08:15.761 [info] CreateClient completed, server stored: true
+2025-10-27 21:08:15.766 [info] Handling CreateClient action
+2025-10-27 21:08:15.766 [info] CreateClient completed, server stored: true
+2025-10-27 21:08:16.216 [info] Handling ListOfferings action, server stored: true
+2025-10-27 21:08:16.217 [info] Connected to stdio server, fetching offerings
+2025-10-27 21:08:16.229 [error] [659530] [Local→Remote] tools/list
+
+2025-10-27 21:08:16.229 [error] [659530] [Local→Remote] tools/list
+
+2025-10-27 21:08:16.248 [info] Handling ListOfferings action, server stored: true
+2025-10-27 21:08:16.248 [info] Connected to stdio server, fetching offerings
+2025-10-27 21:08:16.322 [error] [659530] [Remote→Local] 1
+[659530] [Local→Remote] tools/list
+
+2025-10-27 21:08:16.322 [error] [659530] [Remote→Local] 1
+[659530] [Local→Remote] tools/list
+
+2025-10-27 21:08:16.365 [info] Found 263 tools, 0 prompts, and 0 resources
+2025-10-27 21:08:16.369 [error] [659530] [Remote→Local] 2
+
+2025-10-27 21:08:16.369 [error] [659530] [Remote→Local] 2
+
+2025-10-27 21:08:16.379 [info] Found 263 tools, 0 prompts, and 0 resources
+2025-10-27 21:08:16.384 [info] Handling ListOfferings action, server stored: true
+2025-10-27 21:08:16.384 [info] Connected to stdio server, fetching offerings
+2025-10-27 21:08:16.389 [error] [659530] [Local→Remote] tools/list
+
+2025-10-27 21:08:16.389 [error] [659530] [Local→Remote] tools/list
+
+2025-10-27 21:08:16.390 [info] Handling ListOfferings action, server stored: true
+2025-10-27 21:08:16.390 [info] Connected to stdio server, fetching offerings
+2025-10-27 21:08:16.392 [error] [659530] [Local→Remote] tools/list
+
+2025-10-27 21:08:16.392 [error] [659530] [Local→Remote] tools/list
+
+2025-10-27 21:08:16.400 [info] Handling ListOfferings action, server stored: true
+2025-10-27 21:08:16.400 [info] Connected to stdio server, fetching offerings
+2025-10-27 21:08:16.401 [error] [659530] [Local→Remote] tools/list
+
+2025-10-27 21:08:16.401 [error] [659530] [Local→Remote] tools/list
+
+2025-10-27 21:08:16.411 [info] Handling ListOfferings action, server stored: true
+2025-10-27 21:08:16.411 [info] Connected to stdio server, fetching offerings
+2025-10-27 21:08:16.412 [error] [659530] [Local→Remote] tools/list
+
+2025-10-27 21:08:16.412 [error] [659530] [Local→Remote] tools/list
+
+2025-10-27 21:08:16.423 [info] Handling ListOfferings action, server stored: true
+2025-10-27 21:08:16.424 [info] Connected to stdio server, fetching offerings
+2025-10-27 21:08:16.431 [info] Handling ListOfferings action, server stored: true
+2025-10-27 21:08:16.431 [info] Connected to stdio server, fetching offerings
+2025-10-27 21:08:16.431 [info] Handling ListOfferings action, server stored: true
+2025-10-27 21:08:16.431 [info] Connected to stdio server, fetching offerings
+2025-10-27 21:08:16.431 [error] [659530] [Remote→Local] 3
+
+2025-10-27 21:08:16.431 [error] [659530] [Remote→Local] 3
+
+2025-10-27 21:08:16.450 [info] Found 263 tools, 0 prompts, and 0 resources
+2025-10-27 21:08:16.454 [error] [659530] [Local→Remote] tools/list
+[659530] [Local→Remote] tools/list
+[659530] [Local→Remote] tools/list
+
+2025-10-27 21:08:16.454 [error] [659530] [Local→Remote] tools/list
+[659530] [Local→Remote] tools/list
+[659530] [Local→Remote] tools/list
+
+2025-10-27 21:08:16.457 [info] Handling ListOfferings action, server stored: true
+2025-10-27 21:08:16.457 [info] Connected to stdio server, fetching offerings
+2025-10-27 21:08:16.462 [info] Handling ListOfferings action, server stored: true
+2025-10-27 21:08:16.462 [info] Connected to stdio server, fetching offerings
+2025-10-27 21:08:16.484 [error] [659530] [Remote→Local] 4
+
+2025-10-27 21:08:16.484 [error] [659530] [Remote→Local] 4
+
+2025-10-27 21:08:16.510 [info] Found 263 tools, 0 prompts, and 0 resources
+2025-10-27 21:08:16.535 [info] Found 263 tools, 0 prompts, and 0 resources
+2025-10-27 21:08:16.538 [error] [659530] [Local→Remote] tools/list
+[659530] [Local→Remote] tools/list
+[659530] [Remote→Local] 5
+
+2025-10-27 21:08:16.538 [error] [659530] [Local→Remote] tools/list
+[659530] [Local→Remote] tools/list
+[659530] [Remote→Local] 5
+
+2025-10-27 21:08:16.557 [error] [659530] [Remote→Local] 6
+
+2025-10-27 21:08:16.557 [error] [659530] [Remote→Local] 6
+
+2025-10-27 21:08:16.565 [info] Found 263 tools, 0 prompts, and 0 resources
+2025-10-27 21:08:16.593 [error] [659530] [Remote→Local] 7
+
+2025-10-27 21:08:16.593 [error] [659530] [Remote→Local] 7
+
+2025-10-27 21:08:16.620 [info] Found 263 tools, 0 prompts, and 0 resources
+2025-10-27 21:08:16.639 [info] Found 263 tools, 0 prompts, and 0 resources
+2025-10-27 21:08:16.642 [error] [659530] [Remote→Local] 8
+[659530] [Remote→Local] 9
+[659530] [Remote→Local] 10
+
+2025-10-27 21:08:16.642 [error] [659530] [Remote→Local] 8
+[659530] [Remote→Local] 9
+[659530] [Remote→Local] 10
+
+2025-10-27 21:08:16.664 [info] Found 263 tools, 0 prompts, and 0 resources
+2025-10-27 21:08:16.732 [info] Found 263 tools, 0 prompts, and 0 resources
+2025-10-27 21:08:16.736 [error] [659530] [Remote→Local] 11
+
+2025-10-27 21:08:16.736 [error] [659530] [Remote→Local] 11
+
+2025-10-27 21:08:16.863 [info] Found 263 tools, 0 prompts, and 0 resources
+2025-10-27 21:08:20.519 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:08:20.519 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:08:20.520 [error] [659530] [Local→Remote] 0
+
+2025-10-27 21:08:20.520 [error] [659530] [Local→Remote] 0
+
+2025-10-27 21:08:25.520 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:08:25.520 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:08:25.521 [error] [659530] [Local→Remote] 1
+
+2025-10-27 21:08:25.521 [error] [659530] [Local→Remote] 1
+
+2025-10-27 21:08:30.519 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:08:30.519 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:08:30.521 [error] [659530] [Local→Remote] 2
+
+2025-10-27 21:08:30.521 [error] [659530] [Local→Remote] 2
+
+2025-10-27 21:08:35.519 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:08:35.519 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:08:35.521 [error] [659530] [Local→Remote] 3
+
+2025-10-27 21:08:35.521 [error] [659530] [Local→Remote] 3
+
+2025-10-27 21:08:40.519 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:08:40.519 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:08:40.520 [error] [659530] [Local→Remote] 4
+
+2025-10-27 21:08:40.520 [error] [659530] [Local→Remote] 4
+
+2025-10-27 21:08:45.519 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:08:45.519 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:08:45.520 [error] [659530] [Local→Remote] 5
+
+2025-10-27 21:08:45.520 [error] [659530] [Local→Remote] 5
+
+2025-10-27 21:08:50.519 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:08:50.519 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:08:50.521 [error] [659530] [Local→Remote] 6
+
+2025-10-27 21:08:50.521 [error] [659530] [Local→Remote] 6
+
+2025-10-27 21:08:55.519 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:08:55.519 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:08:55.520 [error] [659530] [Local→Remote] 7
+
+2025-10-27 21:08:55.520 [error] [659530] [Local→Remote] 7
+
+2025-10-27 21:09:00.519 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:09:00.519 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:09:00.521 [error] [659530] [Local→Remote] 8
+
+2025-10-27 21:09:00.521 [error] [659530] [Local→Remote] 8
+
+2025-10-27 21:09:05.519 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:09:05.519 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:09:05.520 [error] [659530] [Local→Remote] 9
+
+2025-10-27 21:09:05.520 [error] [659530] [Local→Remote] 9
+
+2025-10-27 21:09:10.519 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:09:10.519 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:09:10.520 [error] [659530] [Local→Remote] 10
+
+2025-10-27 21:09:10.520 [error] [659530] [Local→Remote] 10
+
+2025-10-27 21:09:15.519 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:09:15.519 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:09:15.520 [error] [659530] [Local→Remote] 11
+
+2025-10-27 21:09:15.520 [error] [659530] [Local→Remote] 11
+
+2025-10-27 21:09:20.518 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:09:20.519 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:09:20.520 [error] [659530] [Local→Remote] 12
+
+2025-10-27 21:09:20.520 [error] [659530] [Local→Remote] 12
+
+2025-10-27 21:09:25.519 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:09:25.520 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:09:25.521 [error] [659530] [Local→Remote] 13
+
+2025-10-27 21:09:25.521 [error] [659530] [Local→Remote] 13
+
+2025-10-27 21:09:30.520 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:09:30.520 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:09:30.521 [error] [659530] [Local→Remote] 14
+
+2025-10-27 21:09:30.521 [error] [659530] [Local→Remote] 14
+
+2025-10-27 21:09:35.520 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:09:35.520 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:09:35.521 [error] [659530] [Local→Remote] 15
+
+2025-10-27 21:09:35.521 [error] [659530] [Local→Remote] 15
+
+2025-10-27 21:09:40.520 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:09:40.520 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:09:40.522 [error] [659530] [Local→Remote] 16
+
+2025-10-27 21:09:40.522 [error] [659530] [Local→Remote] 16
+
+2025-10-27 21:09:45.520 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:09:45.520 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:09:45.521 [error] [659530] [Local→Remote] 17
+
+2025-10-27 21:09:45.521 [error] [659530] [Local→Remote] 17
+
+2025-10-27 21:09:50.520 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:09:50.520 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:09:50.521 [error] [659530] [Local→Remote] 18
+
+2025-10-27 21:09:50.521 [error] [659530] [Local→Remote] 18
+
+2025-10-27 21:09:55.521 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:09:55.521 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:09:55.522 [error] [659530] [Local→Remote] 19
+
+2025-10-27 21:09:55.522 [error] [659530] [Local→Remote] 19
+
+2025-10-27 21:10:00.522 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:10:00.522 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:10:00.523 [error] [659530] [Local→Remote] 20
+
+2025-10-27 21:10:00.523 [error] [659530] [Local→Remote] 20
+
+2025-10-27 21:10:05.522 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:10:05.522 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:10:05.523 [error] [659530] [Local→Remote] 21
+
+2025-10-27 21:10:05.523 [error] [659530] [Local→Remote] 21
+
+2025-10-27 21:10:10.522 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:10:10.522 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:10:10.523 [error] [659530] [Local→Remote] 22
+
+2025-10-27 21:10:10.523 [error] [659530] [Local→Remote] 22
+
+2025-10-27 21:10:15.522 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:10:15.522 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:10:15.523 [error] [659530] [Local→Remote] 23
+
+2025-10-27 21:10:15.523 [error] [659530] [Local→Remote] 23
+
+2025-10-27 21:10:20.522 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:10:20.522 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:10:20.523 [error] [659530] [Local→Remote] 24
+
+2025-10-27 21:10:20.523 [error] [659530] [Local→Remote] 24
+
+2025-10-27 21:10:25.523 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:10:25.523 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:10:25.524 [error] [659530] [Local→Remote] 25
+
+2025-10-27 21:10:25.524 [error] [659530] [Local→Remote] 25
+
+2025-10-27 21:10:30.523 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:10:30.524 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:10:30.525 [error] [659530] [Local→Remote] 26
+
+2025-10-27 21:10:30.525 [error] [659530] [Local→Remote] 26
+
+2025-10-27 21:10:35.524 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:10:35.524 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:10:35.525 [error] [659530] [Local→Remote] 27
+
+2025-10-27 21:10:35.525 [error] [659530] [Local→Remote] 27
+
+2025-10-27 21:10:40.524 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:10:40.524 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:10:40.525 [error] [659530] [Local→Remote] 28
+
+2025-10-27 21:10:40.525 [error] [659530] [Local→Remote] 28
+
+2025-10-27 21:10:45.524 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:10:45.524 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:10:45.525 [error] [659530] [Local→Remote] 29
+
+2025-10-27 21:10:45.525 [error] [659530] [Local→Remote] 29
+
+2025-10-27 21:10:50.524 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:10:50.524 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:10:50.525 [error] [659530] [Local→Remote] 30
+
+2025-10-27 21:10:50.525 [error] [659530] [Local→Remote] 30
+
+2025-10-27 21:10:55.524 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:10:55.524 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:10:55.525 [error] [659530] [Local→Remote] 31
+
+2025-10-27 21:10:55.525 [error] [659530] [Local→Remote] 31
+
+2025-10-27 21:11:00.524 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:11:00.524 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:11:00.525 [error] [659530] [Local→Remote] 32
+
+2025-10-27 21:11:00.525 [error] [659530] [Local→Remote] 32
+
+2025-10-27 21:11:05.524 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:11:05.524 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:11:05.525 [error] [659530] [Local→Remote] 33
+
+2025-10-27 21:11:05.525 [error] [659530] [Local→Remote] 33
+
+2025-10-27 21:11:10.524 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:11:10.524 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:11:10.525 [error] [659530] [Local→Remote] 34
+
+2025-10-27 21:11:10.525 [error] [659530] [Local→Remote] 34
+
+2025-10-27 21:11:15.530 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:11:15.530 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:11:15.531 [error] [659530] [Local→Remote] 35
+
+2025-10-27 21:11:15.531 [error] [659530] [Local→Remote] 35
+
+2025-10-27 21:11:20.525 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:11:20.525 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:11:20.536 [error] [659530] [Local→Remote] 36
+
+2025-10-27 21:11:20.536 [error] [659530] [Local→Remote] 36
+
+2025-10-27 21:11:25.526 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:11:25.526 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:11:25.528 [error] [659530] [Local→Remote] 37
+
+2025-10-27 21:11:25.528 [error] [659530] [Local→Remote] 37
+
+2025-10-27 21:11:30.525 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:11:30.525 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:11:30.526 [error] [659530] [Local→Remote] 38
+
+2025-10-27 21:11:30.526 [error] [659530] [Local→Remote] 38
+
+2025-10-27 21:11:35.525 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:11:35.525 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:11:35.526 [error] [659530] [Local→Remote] 39
+
+2025-10-27 21:11:35.526 [error] [659530] [Local→Remote] 39
+
+2025-10-27 21:11:40.526 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:11:40.526 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:11:40.528 [error] [659530] [Local→Remote] 40
+
+2025-10-27 21:11:40.528 [error] [659530] [Local→Remote] 40
+
+2025-10-27 21:11:45.525 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:11:45.525 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:11:45.526 [error] [659530] [Local→Remote] 41
+
+2025-10-27 21:11:45.526 [error] [659530] [Local→Remote] 41
+
+2025-10-27 21:11:50.526 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:11:50.526 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:11:50.527 [error] [659530] [Local→Remote] 42
+
+2025-10-27 21:11:50.527 [error] [659530] [Local→Remote] 42
+
+2025-10-27 21:11:55.527 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:11:55.527 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:11:55.528 [error] [659530] [Local→Remote] 43
+
+2025-10-27 21:11:55.528 [error] [659530] [Local→Remote] 43
+
+2025-10-27 21:12:00.527 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:12:00.527 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:12:00.528 [error] [659530] [Local→Remote] 44
+
+2025-10-27 21:12:00.528 [error] [659530] [Local→Remote] 44
+
+2025-10-27 21:12:05.528 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:12:05.528 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:12:05.529 [error] [659530] [Local→Remote] 45
+
+2025-10-27 21:12:05.529 [error] [659530] [Local→Remote] 45
+
+2025-10-27 21:12:10.527 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:12:10.528 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:12:10.529 [error] [659530] [Local→Remote] 46
+
+2025-10-27 21:12:10.529 [error] [659530] [Local→Remote] 46
+
+2025-10-27 21:12:15.528 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:12:15.528 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:12:15.529 [error] [659530] [Local→Remote] 47
+
+2025-10-27 21:12:15.529 [error] [659530] [Local→Remote] 47
+
+2025-10-27 21:12:20.529 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:12:20.529 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:12:20.530 [error] [659530] [Local→Remote] 48
+
+2025-10-27 21:12:20.530 [error] [659530] [Local→Remote] 48
+
+2025-10-27 21:12:25.529 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:12:25.529 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:12:25.530 [error] [659530] [Local→Remote] 49
+
+2025-10-27 21:12:25.530 [error] [659530] [Local→Remote] 49
+
+2025-10-27 21:12:30.529 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:12:30.529 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:12:30.530 [error] [659530] [Local→Remote] 50
+
+2025-10-27 21:12:30.530 [error] [659530] [Local→Remote] 50
+
+2025-10-27 21:12:35.530 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:12:35.530 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:12:35.531 [error] [659530] [Local→Remote] 51
+
+2025-10-27 21:12:35.531 [error] [659530] [Local→Remote] 51
+
+2025-10-27 21:12:40.530 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:12:40.530 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:12:40.531 [error] [659530] [Local→Remote] 52
+
+2025-10-27 21:12:40.531 [error] [659530] [Local→Remote] 52
+
+2025-10-27 21:12:45.530 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:12:45.530 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:12:45.531 [error] [659530] [Local→Remote] 53
+
+2025-10-27 21:12:45.531 [error] [659530] [Local→Remote] 53
+
+2025-10-27 21:12:50.531 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:12:50.531 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:12:50.533 [error] [659530] [Local→Remote] 54
+
+2025-10-27 21:12:50.533 [error] [659530] [Local→Remote] 54
+
+2025-10-27 21:12:55.531 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:12:55.531 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:12:55.533 [error] [659530] [Local→Remote] 55
+
+2025-10-27 21:12:55.533 [error] [659530] [Local→Remote] 55
+
+2025-10-27 21:13:00.531 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:13:00.531 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:13:00.532 [error] [659530] [Local→Remote] 56
+
+2025-10-27 21:13:00.532 [error] [659530] [Local→Remote] 56
+
+2025-10-27 21:13:05.531 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:13:05.531 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:13:05.533 [error] [659530] [Local→Remote] 57
+
+2025-10-27 21:13:05.533 [error] [659530] [Local→Remote] 57
+
+2025-10-27 21:13:10.531 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:13:10.531 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:13:10.532 [error] [659530] [Local→Remote] 58
+
+2025-10-27 21:13:10.532 [error] [659530] [Local→Remote] 58
+
+2025-10-27 21:13:15.532 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:13:15.532 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:13:15.533 [error] [659530] [Local→Remote] 59
+
+2025-10-27 21:13:15.533 [error] [659530] [Local→Remote] 59
+
+2025-10-27 21:13:20.531 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:13:20.531 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:13:20.532 [error] [659530] [Local→Remote] 60
+
+2025-10-27 21:13:20.532 [error] [659530] [Local→Remote] 60
+
+2025-10-27 21:13:25.531 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:13:25.531 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:13:25.533 [error] [659530] [Local→Remote] 61
+
+2025-10-27 21:13:25.533 [error] [659530] [Local→Remote] 61
+
+2025-10-27 21:13:30.531 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:13:30.531 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:13:30.532 [error] [659530] [Local→Remote] 62
+
+2025-10-27 21:13:30.532 [error] [659530] [Local→Remote] 62
+
+2025-10-27 21:13:35.531 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:13:35.531 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:13:35.532 [error] [659530] [Local→Remote] 63
+
+2025-10-27 21:13:35.532 [error] [659530] [Local→Remote] 63
+
+2025-10-27 21:13:40.531 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:13:40.531 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:13:40.532 [error] [659530] [Local→Remote] 64
+
+2025-10-27 21:13:40.532 [error] [659530] [Local→Remote] 64
+
+2025-10-27 21:13:45.530 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:13:45.531 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:13:45.531 [error] [659530] [Local→Remote] 65
+
+2025-10-27 21:13:45.531 [error] [659530] [Local→Remote] 65
+
+2025-10-27 21:13:50.531 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:13:50.531 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:13:50.533 [error] [659530] [Local→Remote] 66
+
+2025-10-27 21:13:50.533 [error] [659530] [Local→Remote] 66
+
+2025-10-27 21:13:55.533 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:13:55.533 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:13:55.534 [error] [659530] [Local→Remote] 67
+
+2025-10-27 21:13:55.534 [error] [659530] [Local→Remote] 67
+
+2025-10-27 21:14:00.533 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:14:00.533 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:14:00.534 [error] [659530] [Local→Remote] 68
+
+2025-10-27 21:14:00.534 [error] [659530] [Local→Remote] 68
+
+2025-10-27 21:14:05.533 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:14:05.533 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:14:05.534 [error] [659530] [Local→Remote] 69
+
+2025-10-27 21:14:05.534 [error] [659530] [Local→Remote] 69
+
+2025-10-27 21:14:10.533 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:14:10.533 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:14:10.534 [error] [659530] [Local→Remote] 70
+
+2025-10-27 21:14:10.534 [error] [659530] [Local→Remote] 70
+
+2025-10-27 21:14:15.534 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:14:15.534 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:14:15.536 [error] [659530] [Local→Remote] 71
+
+2025-10-27 21:14:15.536 [error] [659530] [Local→Remote] 71
+
+2025-10-27 21:14:20.533 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:14:20.533 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:14:20.534 [error] [659530] [Local→Remote] 72
+
+2025-10-27 21:14:20.534 [error] [659530] [Local→Remote] 72
+
+2025-10-27 21:14:25.535 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:14:25.535 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:14:25.536 [error] [659530] [Local→Remote] 73
+
+2025-10-27 21:14:25.536 [error] [659530] [Local→Remote] 73
+
+2025-10-27 21:14:30.534 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:14:30.534 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:14:30.535 [error] [659530] [Local→Remote] 74
+
+2025-10-27 21:14:30.535 [error] [659530] [Local→Remote] 74
+
+2025-10-27 21:14:35.544 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:14:35.544 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:14:35.546 [error] [659530] [Local→Remote] 75
+
+2025-10-27 21:14:35.546 [error] [659530] [Local→Remote] 75
+
+2025-10-27 21:14:40.535 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:14:40.535 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:14:40.537 [error] [659530] [Local→Remote] 76
+
+2025-10-27 21:14:40.537 [error] [659530] [Local→Remote] 76
+
+2025-10-27 21:14:45.536 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:14:45.536 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:14:45.537 [error] [659530] [Local→Remote] 77
+
+2025-10-27 21:14:45.537 [error] [659530] [Local→Remote] 77
+
+2025-10-27 21:14:50.536 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:14:50.536 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:14:50.537 [error] [659530] [Local→Remote] 78
+
+2025-10-27 21:14:50.537 [error] [659530] [Local→Remote] 78
+
+2025-10-27 21:14:55.536 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:14:55.536 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:14:55.537 [error] [659530] [Local→Remote] 79
+
+2025-10-27 21:14:55.537 [error] [659530] [Local→Remote] 79
+
+2025-10-27 21:15:00.536 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:15:00.536 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:15:00.540 [error] [659530] [Local→Remote] 80
+
+2025-10-27 21:15:00.540 [error] [659530] [Local→Remote] 80
+
+2025-10-27 21:15:05.536 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:15:05.536 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:15:05.537 [error] [659530] [Local→Remote] 81
+
+2025-10-27 21:15:05.537 [error] [659530] [Local→Remote] 81
+
+2025-10-27 21:15:10.537 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:15:10.537 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:15:10.538 [error] [659530] [Local→Remote] 82
+
+2025-10-27 21:15:10.538 [error] [659530] [Local→Remote] 82
+
+2025-10-27 21:15:15.538 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:15:15.538 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:15:15.540 [error] [659530] [Local→Remote] 83
+
+2025-10-27 21:15:15.540 [error] [659530] [Local→Remote] 83
+
+2025-10-27 21:15:20.537 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:15:20.537 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:15:20.538 [error] [659530] [Local→Remote] 84
+
+2025-10-27 21:15:20.538 [error] [659530] [Local→Remote] 84
+
+2025-10-27 21:15:25.538 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:15:25.538 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:15:25.539 [error] [659530] [Local→Remote] 85
+
+2025-10-27 21:15:25.539 [error] [659530] [Local→Remote] 85
+
+2025-10-27 21:15:30.538 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:15:30.538 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:15:30.539 [error] [659530] [Local→Remote] 86
+
+2025-10-27 21:15:30.539 [error] [659530] [Local→Remote] 86
+
+2025-10-27 21:15:35.538 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:15:35.538 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:15:35.539 [error] [659530] [Local→Remote] 87
+
+2025-10-27 21:15:35.539 [error] [659530] [Local→Remote] 87
+
+2025-10-27 21:15:40.540 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:15:40.540 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:15:40.541 [error] [659530] [Local→Remote] 88
+
+2025-10-27 21:15:40.541 [error] [659530] [Local→Remote] 88
+
+2025-10-27 21:15:45.540 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:15:45.540 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:15:45.541 [error] [659530] [Local→Remote] 89
+
+2025-10-27 21:15:45.541 [error] [659530] [Local→Remote] 89
+
+2025-10-27 21:15:50.541 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:15:50.541 [error] [659530] [Remote→Local] ping
+
+2025-10-27 21:15:50.542 [error] [659530] [Local→Remote] 90
+
+2025-10-27 21:15:50.542 [error] [659530] [Local→Remote] 90
+

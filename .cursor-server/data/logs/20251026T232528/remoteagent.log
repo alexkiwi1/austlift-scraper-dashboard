@@ -10,3 +10,18 @@
 2025-10-26 23:25:29.188 [info] Getting extensions control
 2025-10-26 23:30:28.682 [info] New EH opened, aborting shutdown
 2025-10-27 00:36:03.212 [warning] [File Watcher (node.js)] Watcher shutdown because watched path got deleted
+2025-10-27 21:07:24.601 [info] [127.0.0.1][d116c947][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2025-10-27 21:07:24.918 [info] [127.0.0.1][ea68f6ad][ExtensionHostConnection] <271445> Extension Host Process exited with code: 0, signal: null.
+2025-10-27 21:07:24.919 [info] Last EH closed, waiting before shutting down
+2025-10-27 21:07:56.511 [info] [127.0.0.1][5a2a28a0][ManagementConnection] New connection established.
+2025-10-27 21:07:56.521 [info] [127.0.0.1][64d685bd][ExtensionHostConnection] New connection established.
+2025-10-27 21:07:56.535 [info] [127.0.0.1][64d685bd][ExtensionHostConnection] <658967> Launched Extension Host Process.
+2025-10-27 21:07:56.540 [info] Getting extensions control
+2025-10-27 21:12:24.920 [info] New EH opened, aborting shutdown
+2025-10-27 21:15:51.366 [info] [127.0.0.1][5a2a28a0][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2025-10-27 21:15:51.605 [info] [127.0.0.1][64d685bd][ExtensionHostConnection] <658967> Extension Host Process exited with code: 0, signal: null.
+2025-10-27 21:15:51.605 [info] Last EH closed, waiting before shutting down
+2025-10-27 21:16:14.707 [info] [127.0.0.1][3cbd9144][ManagementConnection] New connection established.
+2025-10-27 21:16:14.724 [info] Getting extensions control
+2025-10-27 21:16:14.776 [info] [127.0.0.1][00ea41ee][ExtensionHostConnection] New connection established.
+2025-10-27 21:16:14.789 [info] [127.0.0.1][00ea41ee][ExtensionHostConnection] <663861> Launched Extension Host Process.
