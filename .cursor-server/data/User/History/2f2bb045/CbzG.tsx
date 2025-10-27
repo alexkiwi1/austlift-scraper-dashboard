@@ -59,17 +59,6 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
   };
 
   /**
-   * Gets the appropriate CSS class for job status badge
-   * @param {string} status - The job status
-   * @returns {string} CSS class string for status badge
-   */
-  const getJobStatusClass = (status: string): string => {
-    if (status === 'completed') return 'bg-green-100 text-green-700';
-    if (status === 'failed') return 'bg-red-100 text-red-700';
-    return 'bg-blue-100 text-blue-700';
-  };
-
-  /**
    * Fetches categories from the API
    * @returns {Promise<void>} Promise that resolves when categories are loaded
    * @throws {Error} When API request fails
@@ -127,7 +116,10 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
       }));
 
       // Continue polling if job is still running
-      if (jobStatus.status === 'running' || jobStatus.status === 'started') {
+      if (
+        jobStatus.status === 'running' ||
+        jobStatus.status === 'started'
+      ) {
         setTimeout(() => {
           pollJobProgress(jobId);
         }, 2000); // Poll every 2 seconds
@@ -523,7 +515,13 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
                               Job {jobId.substring(0, 8)}...
                             </span>
                             <span
-                              className={`text-xs font-bold px-2 py-1 rounded ${getJobStatusClass(job.status)}`}
+                              className={`text-xs font-bold px-2 py-1 rounded ${
+                                job.status === 'completed'
+                                  ? 'bg-green-100 text-green-700'
+                                  : job.status === 'failed'
+                                    ? 'bg-red-100 text-red-700'
+                                    : 'bg-blue-100 text-blue-700'
+                              }`}
                             >
                               {job.status.toUpperCase()}
                             </span>

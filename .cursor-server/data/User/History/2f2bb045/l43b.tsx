@@ -59,17 +59,6 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
   };
 
   /**
-   * Gets the appropriate CSS class for job status badge
-   * @param {string} status - The job status
-   * @returns {string} CSS class string for status badge
-   */
-  const getJobStatusClass = (status: string): string => {
-    if (status === 'completed') return 'bg-green-100 text-green-700';
-    if (status === 'failed') return 'bg-red-100 text-red-700';
-    return 'bg-blue-100 text-blue-700';
-  };
-
-  /**
    * Fetches categories from the API
    * @returns {Promise<void>} Promise that resolves when categories are loaded
    * @throws {Error} When API request fails
@@ -127,7 +116,10 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
       }));
 
       // Continue polling if job is still running
-      if (jobStatus.status === 'running' || jobStatus.status === 'started') {
+      if (
+        jobStatus.status === 'running' ||
+        jobStatus.status === 'started'
+      ) {
         setTimeout(() => {
           pollJobProgress(jobId);
         }, 2000); // Poll every 2 seconds
@@ -244,14 +236,11 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
         const data: ScrapeResponse = await response.json();
         jobIds.push(data.job_id);
         completedCategories += 1;
-
-        // Start polling progress for this job
-        pollJobProgress(data.job_id);
       }
 
       setStep2Status({
         status: 'success',
-        message: `✅ Complete! Started scraping all ${completedCategories} categories. Monitoring progress...`,
+        message: `✅ Complete! Started scraping all ${completedCategories} categories. Job IDs: ${jobIds.join(', ')}`,
       });
     } catch (err) {
       const errorMessage =
@@ -506,71 +495,6 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
                       Start Scraping
                     </button>
                   </div>
-
-                  {/* Progress Display for Active Jobs */}
-                  {Object.keys(scrapingJobs).length > 0 && (
-                    <div className='mt-4 space-y-3'>
-                      <h5 className='font-medium text-gray-700'>
-                        Scraping Progress
-                      </h5>
-                      {Object.entries(scrapingJobs).map(([jobId, job]) => (
-                        <div
-                          key={jobId}
-                          className='border rounded-lg p-3 bg-gray-50'
-                        >
-                          <div className='flex justify-between items-center mb-2'>
-                            <span className='text-sm font-medium text-gray-700'>
-                              Job {jobId.substring(0, 8)}...
-                            </span>
-                            <span
-                              className={`text-xs font-bold px-2 py-1 rounded ${getJobStatusClass(job.status)}`}
-                            >
-                              {job.status.toUpperCase()}
-                            </span>
-                          </div>
-
-                          {job.total_products > 0 ? (
-                            <>
-                              <div className='w-full bg-gray-200 rounded-full h-2 mb-2'>
-                                <div
-                                  className='bg-blue-600 h-2 rounded-full transition-all duration-300'
-                                  style={{
-                                    width: `${job.progress_percentage}%`,
-                                  }}
-                                />
-                              </div>
-                              <div className='flex justify-between text-xs text-gray-600'>
-                                <span>
-                                  {job.current_product} / {job.total_products}{' '}
-                                  products
-                                </span>
-                                <span>
-                                  {job.progress_percentage.toFixed(1)}%
-                                </span>
-                              </div>
-                            </>
-                          ) : (
-                            <div className='text-xs text-gray-600'>
-                              {job.message || 'Initializing...'}
-                            </div>
-                          )}
-
-                          {job.status === 'completed' && (
-                            <div className='mt-2 text-xs text-green-700'>
-                              ✅ Scraped {job.products_count} products (
-                              {job.variations_count} variations)
-                            </div>
-                          )}
-
-                          {job.status === 'failed' && job.error_message && (
-                            <div className='mt-2 text-xs text-red-700'>
-                              ❌ {job.error_message}
-                            </div>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  )}
 
                   {/* Step 3 */}
                   <div className='flex items-center justify-between p-4 border border-gray-200 rounded-lg'>
