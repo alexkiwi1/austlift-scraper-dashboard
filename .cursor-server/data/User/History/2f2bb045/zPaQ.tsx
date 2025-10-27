@@ -36,9 +36,8 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
     message: '',
   });
   const [showStep4Dropdown, setShowStep4Dropdown] = useState<boolean>(false);
-  const [step4Products, setStep4Products] = useState<
-    ProductsByCategoryEndpoint[]
-  >([]);
+  const [step4Products, setStep4Products] =
+    useState<ProductsByCategoryEndpoint[]>([]);
   const [isTableMinimized, setIsTableMinimized] = useState<boolean>(false);
   const [error, setError] = useState<ErrorState>({
     hasError: false,
@@ -328,7 +327,7 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
       message: 'Loading products from all categories...',
     });
     try {
-      const allProducts: ProductsByCategoryEndpoint[] = [];
+      const allProducts: Product[] = [];
       let totalProducts = 0;
 
       // Fetch products from each category to get complete data
@@ -342,7 +341,7 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
           throw new Error(`HTTP ${response.status}: ${response.statusText}`);
         }
         // eslint-disable-next-line no-await-in-loop
-        const data: ProductsByCategoryResponse = await response.json();
+        const data: ProductsResponse = await response.json();
         allProducts.push(...data.products);
         totalProducts += data.total;
       }
@@ -398,7 +397,7 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
       message: 'Loading products from all categories...',
     });
     try {
-      const allProducts: ProductsByCategoryEndpoint[] = [];
+      const allProducts: Product[] = [];
 
       // Fetch products from all categories to get complete data with images
       // eslint-disable-next-line no-restricted-syntax
@@ -411,7 +410,7 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
           throw new Error(`HTTP ${response.status}: ${response.statusText}`);
         }
         // eslint-disable-next-line no-await-in-loop
-        const data: ProductsByCategoryResponse = await response.json();
+        const data: ProductsResponse = await response.json();
         allProducts.push(...data.products);
       }
 
@@ -670,10 +669,7 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
                                 {job.status === 'failed' && (
                                   <div className='mt-2 p-2 bg-red-50 rounded border border-red-200'>
                                     <div className='text-xs text-red-700'>
-                                      ❌{' '}
-                                      {job.error_message ||
-                                        job.message ||
-                                        'Scraping failed'}
+                                      ❌ {job.message || 'Scraping failed'}
                                     </div>
                                   </div>
                                 )}

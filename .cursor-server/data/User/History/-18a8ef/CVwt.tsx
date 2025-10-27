@@ -27,7 +27,7 @@ type SortDirection = 'asc' | 'desc' | null;
 /**
  * Reusable Products Table component with sorting, filtering, and pagination
  * @param {ProductsTableProps} props - Component props
- * @param {ProductsByCategoryEndpoint[]} props.products - Array of products to display
+ * @param {Product[]} props.products - Array of products to display
  * @param {boolean} props.isMinimized - Whether the table is minimized
  * @param {() => void} props.onToggleMinimize - Function to toggle minimize state
  * @param {() => void} props.onClose - Function to close the table
@@ -359,15 +359,11 @@ const ProductsTable: React.FC<ProductsTableProps> = ({
                   >
                     {column.render
                       ? column.render(
-                          product[
-                            column.key as keyof ProductsByCategoryEndpoint
-                          ],
+                          product[column.key as keyof ProductsByCategoryEndpoint],
                           product
                         )
                       : String(
-                          product[
-                            column.key as keyof ProductsByCategoryEndpoint
-                          ] || '-'
+                          product[column.key as keyof ProductsByCategoryEndpoint] || '-'
                         )}
                   </td>
                 ))}

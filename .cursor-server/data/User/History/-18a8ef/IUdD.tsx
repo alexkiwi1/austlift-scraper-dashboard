@@ -15,7 +15,7 @@ interface Column {
 }
 
 interface ProductsTableProps {
-  products: ProductsByCategoryEndpoint[];
+  products: Product[];
   isMinimized: boolean;
   onToggleMinimize: () => void;
   onClose: () => void;
@@ -27,7 +27,7 @@ type SortDirection = 'asc' | 'desc' | null;
 /**
  * Reusable Products Table component with sorting, filtering, and pagination
  * @param {ProductsTableProps} props - Component props
- * @param {ProductsByCategoryEndpoint[]} props.products - Array of products to display
+ * @param {Product[]} props.products - Array of products to display
  * @param {boolean} props.isMinimized - Whether the table is minimized
  * @param {() => void} props.onToggleMinimize - Function to toggle minimize state
  * @param {() => void} props.onClose - Function to close the table
@@ -212,8 +212,8 @@ const ProductsTable: React.FC<ProductsTableProps> = ({
     // Apply sorting
     if (sortColumn && sortDirection) {
       filtered = [...filtered].sort((a, b) => {
-        const aValue = a[sortColumn as keyof ProductsByCategoryEndpoint];
-        const bValue = b[sortColumn as keyof ProductsByCategoryEndpoint];
+        const aValue = a[sortColumn as keyof Product];
+        const bValue = b[sortColumn as keyof Product];
 
         if (aValue === null || aValue === undefined) return 1;
         if (bValue === null || bValue === undefined) return -1;
@@ -359,16 +359,10 @@ const ProductsTable: React.FC<ProductsTableProps> = ({
                   >
                     {column.render
                       ? column.render(
-                          product[
-                            column.key as keyof ProductsByCategoryEndpoint
-                          ],
+                          product[column.key as keyof Product],
                           product
                         )
-                      : String(
-                          product[
-                            column.key as keyof ProductsByCategoryEndpoint
-                          ] || '-'
-                        )}
+                      : String(product[column.key as keyof Product] || '-')}
                   </td>
                 ))}
               </tr>

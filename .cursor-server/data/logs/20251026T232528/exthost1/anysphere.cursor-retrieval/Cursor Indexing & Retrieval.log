@@ -429,3 +429,750 @@
 2025-10-27 06:13:16.942 [error] We currently do not allow indexing the home directory.
 2025-10-27 06:13:16.942 [info] Indexing job successfully done or aborted.
 2025-10-27 06:13:20.885 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 06:13:36.673 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 06:13:41.847 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 06:15:21.642 [info] Get user commits took 17.24151600152254ms for 10 commits
+2025-10-27 06:18:42.941 [info] multiCodebaseIndexingJob dispose
+2025-10-27 06:18:42.941 [info] Aborting indexing job.
+2025-10-27 06:18:42.941 [error] We currently do not allow indexing the home directory.
+2025-10-27 06:18:42.941 [info] Indexing job successfully done or aborted.
+2025-10-27 06:24:08.941 [info] multiCodebaseIndexingJob dispose
+2025-10-27 06:24:08.941 [info] Aborting indexing job.
+2025-10-27 06:24:08.941 [error] We currently do not allow indexing the home directory.
+2025-10-27 06:24:08.941 [info] Indexing job successfully done or aborted.
+2025-10-27 06:26:24.435 [info] Get user commits took 50.237900000065565ms for 10 commits
+2025-10-27 06:29:34.941 [info] multiCodebaseIndexingJob dispose
+2025-10-27 06:29:34.941 [info] Aborting indexing job.
+2025-10-27 06:29:34.941 [error] We currently do not allow indexing the home directory.
+2025-10-27 06:29:34.941 [info] Indexing job successfully done or aborted.
+2025-10-27 06:35:00.942 [info] multiCodebaseIndexingJob dispose
+2025-10-27 06:35:00.942 [info] Aborting indexing job.
+2025-10-27 06:35:00.942 [error] We currently do not allow indexing the home directory.
+2025-10-27 06:35:00.942 [info] Indexing job successfully done or aborted.
+2025-10-27 06:35:21.662 [info] Get user commits took 23.674130000174046ms for 10 commits
+2025-10-27 06:40:26.943 [info] multiCodebaseIndexingJob dispose
+2025-10-27 06:40:26.943 [info] Aborting indexing job.
+2025-10-27 06:40:26.943 [error] We currently do not allow indexing the home directory.
+2025-10-27 06:40:26.943 [info] Indexing job successfully done or aborted.
+2025-10-27 06:45:21.665 [info] Get user commits took 17.483055997639894ms for 10 commits
+2025-10-27 06:45:52.943 [info] multiCodebaseIndexingJob dispose
+2025-10-27 06:45:52.943 [info] Aborting indexing job.
+2025-10-27 06:45:52.944 [error] We currently do not allow indexing the home directory.
+2025-10-27 06:45:52.944 [info] Indexing job successfully done or aborted.
+2025-10-27 06:51:18.943 [info] multiCodebaseIndexingJob dispose
+2025-10-27 06:51:18.943 [info] Aborting indexing job.
+2025-10-27 06:51:18.943 [error] We currently do not allow indexing the home directory.
+2025-10-27 06:51:18.943 [info] Indexing job successfully done or aborted.
+2025-10-27 06:55:21.744 [info] Get user commits took 19.388178002089262ms for 10 commits
+2025-10-27 06:56:44.944 [info] multiCodebaseIndexingJob dispose
+2025-10-27 06:56:44.944 [info] Aborting indexing job.
+2025-10-27 06:56:44.944 [error] We currently do not allow indexing the home directory.
+2025-10-27 06:56:44.944 [info] Indexing job successfully done or aborted.
+2025-10-27 07:02:10.944 [info] multiCodebaseIndexingJob dispose
+2025-10-27 07:02:10.944 [info] Aborting indexing job.
+2025-10-27 07:02:10.944 [error] We currently do not allow indexing the home directory.
+2025-10-27 07:02:10.944 [info] Indexing job successfully done or aborted.
+2025-10-27 07:05:21.740 [info] Get user commits took 27.994356997311115ms for 10 commits
+2025-10-27 07:07:36.944 [info] multiCodebaseIndexingJob dispose
+2025-10-27 07:07:36.944 [info] Aborting indexing job.
+2025-10-27 07:07:36.944 [error] We currently do not allow indexing the home directory.
+2025-10-27 07:07:36.944 [info] Indexing job successfully done or aborted.
+2025-10-27 07:13:02.944 [info] multiCodebaseIndexingJob dispose
+2025-10-27 07:13:02.944 [info] Aborting indexing job.
+2025-10-27 07:13:02.944 [error] We currently do not allow indexing the home directory.
+2025-10-27 07:13:02.944 [info] Indexing job successfully done or aborted.
+2025-10-27 07:15:21.689 [info] Get user commits took 22.235357001423836ms for 10 commits
+2025-10-27 07:18:28.945 [info] multiCodebaseIndexingJob dispose
+2025-10-27 07:18:28.945 [info] Aborting indexing job.
+2025-10-27 07:18:28.945 [error] We currently do not allow indexing the home directory.
+2025-10-27 07:18:28.945 [info] Indexing job successfully done or aborted.
+2025-10-27 07:23:54.945 [info] multiCodebaseIndexingJob dispose
+2025-10-27 07:23:54.945 [info] Aborting indexing job.
+2025-10-27 07:23:54.945 [error] We currently do not allow indexing the home directory.
+2025-10-27 07:23:54.945 [info] Indexing job successfully done or aborted.
+2025-10-27 07:25:21.695 [info] Get user commits took 22.09698000177741ms for 10 commits
+2025-10-27 07:29:20.945 [info] multiCodebaseIndexingJob dispose
+2025-10-27 07:29:20.946 [info] Aborting indexing job.
+2025-10-27 07:29:20.946 [error] We currently do not allow indexing the home directory.
+2025-10-27 07:29:20.946 [info] Indexing job successfully done or aborted.
+2025-10-27 07:34:46.945 [info] multiCodebaseIndexingJob dispose
+2025-10-27 07:34:46.946 [info] Aborting indexing job.
+2025-10-27 07:34:46.946 [error] We currently do not allow indexing the home directory.
+2025-10-27 07:34:46.946 [info] Indexing job successfully done or aborted.
+2025-10-27 07:35:21.709 [info] Get user commits took 24.52939600124955ms for 10 commits
+2025-10-27 07:40:12.945 [info] multiCodebaseIndexingJob dispose
+2025-10-27 07:40:12.945 [info] Aborting indexing job.
+2025-10-27 07:40:12.945 [error] We currently do not allow indexing the home directory.
+2025-10-27 07:40:12.945 [info] Indexing job successfully done or aborted.
+2025-10-27 07:45:21.759 [info] Get user commits took 17.656718999147415ms for 10 commits
+2025-10-27 07:45:38.946 [info] multiCodebaseIndexingJob dispose
+2025-10-27 07:45:38.946 [info] Aborting indexing job.
+2025-10-27 07:45:38.946 [error] We currently do not allow indexing the home directory.
+2025-10-27 07:45:38.946 [info] Indexing job successfully done or aborted.
+2025-10-27 07:51:04.945 [info] multiCodebaseIndexingJob dispose
+2025-10-27 07:51:04.945 [info] Aborting indexing job.
+2025-10-27 07:51:04.945 [error] We currently do not allow indexing the home directory.
+2025-10-27 07:51:04.945 [info] Indexing job successfully done or aborted.
+2025-10-27 07:55:21.740 [info] Get user commits took 25.64267300069332ms for 10 commits
+2025-10-27 07:56:30.946 [info] multiCodebaseIndexingJob dispose
+2025-10-27 07:56:30.946 [info] Aborting indexing job.
+2025-10-27 07:56:30.946 [error] We currently do not allow indexing the home directory.
+2025-10-27 07:56:30.946 [info] Indexing job successfully done or aborted.
+2025-10-27 08:01:56.946 [info] multiCodebaseIndexingJob dispose
+2025-10-27 08:01:56.946 [info] Aborting indexing job.
+2025-10-27 08:01:56.946 [error] We currently do not allow indexing the home directory.
+2025-10-27 08:01:56.946 [info] Indexing job successfully done or aborted.
+2025-10-27 08:05:21.727 [info] Get user commits took 21.46160599961877ms for 10 commits
+2025-10-27 08:07:22.945 [info] multiCodebaseIndexingJob dispose
+2025-10-27 08:07:22.946 [info] Aborting indexing job.
+2025-10-27 08:07:22.946 [error] We currently do not allow indexing the home directory.
+2025-10-27 08:07:22.946 [info] Indexing job successfully done or aborted.
+2025-10-27 08:12:48.945 [info] multiCodebaseIndexingJob dispose
+2025-10-27 08:12:48.945 [info] Aborting indexing job.
+2025-10-27 08:12:48.945 [error] We currently do not allow indexing the home directory.
+2025-10-27 08:12:48.946 [info] Indexing job successfully done or aborted.
+2025-10-27 08:15:21.736 [info] Get user commits took 24.462850000709295ms for 10 commits
+2025-10-27 08:18:14.945 [info] multiCodebaseIndexingJob dispose
+2025-10-27 08:18:14.945 [info] Aborting indexing job.
+2025-10-27 08:18:14.945 [error] We currently do not allow indexing the home directory.
+2025-10-27 08:18:14.945 [info] Indexing job successfully done or aborted.
+2025-10-27 08:23:40.946 [info] multiCodebaseIndexingJob dispose
+2025-10-27 08:23:40.946 [info] Aborting indexing job.
+2025-10-27 08:23:40.946 [error] We currently do not allow indexing the home directory.
+2025-10-27 08:23:40.946 [info] Indexing job successfully done or aborted.
+2025-10-27 08:25:21.756 [info] Get user commits took 25.856632001698017ms for 10 commits
+2025-10-27 08:29:06.946 [info] multiCodebaseIndexingJob dispose
+2025-10-27 08:29:06.946 [info] Aborting indexing job.
+2025-10-27 08:29:06.946 [error] We currently do not allow indexing the home directory.
+2025-10-27 08:29:06.946 [info] Indexing job successfully done or aborted.
+2025-10-27 08:34:32.947 [info] multiCodebaseIndexingJob dispose
+2025-10-27 08:34:32.947 [info] Aborting indexing job.
+2025-10-27 08:34:32.947 [error] We currently do not allow indexing the home directory.
+2025-10-27 08:34:32.947 [info] Indexing job successfully done or aborted.
+2025-10-27 08:35:21.760 [info] Get user commits took 22.549217000603676ms for 10 commits
+2025-10-27 08:39:58.946 [info] multiCodebaseIndexingJob dispose
+2025-10-27 08:39:58.946 [info] Aborting indexing job.
+2025-10-27 08:39:58.946 [error] We currently do not allow indexing the home directory.
+2025-10-27 08:39:58.946 [info] Indexing job successfully done or aborted.
+2025-10-27 08:45:21.761 [info] Get user commits took 29.735331006348133ms for 10 commits
+2025-10-27 08:45:24.946 [info] multiCodebaseIndexingJob dispose
+2025-10-27 08:45:24.947 [info] Aborting indexing job.
+2025-10-27 08:45:24.947 [error] We currently do not allow indexing the home directory.
+2025-10-27 08:45:24.947 [info] Indexing job successfully done or aborted.
+2025-10-27 08:50:50.946 [info] multiCodebaseIndexingJob dispose
+2025-10-27 08:50:50.947 [info] Aborting indexing job.
+2025-10-27 08:50:50.947 [error] We currently do not allow indexing the home directory.
+2025-10-27 08:50:50.947 [info] Indexing job successfully done or aborted.
+2025-10-27 08:55:21.765 [info] Get user commits took 23.80512599647045ms for 10 commits
+2025-10-27 08:56:16.946 [info] multiCodebaseIndexingJob dispose
+2025-10-27 08:56:16.947 [info] Aborting indexing job.
+2025-10-27 08:56:16.947 [error] We currently do not allow indexing the home directory.
+2025-10-27 08:56:16.947 [info] Indexing job successfully done or aborted.
+2025-10-27 09:01:42.947 [info] multiCodebaseIndexingJob dispose
+2025-10-27 09:01:42.947 [info] Aborting indexing job.
+2025-10-27 09:01:42.947 [error] We currently do not allow indexing the home directory.
+2025-10-27 09:01:42.947 [info] Indexing job successfully done or aborted.
+2025-10-27 09:05:21.772 [info] Get user commits took 27.70260800421238ms for 10 commits
+2025-10-27 09:07:08.947 [info] multiCodebaseIndexingJob dispose
+2025-10-27 09:07:08.947 [info] Aborting indexing job.
+2025-10-27 09:07:08.947 [error] We currently do not allow indexing the home directory.
+2025-10-27 09:07:08.947 [info] Indexing job successfully done or aborted.
+2025-10-27 09:12:34.946 [info] multiCodebaseIndexingJob dispose
+2025-10-27 09:12:34.946 [info] Aborting indexing job.
+2025-10-27 09:12:34.946 [error] We currently do not allow indexing the home directory.
+2025-10-27 09:12:34.946 [info] Indexing job successfully done or aborted.
+2025-10-27 09:15:21.839 [info] Get user commits took 26.940021999180317ms for 10 commits
+2025-10-27 09:18:00.947 [info] multiCodebaseIndexingJob dispose
+2025-10-27 09:18:00.947 [info] Aborting indexing job.
+2025-10-27 09:18:00.948 [error] We currently do not allow indexing the home directory.
+2025-10-27 09:18:00.948 [info] Indexing job successfully done or aborted.
+2025-10-27 09:23:26.948 [info] multiCodebaseIndexingJob dispose
+2025-10-27 09:23:26.948 [info] Aborting indexing job.
+2025-10-27 09:23:26.948 [error] We currently do not allow indexing the home directory.
+2025-10-27 09:23:26.948 [info] Indexing job successfully done or aborted.
+2025-10-27 09:25:21.779 [info] Get user commits took 21.9751930013299ms for 10 commits
+2025-10-27 09:28:52.947 [info] multiCodebaseIndexingJob dispose
+2025-10-27 09:28:52.947 [info] Aborting indexing job.
+2025-10-27 09:28:52.947 [error] We currently do not allow indexing the home directory.
+2025-10-27 09:28:52.948 [info] Indexing job successfully done or aborted.
+2025-10-27 09:34:18.948 [info] multiCodebaseIndexingJob dispose
+2025-10-27 09:34:18.948 [info] Aborting indexing job.
+2025-10-27 09:34:18.948 [error] We currently do not allow indexing the home directory.
+2025-10-27 09:34:18.948 [info] Indexing job successfully done or aborted.
+2025-10-27 09:35:21.795 [info] Get user commits took 17.385547995567322ms for 10 commits
+2025-10-27 09:39:44.948 [info] multiCodebaseIndexingJob dispose
+2025-10-27 09:39:44.948 [info] Aborting indexing job.
+2025-10-27 09:39:44.948 [error] We currently do not allow indexing the home directory.
+2025-10-27 09:39:44.948 [info] Indexing job successfully done or aborted.
+2025-10-27 09:45:10.949 [info] multiCodebaseIndexingJob dispose
+2025-10-27 09:45:10.949 [info] Aborting indexing job.
+2025-10-27 09:45:10.949 [error] We currently do not allow indexing the home directory.
+2025-10-27 09:45:10.949 [info] Indexing job successfully done or aborted.
+2025-10-27 09:45:21.799 [info] Get user commits took 22.44285199791193ms for 10 commits
+2025-10-27 09:50:36.948 [info] multiCodebaseIndexingJob dispose
+2025-10-27 09:50:36.948 [info] Aborting indexing job.
+2025-10-27 09:50:36.948 [error] We currently do not allow indexing the home directory.
+2025-10-27 09:50:36.948 [info] Indexing job successfully done or aborted.
+2025-10-27 09:55:22.131 [info] Get user commits took 23.285867996513844ms for 10 commits
+2025-10-27 09:56:02.949 [info] multiCodebaseIndexingJob dispose
+2025-10-27 09:56:02.949 [info] Aborting indexing job.
+2025-10-27 09:56:02.949 [error] We currently do not allow indexing the home directory.
+2025-10-27 09:56:02.949 [info] Indexing job successfully done or aborted.
+2025-10-27 10:01:28.949 [info] multiCodebaseIndexingJob dispose
+2025-10-27 10:01:28.949 [info] Aborting indexing job.
+2025-10-27 10:01:28.949 [error] We currently do not allow indexing the home directory.
+2025-10-27 10:01:28.949 [info] Indexing job successfully done or aborted.
+2025-10-27 10:05:21.812 [info] Get user commits took 25.65694399923086ms for 10 commits
+2025-10-27 10:06:54.949 [info] multiCodebaseIndexingJob dispose
+2025-10-27 10:06:54.949 [info] Aborting indexing job.
+2025-10-27 10:06:54.949 [error] We currently do not allow indexing the home directory.
+2025-10-27 10:06:54.949 [info] Indexing job successfully done or aborted.
+2025-10-27 10:12:20.949 [info] multiCodebaseIndexingJob dispose
+2025-10-27 10:12:20.949 [info] Aborting indexing job.
+2025-10-27 10:12:20.949 [error] We currently do not allow indexing the home directory.
+2025-10-27 10:12:20.949 [info] Indexing job successfully done or aborted.
+2025-10-27 10:15:21.825 [info] Get user commits took 20.695684999227524ms for 10 commits
+2025-10-27 10:17:46.948 [info] multiCodebaseIndexingJob dispose
+2025-10-27 10:17:46.948 [info] Aborting indexing job.
+2025-10-27 10:17:46.948 [error] We currently do not allow indexing the home directory.
+2025-10-27 10:17:46.948 [info] Indexing job successfully done or aborted.
+2025-10-27 10:23:12.948 [info] multiCodebaseIndexingJob dispose
+2025-10-27 10:23:12.949 [info] Aborting indexing job.
+2025-10-27 10:23:12.949 [error] We currently do not allow indexing the home directory.
+2025-10-27 10:23:12.949 [info] Indexing job successfully done or aborted.
+2025-10-27 10:25:21.821 [info] Get user commits took 21.52038199454546ms for 10 commits
+2025-10-27 10:28:38.949 [info] multiCodebaseIndexingJob dispose
+2025-10-27 10:28:38.949 [info] Aborting indexing job.
+2025-10-27 10:28:38.949 [error] We currently do not allow indexing the home directory.
+2025-10-27 10:28:38.949 [info] Indexing job successfully done or aborted.
+2025-10-27 10:34:04.950 [info] multiCodebaseIndexingJob dispose
+2025-10-27 10:34:04.950 [info] Aborting indexing job.
+2025-10-27 10:34:04.950 [error] We currently do not allow indexing the home directory.
+2025-10-27 10:34:04.950 [info] Indexing job successfully done or aborted.
+2025-10-27 10:35:21.834 [info] Get user commits took 23.66500699520111ms for 10 commits
+2025-10-27 10:39:30.949 [info] multiCodebaseIndexingJob dispose
+2025-10-27 10:39:30.949 [info] Aborting indexing job.
+2025-10-27 10:39:30.949 [error] We currently do not allow indexing the home directory.
+2025-10-27 10:39:30.950 [info] Indexing job successfully done or aborted.
+2025-10-27 10:44:56.949 [info] multiCodebaseIndexingJob dispose
+2025-10-27 10:44:56.949 [info] Aborting indexing job.
+2025-10-27 10:44:56.949 [error] We currently do not allow indexing the home directory.
+2025-10-27 10:44:56.949 [info] Indexing job successfully done or aborted.
+2025-10-27 10:45:21.843 [info] Get user commits took 23.641341000795364ms for 10 commits
+2025-10-27 10:50:22.949 [info] multiCodebaseIndexingJob dispose
+2025-10-27 10:50:22.949 [info] Aborting indexing job.
+2025-10-27 10:50:22.949 [error] We currently do not allow indexing the home directory.
+2025-10-27 10:50:22.949 [info] Indexing job successfully done or aborted.
+2025-10-27 10:55:21.847 [info] Get user commits took 23.540108993649483ms for 10 commits
+2025-10-27 10:55:48.949 [info] multiCodebaseIndexingJob dispose
+2025-10-27 10:55:48.949 [info] Aborting indexing job.
+2025-10-27 10:55:48.949 [error] We currently do not allow indexing the home directory.
+2025-10-27 10:55:48.949 [info] Indexing job successfully done or aborted.
+2025-10-27 11:01:14.949 [info] multiCodebaseIndexingJob dispose
+2025-10-27 11:01:14.949 [info] Aborting indexing job.
+2025-10-27 11:01:14.949 [error] We currently do not allow indexing the home directory.
+2025-10-27 11:01:14.949 [info] Indexing job successfully done or aborted.
+2025-10-27 11:05:21.855 [info] Get user commits took 23.082945004105568ms for 10 commits
+2025-10-27 11:06:40.950 [info] multiCodebaseIndexingJob dispose
+2025-10-27 11:06:40.950 [info] Aborting indexing job.
+2025-10-27 11:06:40.950 [error] We currently do not allow indexing the home directory.
+2025-10-27 11:06:40.950 [info] Indexing job successfully done or aborted.
+2025-10-27 11:12:06.950 [info] multiCodebaseIndexingJob dispose
+2025-10-27 11:12:06.950 [info] Aborting indexing job.
+2025-10-27 11:12:06.951 [error] We currently do not allow indexing the home directory.
+2025-10-27 11:12:06.951 [info] Indexing job successfully done or aborted.
+2025-10-27 11:15:21.859 [info] Get user commits took 21.978301003575325ms for 10 commits
+2025-10-27 11:17:32.951 [info] multiCodebaseIndexingJob dispose
+2025-10-27 11:17:32.951 [info] Aborting indexing job.
+2025-10-27 11:17:32.951 [error] We currently do not allow indexing the home directory.
+2025-10-27 11:17:32.951 [info] Indexing job successfully done or aborted.
+2025-10-27 11:22:58.951 [info] multiCodebaseIndexingJob dispose
+2025-10-27 11:22:58.951 [info] Aborting indexing job.
+2025-10-27 11:22:58.951 [error] We currently do not allow indexing the home directory.
+2025-10-27 11:22:58.951 [info] Indexing job successfully done or aborted.
+2025-10-27 11:25:21.864 [info] Get user commits took 20.48555099964142ms for 10 commits
+2025-10-27 11:28:24.950 [info] multiCodebaseIndexingJob dispose
+2025-10-27 11:28:24.950 [info] Aborting indexing job.
+2025-10-27 11:28:24.950 [error] We currently do not allow indexing the home directory.
+2025-10-27 11:28:24.950 [info] Indexing job successfully done or aborted.
+2025-10-27 11:33:50.950 [info] multiCodebaseIndexingJob dispose
+2025-10-27 11:33:50.950 [info] Aborting indexing job.
+2025-10-27 11:33:50.950 [error] We currently do not allow indexing the home directory.
+2025-10-27 11:33:50.950 [info] Indexing job successfully done or aborted.
+2025-10-27 11:35:21.874 [info] Get user commits took 22.725781001150608ms for 10 commits
+2025-10-27 11:39:16.950 [info] multiCodebaseIndexingJob dispose
+2025-10-27 11:39:16.950 [info] Aborting indexing job.
+2025-10-27 11:39:16.950 [error] We currently do not allow indexing the home directory.
+2025-10-27 11:39:16.950 [info] Indexing job successfully done or aborted.
+2025-10-27 11:44:42.951 [info] multiCodebaseIndexingJob dispose
+2025-10-27 11:44:42.951 [info] Aborting indexing job.
+2025-10-27 11:44:42.951 [error] We currently do not allow indexing the home directory.
+2025-10-27 11:44:42.951 [info] Indexing job successfully done or aborted.
+2025-10-27 11:45:21.881 [info] Get user commits took 23.474926002323627ms for 10 commits
+2025-10-27 11:50:08.951 [info] multiCodebaseIndexingJob dispose
+2025-10-27 11:50:08.951 [info] Aborting indexing job.
+2025-10-27 11:50:08.951 [error] We currently do not allow indexing the home directory.
+2025-10-27 11:50:08.951 [info] Indexing job successfully done or aborted.
+2025-10-27 11:55:21.894 [info] Get user commits took 25.063825003802776ms for 10 commits
+2025-10-27 11:55:34.951 [info] multiCodebaseIndexingJob dispose
+2025-10-27 11:55:34.952 [info] Aborting indexing job.
+2025-10-27 11:55:34.952 [error] We currently do not allow indexing the home directory.
+2025-10-27 11:55:34.952 [info] Indexing job successfully done or aborted.
+2025-10-27 12:01:00.952 [info] multiCodebaseIndexingJob dispose
+2025-10-27 12:01:00.952 [info] Aborting indexing job.
+2025-10-27 12:01:00.952 [error] We currently do not allow indexing the home directory.
+2025-10-27 12:01:00.952 [info] Indexing job successfully done or aborted.
+2025-10-27 12:05:21.894 [info] Get user commits took 20.48683499544859ms for 10 commits
+2025-10-27 12:06:26.952 [info] multiCodebaseIndexingJob dispose
+2025-10-27 12:06:26.952 [info] Aborting indexing job.
+2025-10-27 12:06:26.952 [error] We currently do not allow indexing the home directory.
+2025-10-27 12:06:26.952 [info] Indexing job successfully done or aborted.
+2025-10-27 12:11:52.952 [info] multiCodebaseIndexingJob dispose
+2025-10-27 12:11:52.952 [info] Aborting indexing job.
+2025-10-27 12:11:52.952 [error] We currently do not allow indexing the home directory.
+2025-10-27 12:11:52.952 [info] Indexing job successfully done or aborted.
+2025-10-27 12:15:21.903 [info] Get user commits took 20.34348700195551ms for 10 commits
+2025-10-27 12:17:18.952 [info] multiCodebaseIndexingJob dispose
+2025-10-27 12:17:18.952 [info] Aborting indexing job.
+2025-10-27 12:17:18.952 [error] We currently do not allow indexing the home directory.
+2025-10-27 12:17:18.952 [info] Indexing job successfully done or aborted.
+2025-10-27 12:22:44.952 [info] multiCodebaseIndexingJob dispose
+2025-10-27 12:22:44.952 [info] Aborting indexing job.
+2025-10-27 12:22:44.952 [error] We currently do not allow indexing the home directory.
+2025-10-27 12:22:44.952 [info] Indexing job successfully done or aborted.
+2025-10-27 12:25:22.308 [info] Get user commits took 24.05766099691391ms for 10 commits
+2025-10-27 12:28:10.953 [info] multiCodebaseIndexingJob dispose
+2025-10-27 12:28:10.953 [info] Aborting indexing job.
+2025-10-27 12:28:10.953 [error] We currently do not allow indexing the home directory.
+2025-10-27 12:28:10.953 [info] Indexing job successfully done or aborted.
+2025-10-27 12:33:36.953 [info] multiCodebaseIndexingJob dispose
+2025-10-27 12:33:36.953 [info] Aborting indexing job.
+2025-10-27 12:33:36.953 [error] We currently do not allow indexing the home directory.
+2025-10-27 12:33:36.953 [info] Indexing job successfully done or aborted.
+2025-10-27 12:35:21.930 [info] Get user commits took 22.366879999637604ms for 10 commits
+2025-10-27 12:39:02.953 [info] multiCodebaseIndexingJob dispose
+2025-10-27 12:39:02.953 [info] Aborting indexing job.
+2025-10-27 12:39:02.953 [error] We currently do not allow indexing the home directory.
+2025-10-27 12:39:02.953 [info] Indexing job successfully done or aborted.
+2025-10-27 12:44:28.953 [info] multiCodebaseIndexingJob dispose
+2025-10-27 12:44:28.953 [info] Aborting indexing job.
+2025-10-27 12:44:28.953 [error] We currently do not allow indexing the home directory.
+2025-10-27 12:44:28.953 [info] Indexing job successfully done or aborted.
+2025-10-27 12:45:21.919 [info] Get user commits took 20.29618499428034ms for 10 commits
+2025-10-27 12:49:54.952 [info] multiCodebaseIndexingJob dispose
+2025-10-27 12:49:54.952 [info] Aborting indexing job.
+2025-10-27 12:49:54.952 [error] We currently do not allow indexing the home directory.
+2025-10-27 12:49:54.952 [info] Indexing job successfully done or aborted.
+2025-10-27 12:55:20.953 [info] multiCodebaseIndexingJob dispose
+2025-10-27 12:55:20.953 [info] Aborting indexing job.
+2025-10-27 12:55:20.953 [error] We currently do not allow indexing the home directory.
+2025-10-27 12:55:20.953 [info] Indexing job successfully done or aborted.
+2025-10-27 12:55:21.932 [info] Get user commits took 23.107133999466896ms for 10 commits
+2025-10-27 13:00:46.952 [info] multiCodebaseIndexingJob dispose
+2025-10-27 13:00:46.952 [info] Aborting indexing job.
+2025-10-27 13:00:46.952 [error] We currently do not allow indexing the home directory.
+2025-10-27 13:00:46.952 [info] Indexing job successfully done or aborted.
+2025-10-27 13:05:21.949 [info] Get user commits took 25.58492600172758ms for 10 commits
+2025-10-27 13:06:12.953 [info] multiCodebaseIndexingJob dispose
+2025-10-27 13:06:12.953 [info] Aborting indexing job.
+2025-10-27 13:06:12.953 [error] We currently do not allow indexing the home directory.
+2025-10-27 13:06:12.953 [info] Indexing job successfully done or aborted.
+2025-10-27 13:11:38.952 [info] multiCodebaseIndexingJob dispose
+2025-10-27 13:11:38.952 [info] Aborting indexing job.
+2025-10-27 13:11:38.952 [error] We currently do not allow indexing the home directory.
+2025-10-27 13:11:38.953 [info] Indexing job successfully done or aborted.
+2025-10-27 13:15:21.943 [info] Get user commits took 22.017554000020027ms for 10 commits
+2025-10-27 13:17:04.953 [info] multiCodebaseIndexingJob dispose
+2025-10-27 13:17:04.953 [info] Aborting indexing job.
+2025-10-27 13:17:04.953 [error] We currently do not allow indexing the home directory.
+2025-10-27 13:17:04.953 [info] Indexing job successfully done or aborted.
+2025-10-27 13:22:30.953 [info] multiCodebaseIndexingJob dispose
+2025-10-27 13:22:30.953 [info] Aborting indexing job.
+2025-10-27 13:22:30.953 [error] We currently do not allow indexing the home directory.
+2025-10-27 13:22:30.953 [info] Indexing job successfully done or aborted.
+2025-10-27 13:25:21.949 [info] Get user commits took 17.9120349958539ms for 10 commits
+2025-10-27 13:27:56.954 [info] multiCodebaseIndexingJob dispose
+2025-10-27 13:27:56.954 [info] Aborting indexing job.
+2025-10-27 13:27:56.954 [error] We currently do not allow indexing the home directory.
+2025-10-27 13:27:56.954 [info] Indexing job successfully done or aborted.
+2025-10-27 13:33:22.954 [info] multiCodebaseIndexingJob dispose
+2025-10-27 13:33:22.954 [info] Aborting indexing job.
+2025-10-27 13:33:22.954 [error] We currently do not allow indexing the home directory.
+2025-10-27 13:33:22.954 [info] Indexing job successfully done or aborted.
+2025-10-27 13:35:22.003 [info] Get user commits took 20.7816059961915ms for 10 commits
+2025-10-27 13:38:48.954 [info] multiCodebaseIndexingJob dispose
+2025-10-27 13:38:48.954 [info] Aborting indexing job.
+2025-10-27 13:38:48.954 [error] We currently do not allow indexing the home directory.
+2025-10-27 13:38:48.954 [info] Indexing job successfully done or aborted.
+2025-10-27 13:44:14.955 [info] multiCodebaseIndexingJob dispose
+2025-10-27 13:44:14.955 [info] Aborting indexing job.
+2025-10-27 13:44:14.955 [error] We currently do not allow indexing the home directory.
+2025-10-27 13:44:14.955 [info] Indexing job successfully done or aborted.
+2025-10-27 13:45:21.959 [info] Get user commits took 17.036298997700214ms for 10 commits
+2025-10-27 13:49:40.954 [info] multiCodebaseIndexingJob dispose
+2025-10-27 13:49:40.954 [info] Aborting indexing job.
+2025-10-27 13:49:40.954 [error] We currently do not allow indexing the home directory.
+2025-10-27 13:49:40.954 [info] Indexing job successfully done or aborted.
+2025-10-27 13:55:06.954 [info] multiCodebaseIndexingJob dispose
+2025-10-27 13:55:06.954 [info] Aborting indexing job.
+2025-10-27 13:55:06.954 [error] We currently do not allow indexing the home directory.
+2025-10-27 13:55:06.954 [info] Indexing job successfully done or aborted.
+2025-10-27 13:55:21.975 [info] Get user commits took 24.911468997597694ms for 10 commits
+2025-10-27 14:00:32.954 [info] multiCodebaseIndexingJob dispose
+2025-10-27 14:00:32.954 [info] Aborting indexing job.
+2025-10-27 14:00:32.954 [error] We currently do not allow indexing the home directory.
+2025-10-27 14:00:32.954 [info] Indexing job successfully done or aborted.
+2025-10-27 14:05:21.975 [info] Get user commits took 19.775283001363277ms for 10 commits
+2025-10-27 14:05:58.955 [info] multiCodebaseIndexingJob dispose
+2025-10-27 14:05:58.955 [info] Aborting indexing job.
+2025-10-27 14:05:58.955 [error] We currently do not allow indexing the home directory.
+2025-10-27 14:05:58.955 [info] Indexing job successfully done or aborted.
+2025-10-27 14:11:24.954 [info] multiCodebaseIndexingJob dispose
+2025-10-27 14:11:24.954 [info] Aborting indexing job.
+2025-10-27 14:11:24.954 [error] We currently do not allow indexing the home directory.
+2025-10-27 14:11:24.954 [info] Indexing job successfully done or aborted.
+2025-10-27 14:15:21.981 [info] Get user commits took 16.152890995144844ms for 10 commits
+2025-10-27 14:16:50.954 [info] multiCodebaseIndexingJob dispose
+2025-10-27 14:16:50.954 [info] Aborting indexing job.
+2025-10-27 14:16:50.954 [error] We currently do not allow indexing the home directory.
+2025-10-27 14:16:50.954 [info] Indexing job successfully done or aborted.
+2025-10-27 14:22:16.955 [info] multiCodebaseIndexingJob dispose
+2025-10-27 14:22:16.955 [info] Aborting indexing job.
+2025-10-27 14:22:16.955 [error] We currently do not allow indexing the home directory.
+2025-10-27 14:22:16.955 [info] Indexing job successfully done or aborted.
+2025-10-27 14:25:21.994 [info] Get user commits took 22.75382400304079ms for 10 commits
+2025-10-27 14:27:42.955 [info] multiCodebaseIndexingJob dispose
+2025-10-27 14:27:42.955 [info] Aborting indexing job.
+2025-10-27 14:27:42.955 [error] We currently do not allow indexing the home directory.
+2025-10-27 14:27:42.955 [info] Indexing job successfully done or aborted.
+2025-10-27 14:33:08.956 [info] multiCodebaseIndexingJob dispose
+2025-10-27 14:33:08.956 [info] Aborting indexing job.
+2025-10-27 14:33:08.956 [error] We currently do not allow indexing the home directory.
+2025-10-27 14:33:08.956 [info] Indexing job successfully done or aborted.
+2025-10-27 14:35:22.051 [info] Get user commits took 18.853886000812054ms for 10 commits
+2025-10-27 14:38:34.955 [info] multiCodebaseIndexingJob dispose
+2025-10-27 14:38:34.955 [info] Aborting indexing job.
+2025-10-27 14:38:34.955 [error] We currently do not allow indexing the home directory.
+2025-10-27 14:38:34.955 [info] Indexing job successfully done or aborted.
+2025-10-27 14:44:00.955 [info] multiCodebaseIndexingJob dispose
+2025-10-27 14:44:00.955 [info] Aborting indexing job.
+2025-10-27 14:44:00.956 [error] We currently do not allow indexing the home directory.
+2025-10-27 14:44:00.956 [info] Indexing job successfully done or aborted.
+2025-10-27 14:45:22.059 [info] Get user commits took 23.50661700218916ms for 10 commits
+2025-10-27 14:49:26.955 [info] multiCodebaseIndexingJob dispose
+2025-10-27 14:49:26.955 [info] Aborting indexing job.
+2025-10-27 14:49:26.955 [error] We currently do not allow indexing the home directory.
+2025-10-27 14:49:26.955 [info] Indexing job successfully done or aborted.
+2025-10-27 14:54:52.956 [info] multiCodebaseIndexingJob dispose
+2025-10-27 14:54:52.956 [info] Aborting indexing job.
+2025-10-27 14:54:52.956 [error] We currently do not allow indexing the home directory.
+2025-10-27 14:54:52.956 [info] Indexing job successfully done or aborted.
+2025-10-27 14:55:22.391 [info] Get user commits took 20.20058099925518ms for 10 commits
+2025-10-27 15:00:18.957 [info] multiCodebaseIndexingJob dispose
+2025-10-27 15:00:18.957 [info] Aborting indexing job.
+2025-10-27 15:00:18.957 [error] We currently do not allow indexing the home directory.
+2025-10-27 15:00:18.957 [info] Indexing job successfully done or aborted.
+2025-10-27 15:05:22.023 [info] Get user commits took 23.568137995898724ms for 10 commits
+2025-10-27 15:05:44.957 [info] multiCodebaseIndexingJob dispose
+2025-10-27 15:05:44.957 [info] Aborting indexing job.
+2025-10-27 15:05:44.957 [error] We currently do not allow indexing the home directory.
+2025-10-27 15:05:44.957 [info] Indexing job successfully done or aborted.
+2025-10-27 15:11:10.956 [info] multiCodebaseIndexingJob dispose
+2025-10-27 15:11:10.956 [info] Aborting indexing job.
+2025-10-27 15:11:10.956 [error] We currently do not allow indexing the home directory.
+2025-10-27 15:11:10.956 [info] Indexing job successfully done or aborted.
+2025-10-27 15:15:22.033 [info] Get user commits took 24.34452600032091ms for 10 commits
+2025-10-27 15:16:36.956 [info] multiCodebaseIndexingJob dispose
+2025-10-27 15:16:36.956 [info] Aborting indexing job.
+2025-10-27 15:16:36.956 [error] We currently do not allow indexing the home directory.
+2025-10-27 15:16:36.956 [info] Indexing job successfully done or aborted.
+2025-10-27 15:22:02.957 [info] multiCodebaseIndexingJob dispose
+2025-10-27 15:22:02.957 [info] Aborting indexing job.
+2025-10-27 15:22:02.957 [error] We currently do not allow indexing the home directory.
+2025-10-27 15:22:02.957 [info] Indexing job successfully done or aborted.
+2025-10-27 15:25:22.043 [info] Get user commits took 29.140382006764412ms for 10 commits
+2025-10-27 15:27:28.958 [info] multiCodebaseIndexingJob dispose
+2025-10-27 15:27:28.958 [info] Aborting indexing job.
+2025-10-27 15:27:28.958 [error] We currently do not allow indexing the home directory.
+2025-10-27 15:27:28.958 [info] Indexing job successfully done or aborted.
+2025-10-27 15:32:54.957 [info] multiCodebaseIndexingJob dispose
+2025-10-27 15:32:54.957 [info] Aborting indexing job.
+2025-10-27 15:32:54.957 [error] We currently do not allow indexing the home directory.
+2025-10-27 15:32:54.957 [info] Indexing job successfully done or aborted.
+2025-10-27 15:35:22.044 [info] Get user commits took 20.506229996681213ms for 10 commits
+2025-10-27 15:38:20.958 [info] multiCodebaseIndexingJob dispose
+2025-10-27 15:38:20.958 [info] Aborting indexing job.
+2025-10-27 15:38:20.958 [error] We currently do not allow indexing the home directory.
+2025-10-27 15:38:20.958 [info] Indexing job successfully done or aborted.
+2025-10-27 15:43:46.957 [info] multiCodebaseIndexingJob dispose
+2025-10-27 15:43:46.957 [info] Aborting indexing job.
+2025-10-27 15:43:46.958 [error] We currently do not allow indexing the home directory.
+2025-10-27 15:43:46.958 [info] Indexing job successfully done or aborted.
+2025-10-27 15:45:22.050 [info] Get user commits took 21.155877001583576ms for 10 commits
+2025-10-27 15:49:12.958 [info] multiCodebaseIndexingJob dispose
+2025-10-27 15:49:12.958 [info] Aborting indexing job.
+2025-10-27 15:49:12.958 [error] We currently do not allow indexing the home directory.
+2025-10-27 15:49:12.958 [info] Indexing job successfully done or aborted.
+2025-10-27 15:54:38.958 [info] multiCodebaseIndexingJob dispose
+2025-10-27 15:54:38.958 [info] Aborting indexing job.
+2025-10-27 15:54:38.958 [error] We currently do not allow indexing the home directory.
+2025-10-27 15:54:38.958 [info] Indexing job successfully done or aborted.
+2025-10-27 15:55:22.068 [info] Get user commits took 28.77020099759102ms for 10 commits
+2025-10-27 16:00:04.959 [info] multiCodebaseIndexingJob dispose
+2025-10-27 16:00:04.959 [info] Aborting indexing job.
+2025-10-27 16:00:04.959 [error] We currently do not allow indexing the home directory.
+2025-10-27 16:00:04.959 [info] Indexing job successfully done or aborted.
+2025-10-27 16:05:22.062 [info] Get user commits took 17.258181996643543ms for 10 commits
+2025-10-27 16:05:30.959 [info] multiCodebaseIndexingJob dispose
+2025-10-27 16:05:30.959 [info] Aborting indexing job.
+2025-10-27 16:05:30.959 [error] We currently do not allow indexing the home directory.
+2025-10-27 16:05:30.959 [info] Indexing job successfully done or aborted.
+2025-10-27 16:10:56.960 [info] multiCodebaseIndexingJob dispose
+2025-10-27 16:10:56.960 [info] Aborting indexing job.
+2025-10-27 16:10:56.960 [error] We currently do not allow indexing the home directory.
+2025-10-27 16:10:56.960 [info] Indexing job successfully done or aborted.
+2025-10-27 16:15:22.075 [info] Get user commits took 23.276678003370762ms for 10 commits
+2025-10-27 16:16:22.960 [info] multiCodebaseIndexingJob dispose
+2025-10-27 16:16:22.960 [info] Aborting indexing job.
+2025-10-27 16:16:22.960 [error] We currently do not allow indexing the home directory.
+2025-10-27 16:16:22.960 [info] Indexing job successfully done or aborted.
+2025-10-27 16:21:48.959 [info] multiCodebaseIndexingJob dispose
+2025-10-27 16:21:48.959 [info] Aborting indexing job.
+2025-10-27 16:21:48.959 [error] We currently do not allow indexing the home directory.
+2025-10-27 16:21:48.959 [info] Indexing job successfully done or aborted.
+2025-10-27 16:25:22.079 [info] Get user commits took 21.44717900454998ms for 10 commits
+2025-10-27 16:27:14.960 [info] multiCodebaseIndexingJob dispose
+2025-10-27 16:27:14.960 [info] Aborting indexing job.
+2025-10-27 16:27:14.960 [error] We currently do not allow indexing the home directory.
+2025-10-27 16:27:14.960 [info] Indexing job successfully done or aborted.
+2025-10-27 16:32:40.960 [info] multiCodebaseIndexingJob dispose
+2025-10-27 16:32:40.960 [info] Aborting indexing job.
+2025-10-27 16:32:40.960 [error] We currently do not allow indexing the home directory.
+2025-10-27 16:32:40.960 [info] Indexing job successfully done or aborted.
+2025-10-27 16:35:22.102 [info] Get user commits took 34.444587998092175ms for 10 commits
+2025-10-27 16:38:06.960 [info] multiCodebaseIndexingJob dispose
+2025-10-27 16:38:06.960 [info] Aborting indexing job.
+2025-10-27 16:38:06.960 [error] We currently do not allow indexing the home directory.
+2025-10-27 16:38:06.960 [info] Indexing job successfully done or aborted.
+2025-10-27 16:43:32.959 [info] multiCodebaseIndexingJob dispose
+2025-10-27 16:43:32.959 [info] Aborting indexing job.
+2025-10-27 16:43:32.959 [error] We currently do not allow indexing the home directory.
+2025-10-27 16:43:32.959 [info] Indexing job successfully done or aborted.
+2025-10-27 16:45:22.121 [info] Get user commits took 23.363994002342224ms for 10 commits
+2025-10-27 16:48:58.959 [info] multiCodebaseIndexingJob dispose
+2025-10-27 16:48:58.959 [info] Aborting indexing job.
+2025-10-27 16:48:58.959 [error] We currently do not allow indexing the home directory.
+2025-10-27 16:48:58.960 [info] Indexing job successfully done or aborted.
+2025-10-27 16:54:24.959 [info] multiCodebaseIndexingJob dispose
+2025-10-27 16:54:24.959 [info] Aborting indexing job.
+2025-10-27 16:54:24.959 [error] We currently do not allow indexing the home directory.
+2025-10-27 16:54:24.959 [info] Indexing job successfully done or aborted.
+2025-10-27 16:55:22.101 [info] Get user commits took 23.11931300163269ms for 10 commits
+2025-10-27 16:59:50.959 [info] multiCodebaseIndexingJob dispose
+2025-10-27 16:59:50.959 [info] Aborting indexing job.
+2025-10-27 16:59:50.959 [error] We currently do not allow indexing the home directory.
+2025-10-27 16:59:50.959 [info] Indexing job successfully done or aborted.
+2025-10-27 17:05:16.960 [info] multiCodebaseIndexingJob dispose
+2025-10-27 17:05:16.960 [info] Aborting indexing job.
+2025-10-27 17:05:16.960 [error] We currently do not allow indexing the home directory.
+2025-10-27 17:05:16.960 [info] Indexing job successfully done or aborted.
+2025-10-27 17:05:22.439 [info] Get user commits took 23.828674994409084ms for 10 commits
+2025-10-27 17:10:42.961 [info] multiCodebaseIndexingJob dispose
+2025-10-27 17:10:42.961 [info] Aborting indexing job.
+2025-10-27 17:10:42.961 [error] We currently do not allow indexing the home directory.
+2025-10-27 17:10:42.961 [info] Indexing job successfully done or aborted.
+2025-10-27 17:15:22.120 [info] Get user commits took 24.348469994962215ms for 10 commits
+2025-10-27 17:16:08.961 [info] multiCodebaseIndexingJob dispose
+2025-10-27 17:16:08.961 [info] Aborting indexing job.
+2025-10-27 17:16:08.961 [error] We currently do not allow indexing the home directory.
+2025-10-27 17:16:08.961 [info] Indexing job successfully done or aborted.
+2025-10-27 17:21:34.961 [info] multiCodebaseIndexingJob dispose
+2025-10-27 17:21:34.961 [info] Aborting indexing job.
+2025-10-27 17:21:34.961 [error] We currently do not allow indexing the home directory.
+2025-10-27 17:21:34.961 [info] Indexing job successfully done or aborted.
+2025-10-27 17:25:22.148 [info] Get user commits took 22.185074001550674ms for 10 commits
+2025-10-27 17:27:00.961 [info] multiCodebaseIndexingJob dispose
+2025-10-27 17:27:00.961 [info] Aborting indexing job.
+2025-10-27 17:27:00.961 [error] We currently do not allow indexing the home directory.
+2025-10-27 17:27:00.961 [info] Indexing job successfully done or aborted.
+2025-10-27 17:32:26.961 [info] multiCodebaseIndexingJob dispose
+2025-10-27 17:32:26.961 [info] Aborting indexing job.
+2025-10-27 17:32:26.961 [error] We currently do not allow indexing the home directory.
+2025-10-27 17:32:26.961 [info] Indexing job successfully done or aborted.
+2025-10-27 17:35:22.167 [info] Get user commits took 21.041910000145435ms for 10 commits
+2025-10-27 17:37:52.961 [info] multiCodebaseIndexingJob dispose
+2025-10-27 17:37:52.961 [info] Aborting indexing job.
+2025-10-27 17:37:52.961 [error] We currently do not allow indexing the home directory.
+2025-10-27 17:37:52.961 [info] Indexing job successfully done or aborted.
+2025-10-27 17:43:18.960 [info] multiCodebaseIndexingJob dispose
+2025-10-27 17:43:18.961 [info] Aborting indexing job.
+2025-10-27 17:43:18.961 [error] We currently do not allow indexing the home directory.
+2025-10-27 17:43:18.961 [info] Indexing job successfully done or aborted.
+2025-10-27 17:45:22.169 [info] Get user commits took 22.2002469971776ms for 10 commits
+2025-10-27 17:48:44.960 [info] multiCodebaseIndexingJob dispose
+2025-10-27 17:48:44.960 [info] Aborting indexing job.
+2025-10-27 17:48:44.960 [error] We currently do not allow indexing the home directory.
+2025-10-27 17:48:44.960 [info] Indexing job successfully done or aborted.
+2025-10-27 17:54:10.961 [info] multiCodebaseIndexingJob dispose
+2025-10-27 17:54:10.961 [info] Aborting indexing job.
+2025-10-27 17:54:10.961 [error] We currently do not allow indexing the home directory.
+2025-10-27 17:54:10.961 [info] Indexing job successfully done or aborted.
+2025-10-27 17:55:22.179 [info] Get user commits took 22.772218003869057ms for 10 commits
+2025-10-27 17:59:36.960 [info] multiCodebaseIndexingJob dispose
+2025-10-27 17:59:36.960 [info] Aborting indexing job.
+2025-10-27 17:59:36.960 [error] We currently do not allow indexing the home directory.
+2025-10-27 17:59:36.960 [info] Indexing job successfully done or aborted.
+2025-10-27 18:05:02.960 [info] multiCodebaseIndexingJob dispose
+2025-10-27 18:05:02.961 [info] Aborting indexing job.
+2025-10-27 18:05:02.961 [error] We currently do not allow indexing the home directory.
+2025-10-27 18:05:02.961 [info] Indexing job successfully done or aborted.
+2025-10-27 18:05:22.156 [info] Get user commits took 23.13978199660778ms for 10 commits
+2025-10-27 18:10:28.960 [info] multiCodebaseIndexingJob dispose
+2025-10-27 18:10:28.960 [info] Aborting indexing job.
+2025-10-27 18:10:28.960 [error] We currently do not allow indexing the home directory.
+2025-10-27 18:10:28.960 [info] Indexing job successfully done or aborted.
+2025-10-27 18:15:22.349 [info] Get user commits took 23.977685004472733ms for 10 commits
+2025-10-27 18:15:54.960 [info] multiCodebaseIndexingJob dispose
+2025-10-27 18:15:54.960 [info] Aborting indexing job.
+2025-10-27 18:15:54.960 [error] We currently do not allow indexing the home directory.
+2025-10-27 18:15:54.960 [info] Indexing job successfully done or aborted.
+2025-10-27 18:21:20.960 [info] multiCodebaseIndexingJob dispose
+2025-10-27 18:21:20.960 [info] Aborting indexing job.
+2025-10-27 18:21:20.960 [error] We currently do not allow indexing the home directory.
+2025-10-27 18:21:20.960 [info] Indexing job successfully done or aborted.
+2025-10-27 18:25:22.168 [info] Get user commits took 26.225866988301277ms for 10 commits
+2025-10-27 18:26:46.960 [info] multiCodebaseIndexingJob dispose
+2025-10-27 18:26:46.960 [info] Aborting indexing job.
+2025-10-27 18:26:46.960 [error] We currently do not allow indexing the home directory.
+2025-10-27 18:26:46.960 [info] Indexing job successfully done or aborted.
+2025-10-27 18:32:12.961 [info] multiCodebaseIndexingJob dispose
+2025-10-27 18:32:12.961 [info] Aborting indexing job.
+2025-10-27 18:32:12.961 [error] We currently do not allow indexing the home directory.
+2025-10-27 18:32:12.961 [info] Indexing job successfully done or aborted.
+2025-10-27 18:35:22.185 [info] Get user commits took 33.72995999455452ms for 10 commits
+2025-10-27 18:37:38.960 [info] multiCodebaseIndexingJob dispose
+2025-10-27 18:37:38.960 [info] Aborting indexing job.
+2025-10-27 18:37:38.960 [error] We currently do not allow indexing the home directory.
+2025-10-27 18:37:38.960 [info] Indexing job successfully done or aborted.
+2025-10-27 18:43:04.961 [info] multiCodebaseIndexingJob dispose
+2025-10-27 18:43:04.961 [info] Aborting indexing job.
+2025-10-27 18:43:04.961 [error] We currently do not allow indexing the home directory.
+2025-10-27 18:43:04.961 [info] Indexing job successfully done or aborted.
+2025-10-27 18:45:22.184 [info] Get user commits took 23.52201399207115ms for 10 commits
+2025-10-27 18:48:30.960 [info] multiCodebaseIndexingJob dispose
+2025-10-27 18:48:30.960 [info] Aborting indexing job.
+2025-10-27 18:48:30.960 [error] We currently do not allow indexing the home directory.
+2025-10-27 18:48:30.960 [info] Indexing job successfully done or aborted.
+2025-10-27 18:53:56.961 [info] multiCodebaseIndexingJob dispose
+2025-10-27 18:53:56.961 [info] Aborting indexing job.
+2025-10-27 18:53:56.961 [error] We currently do not allow indexing the home directory.
+2025-10-27 18:53:56.961 [info] Indexing job successfully done or aborted.
+2025-10-27 18:55:22.186 [info] Get user commits took 22.82380498945713ms for 10 commits
+2025-10-27 18:59:22.961 [info] multiCodebaseIndexingJob dispose
+2025-10-27 18:59:22.961 [info] Aborting indexing job.
+2025-10-27 18:59:22.961 [error] We currently do not allow indexing the home directory.
+2025-10-27 18:59:22.961 [info] Indexing job successfully done or aborted.
+2025-10-27 19:04:48.962 [info] multiCodebaseIndexingJob dispose
+2025-10-27 19:04:48.962 [info] Aborting indexing job.
+2025-10-27 19:04:48.962 [error] We currently do not allow indexing the home directory.
+2025-10-27 19:04:48.962 [info] Indexing job successfully done or aborted.
+2025-10-27 19:05:22.196 [info] Get user commits took 22.94609299302101ms for 10 commits
+2025-10-27 19:10:14.961 [info] multiCodebaseIndexingJob dispose
+2025-10-27 19:10:14.961 [info] Aborting indexing job.
+2025-10-27 19:10:14.961 [error] We currently do not allow indexing the home directory.
+2025-10-27 19:10:14.961 [info] Indexing job successfully done or aborted.
+2025-10-27 19:15:22.201 [info] Get user commits took 22.607570990920067ms for 10 commits
+2025-10-27 19:15:40.962 [info] multiCodebaseIndexingJob dispose
+2025-10-27 19:15:40.962 [info] Aborting indexing job.
+2025-10-27 19:15:40.962 [error] We currently do not allow indexing the home directory.
+2025-10-27 19:15:40.962 [info] Indexing job successfully done or aborted.
+2025-10-27 19:21:06.961 [info] multiCodebaseIndexingJob dispose
+2025-10-27 19:21:06.961 [info] Aborting indexing job.
+2025-10-27 19:21:06.961 [error] We currently do not allow indexing the home directory.
+2025-10-27 19:21:06.961 [info] Indexing job successfully done or aborted.
+2025-10-27 19:25:22.203 [info] Get user commits took 16.9969399869442ms for 10 commits
+2025-10-27 19:26:32.962 [info] multiCodebaseIndexingJob dispose
+2025-10-27 19:26:32.962 [info] Aborting indexing job.
+2025-10-27 19:26:32.962 [error] We currently do not allow indexing the home directory.
+2025-10-27 19:26:32.962 [info] Indexing job successfully done or aborted.
+2025-10-27 19:31:58.962 [info] multiCodebaseIndexingJob dispose
+2025-10-27 19:31:58.962 [info] Aborting indexing job.
+2025-10-27 19:31:58.962 [error] We currently do not allow indexing the home directory.
+2025-10-27 19:31:58.962 [info] Indexing job successfully done or aborted.
+2025-10-27 19:35:22.212 [info] Get user commits took 20.53211699426174ms for 10 commits
+2025-10-27 19:37:24.962 [info] multiCodebaseIndexingJob dispose
+2025-10-27 19:37:24.962 [info] Aborting indexing job.
+2025-10-27 19:37:24.962 [error] We currently do not allow indexing the home directory.
+2025-10-27 19:37:24.962 [info] Indexing job successfully done or aborted.
+2025-10-27 19:42:50.962 [info] multiCodebaseIndexingJob dispose
+2025-10-27 19:42:50.962 [info] Aborting indexing job.
+2025-10-27 19:42:50.962 [error] We currently do not allow indexing the home directory.
+2025-10-27 19:42:50.962 [info] Indexing job successfully done or aborted.
+2025-10-27 19:45:22.231 [info] Get user commits took 30.98207101225853ms for 10 commits
+2025-10-27 19:48:16.963 [info] multiCodebaseIndexingJob dispose
+2025-10-27 19:48:16.963 [info] Aborting indexing job.
+2025-10-27 19:48:16.963 [error] We currently do not allow indexing the home directory.
+2025-10-27 19:48:16.963 [info] Indexing job successfully done or aborted.
+2025-10-27 19:53:42.963 [info] multiCodebaseIndexingJob dispose
+2025-10-27 19:53:42.963 [info] Aborting indexing job.
+2025-10-27 19:53:42.963 [error] We currently do not allow indexing the home directory.
+2025-10-27 19:53:42.963 [info] Indexing job successfully done or aborted.
+2025-10-27 19:55:22.305 [info] Get user commits took 29.15209101140499ms for 10 commits
+2025-10-27 19:59:08.963 [info] multiCodebaseIndexingJob dispose
+2025-10-27 19:59:08.963 [info] Aborting indexing job.
+2025-10-27 19:59:08.963 [error] We currently do not allow indexing the home directory.
+2025-10-27 19:59:08.963 [info] Indexing job successfully done or aborted.
+2025-10-27 20:04:34.963 [info] multiCodebaseIndexingJob dispose
+2025-10-27 20:04:34.963 [info] Aborting indexing job.
+2025-10-27 20:04:34.963 [error] We currently do not allow indexing the home directory.
+2025-10-27 20:04:34.963 [info] Indexing job successfully done or aborted.
+2025-10-27 20:05:22.265 [info] Get user commits took 17.721088007092476ms for 10 commits
+2025-10-27 20:10:00.964 [info] multiCodebaseIndexingJob dispose
+2025-10-27 20:10:00.964 [info] Aborting indexing job.
+2025-10-27 20:10:00.964 [error] We currently do not allow indexing the home directory.
+2025-10-27 20:10:00.964 [info] Indexing job successfully done or aborted.
+2025-10-27 20:15:22.244 [info] Get user commits took 21.087143003940582ms for 10 commits
+2025-10-27 20:15:26.964 [info] multiCodebaseIndexingJob dispose
+2025-10-27 20:15:26.964 [info] Aborting indexing job.
+2025-10-27 20:15:26.965 [error] We currently do not allow indexing the home directory.
+2025-10-27 20:15:26.965 [info] Indexing job successfully done or aborted.
+2025-10-27 20:20:52.964 [info] multiCodebaseIndexingJob dispose
+2025-10-27 20:20:52.964 [info] Aborting indexing job.
+2025-10-27 20:20:52.964 [error] We currently do not allow indexing the home directory.
+2025-10-27 20:20:52.964 [info] Indexing job successfully done or aborted.
+2025-10-27 20:25:22.251 [info] Get user commits took 22.446350008249283ms for 10 commits
+2025-10-27 20:26:18.964 [info] multiCodebaseIndexingJob dispose
+2025-10-27 20:26:18.965 [info] Aborting indexing job.
+2025-10-27 20:26:18.965 [error] We currently do not allow indexing the home directory.
+2025-10-27 20:26:18.965 [info] Indexing job successfully done or aborted.
+2025-10-27 20:31:44.965 [info] multiCodebaseIndexingJob dispose
+2025-10-27 20:31:44.965 [info] Aborting indexing job.
+2025-10-27 20:31:44.965 [error] We currently do not allow indexing the home directory.
+2025-10-27 20:31:44.965 [info] Indexing job successfully done or aborted.
+2025-10-27 20:35:22.262 [info] Get user commits took 25.32898099720478ms for 10 commits
+2025-10-27 20:37:10.964 [info] multiCodebaseIndexingJob dispose
+2025-10-27 20:37:10.964 [info] Aborting indexing job.
+2025-10-27 20:37:10.964 [error] We currently do not allow indexing the home directory.
+2025-10-27 20:37:10.964 [info] Indexing job successfully done or aborted.
+2025-10-27 20:39:52.558 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 20:42:36.964 [info] multiCodebaseIndexingJob dispose
+2025-10-27 20:42:36.964 [info] Aborting indexing job.
+2025-10-27 20:42:36.964 [error] We currently do not allow indexing the home directory.
+2025-10-27 20:42:36.964 [info] Indexing job successfully done or aborted.
+2025-10-27 20:43:49.144 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 20:44:04.887 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 20:44:15.386 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 20:44:52.424 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 20:45:23.940 [info] Get user commits took 18.430396005511284ms for 10 commits
+2025-10-27 20:48:02.964 [info] multiCodebaseIndexingJob dispose
+2025-10-27 20:48:02.964 [info] Aborting indexing job.
+2025-10-27 20:48:02.964 [error] We currently do not allow indexing the home directory.
+2025-10-27 20:48:02.965 [info] Indexing job successfully done or aborted.
+2025-10-27 20:48:11.773 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 20:48:16.887 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 20:48:27.364 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 20:48:40.577 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 20:48:45.942 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 20:49:01.986 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 20:49:17.813 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 20:49:23.230 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')

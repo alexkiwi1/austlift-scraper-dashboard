@@ -75,34 +75,29 @@ export interface ScrapeResponse {
 export interface ScrapeJob {
   job_id: string;
   status: 'started' | 'running' | 'completed' | 'failed' | 'queued';
-  message: string;
+  products_count: number; // Always 0 during "running", populated when "completed"
+  variations_count: number; // Always 0 during "running", populated when "completed"
   current_product: number;
   total_products: number;
   progress_percentage: number;
-  created_at: string; // ISO 8601 datetime
-  completed_at: string | null; // ISO 8601 datetime, null if not completed
-  error_message: string | null; // Detailed error message if status is 'failed'
+  message?: string;
+  // Note: The following fields are NOT returned by the API:
+  // - created_at
+  // - updated_at
+  // - error_message (errors shown in "message" field instead)
 }
 
-// GET /products - Response type
 export interface ProductsResponse {
-  products: ProductsEndpoint[];
-  total: number;
-  limit: number;
-  offset: number;
-}
-
-// GET /products/by-category/{id} - Response type
-export interface ProductsByCategoryResponse {
-  products: ProductsByCategoryEndpoint[];
+  products: Product[];
   total: number;
   category_id: string;
   limit: number;
   offset: number;
 }
 
-// Legacy alias for CategoriesFetchResponse
-export type CategoriesResponse = CategoriesFetchResponse;
+export interface CategoriesResponse {
+  categories: Category[];
+}
 
 // Component State Types
 export type StepStatus = 'idle' | 'loading' | 'success' | 'error';
@@ -134,7 +129,7 @@ export interface WorkflowStepProps {
 }
 
 export interface ProductsTableProps {
-  products: ProductsByCategoryEndpoint[];
+  products: Product[];
   isMinimized: boolean;
   onToggleMinimize: () => void;
   onClose: () => void;
@@ -155,7 +150,7 @@ export interface UseCategoriesReturn {
 }
 
 export interface UseProductsReturn {
-  products: ProductsByCategoryEndpoint[];
+  products: Product[];
   total: number;
   loading: boolean;
   error: ErrorState;
