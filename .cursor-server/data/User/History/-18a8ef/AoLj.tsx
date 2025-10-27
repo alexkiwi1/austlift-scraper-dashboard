@@ -201,14 +201,14 @@ const ProductsTable: React.FC<ProductsTableProps> = ({
       key: 'specification_pdfs',
       label: 'PDFs',
       width: '120px',
-      render: value => {
+      render: (value, product) => {
         if (value && Array.isArray(value) && value.length > 0) {
           const pdfs = value as Array<{ name: string; path: string }>;
           return (
             <div className='flex flex-col gap-1'>
-              {pdfs.slice(0, 2).map(pdf => (
+              {pdfs.slice(0, 2).map((pdf, idx) => (
                 <a
-                  key={pdf.path}
+                  key={idx}
                   href={`/${pdf.path}`}
                   target='_blank'
                   rel='noopener noreferrer'
