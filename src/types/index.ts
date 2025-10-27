@@ -188,3 +188,23 @@ export type AsyncState<T> = {
 };
 
 export type StepId = 'step1' | 'step2' | 'step3' | 'step4';
+
+// Step 0: Delete/Backup Types
+export interface DeleteProductsResponse {
+  message: string;
+  count: number;
+}
+
+export interface ProductCountResponse {
+  count: number;
+}
+
+export interface ProductBackup {
+  metadata: {
+    backup_date: string;
+    product_count: number;
+    categories: Array<{ id: string; name: string }>;
+    version: string;
+  };
+  products: ProductsByCategoryEndpoint[];
+}
