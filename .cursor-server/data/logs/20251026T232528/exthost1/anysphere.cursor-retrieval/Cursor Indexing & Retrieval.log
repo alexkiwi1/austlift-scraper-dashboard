@@ -1176,3 +1176,7 @@
 2025-10-27 20:49:01.986 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
 2025-10-27 20:49:17.813 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
 2025-10-27 20:49:23.230 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 20:49:54.728 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 20:49:59.932 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 20:50:26.189 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 20:50:47.257 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
