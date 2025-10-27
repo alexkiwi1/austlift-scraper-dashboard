@@ -290,6 +290,38 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
   ]);
 
   /**
+   * Polls a scraping job for progress updates
+   * @param {string} jobId - The job ID to poll
+   * @returns {Promise<void>} Promise that resolves when polling completes or job finishes
+   */
+  const pollJobProgress = useCallback(async (jobId: string): Promise<void> => {
+    try {
+      const response = await fetch(`/jobs/${jobId}`);
+      if (!response.ok) {
+        console.error(`Failed to fetch job ${jobId}: ${response.status}`);
+        return;
+      }
+
+      const jobStatus: ScrapeJob = await response.json();
+
+      // Update job status in state
+      setScrapingJobs(prev => ({
+        ...prev,
+        [jobId]: jobStatus,
+      }));
+
+      // Continue polling if job is still running
+      if (jobStatus.status === 'running' || jobStatus.status === 'started') {
+        setTimeout(() => {
+          pollJobProgress(jobId);
+        }, 2000); // Poll every 2 seconds
+      }
+    } catch (err) {
+      console.error(`Error polling job progress for ${jobId}:`, err);
+    }
+  }, []);
+
+  /**
    * Refreshes categories from the API
    * @returns {Promise<void>} Promise that resolves when categories are refreshed
    * @throws {Error} When API request fails

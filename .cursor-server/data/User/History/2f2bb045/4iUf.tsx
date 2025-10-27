@@ -174,38 +174,6 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
     }
   }, []);
 
-  /**
-   * Polls a scraping job for progress updates
-   * @param {string} jobId - The job ID to poll
-   * @returns {Promise<void>} Promise that resolves when polling completes or job finishes
-   */
-  const pollJobProgress = useCallback(async (jobId: string): Promise<void> => {
-    try {
-      const response = await fetch(`/jobs/${jobId}`);
-      if (!response.ok) {
-        console.error(`Failed to fetch job ${jobId}: ${response.status}`);
-        return;
-      }
-
-      const jobStatus: ScrapeJob = await response.json();
-
-      // Update job status in state
-      setScrapingJobs(prev => ({
-        ...prev,
-        [jobId]: jobStatus,
-      }));
-
-      // Continue polling if job is still running
-      if (jobStatus.status === 'running' || jobStatus.status === 'started') {
-        setTimeout(() => {
-          pollJobProgress(jobId);
-        }, 2000); // Poll every 2 seconds
-      }
-    } catch (err) {
-      console.error(`Error polling job progress for ${jobId}:`, err);
-    }
-  }, []);
-
   // Restore state from localStorage or fetch fresh data on component mount
   useEffect(() => {
     console.log('[Persistence] Component mounted, checking for saved state...');
@@ -215,11 +183,8 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
     );
 
     if (savedState) {
-      console.log(
-        '[Persistence] Restoring saved state from',
-        new Date(savedState.timestamp)
-      );
-
+      console.log('[Persistence] Restoring saved state from', new Date(savedState.timestamp));
+      
       // Restore all state
       setStep0Status(savedState.step0Status);
       setProductCount(savedState.productCount);
@@ -290,6 +255,38 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
   ]);
 
   /**
+   * Polls a scraping job for progress updates
+   * @param {string} jobId - The job ID to poll
+   * @returns {Promise<void>} Promise that resolves when polling completes or job finishes
+   */
+  const pollJobProgress = useCallback(async (jobId: string): Promise<void> => {
+    try {
+      const response = await fetch(`/jobs/${jobId}`);
+      if (!response.ok) {
+        console.error(`Failed to fetch job ${jobId}: ${response.status}`);
+        return;
+      }
+
+      const jobStatus: ScrapeJob = await response.json();
+
+      // Update job status in state
+      setScrapingJobs(prev => ({
+        ...prev,
+        [jobId]: jobStatus,
+      }));
+
+      // Continue polling if job is still running
+      if (jobStatus.status === 'running' || jobStatus.status === 'started') {
+        setTimeout(() => {
+          pollJobProgress(jobId);
+        }, 2000); // Poll every 2 seconds
+      }
+    } catch (err) {
+      console.error(`Error polling job progress for ${jobId}:`, err);
+    }
+  }, []);
+
+  /**
    * Refreshes categories from the API
    * @returns {Promise<void>} Promise that resolves when categories are refreshed
    * @throws {Error} When API request fails
@@ -314,29 +311,6 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
       console.error('Error refreshing categories:', err);
     }
   }, []);
-
-  /**
-   * Resets the entire dashboard state and clears localStorage
-   * @returns {void}
-   */
-  const handleResetDashboard = useCallback((): void => {
-    // eslint-disable-next-line no-alert
-    const confirmed = window.confirm(
-      '🔄 Reset Dashboard\n\n' +
-        'This will clear all progress and cached data:\n' +
-        '- Scraping job progress\n' +
-        '- Step completion statuses\n' +
-        '- Loaded categories and products\n\n' +
-        'The page will reload after reset.\n\n' +
-        'Continue?'
-    );
-
-    if (confirmed) {
-      console.log('[Persistence] Clearing all saved state...');
-      clearState(STORAGE_KEY);
-      window.location.reload();
-    }
-  }, [STORAGE_KEY]);
 
   /**
    * Handles Step 0 - Clear all products (with confirmation)
@@ -710,28 +684,18 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
 
               {/* Welcome Section */}
               <div className='bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg shadow-lg p-8 text-white'>
-                <div className='flex items-center justify-between'>
-                  <div className='flex items-center space-x-4'>
-                    <div className='p-3 bg-white bg-opacity-20 rounded-lg'>
-                      <Home className='w-8 h-8' />
-                    </div>
-                    <div>
-                      <h1 className='text-3xl font-bold'>
-                        Austlift Scraper Dashboard
-                      </h1>
-                      <p className='text-blue-100 text-lg'>
-                        Complete Product Data Management Workflow
-                      </p>
-                    </div>
+                <div className='flex items-center space-x-4 mb-4'>
+                  <div className='p-3 bg-white bg-opacity-20 rounded-lg'>
+                    <Home className='w-8 h-8' />
                   </div>
-                  <button
-                    type='button'
-                    onClick={handleResetDashboard}
-                    className='px-4 py-2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white rounded-lg transition-colors font-semibold border border-white border-opacity-30'
-                    title='Clear all progress and reload dashboard'
-                  >
-                    🔄 Reset Dashboard
-                  </button>
+                  <div>
+                    <h1 className='text-3xl font-bold'>
+                      Austlift Scraper Dashboard
+                    </h1>
+                    <p className='text-blue-100 text-lg'>
+                      Complete Product Data Management Workflow
+                    </p>
+                  </div>
                 </div>
               </div>
 

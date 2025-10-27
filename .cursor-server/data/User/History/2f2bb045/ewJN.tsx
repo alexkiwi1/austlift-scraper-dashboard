@@ -174,38 +174,6 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
     }
   }, []);
 
-  /**
-   * Polls a scraping job for progress updates
-   * @param {string} jobId - The job ID to poll
-   * @returns {Promise<void>} Promise that resolves when polling completes or job finishes
-   */
-  const pollJobProgress = useCallback(async (jobId: string): Promise<void> => {
-    try {
-      const response = await fetch(`/jobs/${jobId}`);
-      if (!response.ok) {
-        console.error(`Failed to fetch job ${jobId}: ${response.status}`);
-        return;
-      }
-
-      const jobStatus: ScrapeJob = await response.json();
-
-      // Update job status in state
-      setScrapingJobs(prev => ({
-        ...prev,
-        [jobId]: jobStatus,
-      }));
-
-      // Continue polling if job is still running
-      if (jobStatus.status === 'running' || jobStatus.status === 'started') {
-        setTimeout(() => {
-          pollJobProgress(jobId);
-        }, 2000); // Poll every 2 seconds
-      }
-    } catch (err) {
-      console.error(`Error polling job progress for ${jobId}:`, err);
-    }
-  }, []);
-
   // Restore state from localStorage or fetch fresh data on component mount
   useEffect(() => {
     console.log('[Persistence] Component mounted, checking for saved state...');
@@ -215,11 +183,8 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
     );
 
     if (savedState) {
-      console.log(
-        '[Persistence] Restoring saved state from',
-        new Date(savedState.timestamp)
-      );
-
+      console.log('[Persistence] Restoring saved state from', new Date(savedState.timestamp));
+      
       // Restore all state
       setStep0Status(savedState.step0Status);
       setProductCount(savedState.productCount);
@@ -288,6 +253,38 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
     showStep4Dropdown,
     isTableMinimized,
   ]);
+
+  /**
+   * Polls a scraping job for progress updates
+   * @param {string} jobId - The job ID to poll
+   * @returns {Promise<void>} Promise that resolves when polling completes or job finishes
+   */
+  const pollJobProgress = useCallback(async (jobId: string): Promise<void> => {
+    try {
+      const response = await fetch(`/jobs/${jobId}`);
+      if (!response.ok) {
+        console.error(`Failed to fetch job ${jobId}: ${response.status}`);
+        return;
+      }
+
+      const jobStatus: ScrapeJob = await response.json();
+
+      // Update job status in state
+      setScrapingJobs(prev => ({
+        ...prev,
+        [jobId]: jobStatus,
+      }));
+
+      // Continue polling if job is still running
+      if (jobStatus.status === 'running' || jobStatus.status === 'started') {
+        setTimeout(() => {
+          pollJobProgress(jobId);
+        }, 2000); // Poll every 2 seconds
+      }
+    } catch (err) {
+      console.error(`Error polling job progress for ${jobId}:`, err);
+    }
+  }, []);
 
   /**
    * Refreshes categories from the API

@@ -35,3 +35,4 @@
 2025-10-27 21:32:53.037 [info] Getting extensions control
 2025-10-27 21:32:53.088 [info] [127.0.0.1][b738367a][ExtensionHostConnection] New connection established.
 2025-10-27 21:32:53.104 [info] [127.0.0.1][b738367a][ExtensionHostConnection] <674873> Launched Extension Host Process.
+2025-10-27 21:37:19.169 [info] New EH opened, aborting shutdown
