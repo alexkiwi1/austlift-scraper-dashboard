@@ -68,11 +68,7 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }
       const data = await response.json();
-      console.log(
-        'Categories fetched:',
-        data.categories?.length || 0,
-        'categories'
-      );
+      console.log('Categories fetched:', data.categories?.length || 0, 'categories');
       setCategories(data.categories || []);
     } catch (err) {
       const errorMessage =
