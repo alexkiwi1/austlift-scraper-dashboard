@@ -178,12 +178,12 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
         const response = await fetch('/scrape', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            category_url: category.url,
-            max_pages: 100, // Scrape all pages per category
-            scrape_variations: true,
-            use_auth: true,
-          }),
+        body: JSON.stringify({
+          category_url: category.url,
+          max_pages: 100, // Scrape all pages per category
+          scrape_variations: true,
+          use_auth: true,
+        }),
         });
 
         if (!response.ok) {

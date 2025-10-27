@@ -182,7 +182,6 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
             category_url: category.url,
             max_pages: 100, // Scrape all pages per category
             scrape_variations: true,
-            use_auth: true,
           }),
         });
 
