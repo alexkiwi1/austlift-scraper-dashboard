@@ -4,15 +4,15 @@
 3 silly config load:file:/usr/lib/node_modules/npm/npmrc
 4 silly config load:file:/root/.npmrc
 5 silly config load:file:/usr/etc/npmrc
-6 verbose title npm run format
-7 verbose argv "run" "format"
-8 verbose logfile logs-max:10 dir:/root/.npm/_logs/2025-10-26T06_56_33_704Z-
-9 verbose logfile /root/.npm/_logs/2025-10-26T06_56_33_704Z-debug-0.log
+6 verbose title npm run lint
+7 verbose argv "run" "lint"
+8 verbose logfile logs-max:10 dir:/root/.npm/_logs/2025-10-27T00_49_40_087Z-
+9 verbose logfile /root/.npm/_logs/2025-10-27T00_49_40_087Z-debug-0.log
 10 silly logfile start cleaning logs, removing 1 files
 11 silly logfile done cleaning log files
 12 verbose cwd /root
 13 verbose os Linux 6.8.12-9-pve
 14 verbose node v22.21.0
 15 verbose npm  v10.9.4
-16 verbose exit 0
-17 info ok
+16 verbose exit 1
+17 verbose code 1

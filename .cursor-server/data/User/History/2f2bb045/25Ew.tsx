@@ -47,6 +47,12 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
    * @param {string} defaultColor - The default color class
    * @returns {string} CSS class string
    */
+  /**
+   * Gets the appropriate CSS class for step status
+   * @param {StepState} status - The step status
+   * @param {string} defaultColor - The default color class
+   * @returns {string} CSS class string
+   */
   const getStatusColor = (status: StepState, defaultColor: string): string => {
     if (status.status === 'success') return 'text-green-600';
     if (status.status === 'error') return 'text-red-600';
@@ -74,11 +80,6 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
       console.error('Error fetching categories:', err);
     }
   }, []);
-
-  // Fetch categories on component mount
-  useEffect(() => {
-    fetchCategories();
-  }, [fetchCategories]);
 
   /**
    * Refreshes categories from the API
