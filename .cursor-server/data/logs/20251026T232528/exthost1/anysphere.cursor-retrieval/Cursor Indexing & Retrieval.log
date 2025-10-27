@@ -373,3 +373,18 @@
 2025-10-27 05:40:40.941 [info] Indexing job successfully done or aborted.
 2025-10-27 05:43:35.249 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
 2025-10-27 05:43:46.007 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 05:44:01.812 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 05:44:07.107 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 05:44:13.135 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 05:45:23.307 [info] Get user commits took 23.242322999984026ms for 10 commits
+2025-10-27 05:46:06.941 [info] multiCodebaseIndexingJob dispose
+2025-10-27 05:46:06.941 [info] Aborting indexing job.
+2025-10-27 05:46:06.941 [error] We currently do not allow indexing the home directory.
+2025-10-27 05:46:06.941 [info] Indexing job successfully done or aborted.
+2025-10-27 05:51:32.941 [info] multiCodebaseIndexingJob dispose
+2025-10-27 05:51:32.941 [info] Aborting indexing job.
+2025-10-27 05:51:32.942 [error] We currently do not allow indexing the home directory.
+2025-10-27 05:51:32.942 [info] Indexing job successfully done or aborted.
+2025-10-27 05:55:22.202 [info] Get user commits took 26.835377000272274ms for 10 commits
+2025-10-27 05:55:59.256 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 05:56:04.562 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
