@@ -250,14 +250,12 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
       // Fetch products from all categories to get complete data with images
       // eslint-disable-next-line no-restricted-syntax
       for (const category of categories) {
-        // eslint-disable-next-line no-await-in-loop
         const response = await fetch(
           `/products/by-category/${category.id}?limit=1000&offset=0`
         );
         if (!response.ok) {
           throw new Error(`HTTP ${response.status}: ${response.statusText}`);
         }
-        // eslint-disable-next-line no-await-in-loop
         const data: ProductsResponse = await response.json();
         allProducts.push(...data.products);
       }

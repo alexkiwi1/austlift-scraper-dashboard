@@ -190,24 +190,19 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
     });
     await handleStep2();
 
-    setStep3Status({
-      status: 'loading',
-      message: 'Loading products from all categories...',
-    });
+    setStep3Status({ status: 'loading', message: 'Loading products from all categories...' });
     try {
       let totalProducts = 0;
 
       // Fetch products from each category to get complete data
       // eslint-disable-next-line no-restricted-syntax
       for (const category of categories) {
-        // eslint-disable-next-line no-await-in-loop
         const response = await fetch(
           `/products/by-category/${category.id}?limit=1000&offset=0`
         );
         if (!response.ok) {
           throw new Error(`HTTP ${response.status}: ${response.statusText}`);
         }
-        // eslint-disable-next-line no-await-in-loop
         const data: ProductsResponse = await response.json();
         totalProducts += data.total;
       }
@@ -242,27 +237,16 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
 
     setStep4Status({
       status: 'loading',
-      message: 'Loading products from all categories...',
+      message: 'Loading ALL products for table display...',
     });
     try {
-      const allProducts: Product[] = [];
-
-      // Fetch products from all categories to get complete data with images
-      // eslint-disable-next-line no-restricted-syntax
-      for (const category of categories) {
-        // eslint-disable-next-line no-await-in-loop
-        const response = await fetch(
-          `/products/by-category/${category.id}?limit=1000&offset=0`
-        );
-        if (!response.ok) {
-          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-        }
-        // eslint-disable-next-line no-await-in-loop
-        const data: ProductsResponse = await response.json();
-        allProducts.push(...data.products);
+      const response = await fetch('/products?limit=10000&offset=0');
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }
+      const data = await response.json();
 
-      if (allProducts.length === 0) {
+      if (!data.products || data.products.length === 0) {
         setStep4Products([]);
         setStep4Status({
           status: 'error',
@@ -271,10 +255,10 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
         return;
       }
 
-      setStep4Products(allProducts);
+      setStep4Products(data.products);
       setStep4Status({
         status: 'success',
-        message: `✅ ALL products loaded! Showing ${allProducts.length} products from ${categories.length} categories`,
+        message: `✅ ALL products loaded! Showing ${data.products.length} products`,
       });
       setShowStep4Dropdown(true);
       setIsTableMinimized(false);

@@ -62,13 +62,7 @@ const ProductsTable: React.FC<ProductsTableProps> = ({
           '-'
         ),
     },
-    {
-      key: 'code',
-      label: 'Code',
-      sortable: true,
-      filterable: true,
-      width: '100px',
-    },
+    { key: 'code', label: 'Code', sortable: true, filterable: true, width: '100px' },
     { key: 'name', label: 'Name', sortable: true, filterable: true },
     {
       key: 'price',

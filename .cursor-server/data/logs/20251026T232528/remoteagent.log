@@ -9,3 +9,4 @@
 2025-10-26 23:25:29.178 [info] [127.0.0.1][ea68f6ad][ExtensionHostConnection] <271445> Launched Extension Host Process.
 2025-10-26 23:25:29.188 [info] Getting extensions control
 2025-10-26 23:30:28.682 [info] New EH opened, aborting shutdown
+2025-10-27 00:36:03.212 [warning] [File Watcher (node.js)] Watcher shutdown because watched path got deleted
