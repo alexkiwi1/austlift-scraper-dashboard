@@ -96,3 +96,6 @@
 2025-10-27 00:54:14.815 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
 2025-10-27 00:54:25.385 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
 2025-10-27 00:54:36.126 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 00:55:09.588 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 00:55:19.251 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-27 00:55:21.431 [info] Get user commits took 15.888130000792444ms for 10 commits
