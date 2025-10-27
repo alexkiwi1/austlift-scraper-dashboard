@@ -1,0 +1,108 @@
+2025-10-26 03:23:25.049 [info] Handling CreateClient action
+2025-10-26 03:23:25.050 [info] Starting new stdio process with command: npx -y @modelcontextprotocol/server-filesystem /tmp
+2025-10-26 03:23:29.491 [error] Secure MCP Filesystem Server running on stdio
+
+2025-10-26 03:23:29.493 [info] Successfully connected to stdio server
+2025-10-26 03:23:29.493 [info] Storing stdio client project-0-root-test-server
+2025-10-26 03:23:29.493 [info] CreateClient completed, server stored: true
+2025-10-26 03:23:29.524 [info] ListRootsRequest received
+2025-10-26 03:23:29.532 [error] Updated allowed directories from MCP roots: 1 valid directories
+
+2025-10-26 03:23:29.532 [error] Updated allowed directories from MCP roots: 1 valid directories
+
+2025-10-26 03:23:30.998 [info] Handling CreateClient action
+2025-10-26 03:23:30.998 [info] Handling CreateClient action
+2025-10-26 03:23:30.998 [info] Handling CreateClient action
+2025-10-26 03:23:30.998 [info] Handling CreateClient action
+2025-10-26 03:23:30.998 [info] CreateClient completed, server stored: true
+2025-10-26 03:23:30.998 [info] CreateClient completed, server stored: true
+2025-10-26 03:23:30.998 [info] CreateClient completed, server stored: true
+2025-10-26 03:23:30.998 [info] CreateClient completed, server stored: true
+2025-10-26 03:23:32.576 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:23:32.577 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:23:32.582 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:23:32.582 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:23:32.585 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:23:32.589 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:23:32.591 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:23:32.592 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:23:32.595 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:23:32.597 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:23:32.597 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:23:32.602 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:23:32.606 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:23:32.606 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:23:32.607 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:23:32.607 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:23:32.609 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:23:32.612 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:23:32.612 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:23:32.612 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:23:32.614 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:23:34.953 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:23:34.953 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:23:34.958 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:23:34.990 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:23:34.990 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:23:34.997 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:23:34.998 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:23:34.998 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:23:35.005 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:23:35.005 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:23:35.005 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:23:35.009 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:23:35.440 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:23:35.441 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:23:35.442 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:23:35.442 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:23:35.444 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:23:35.446 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:23:35.448 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:23:35.449 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:23:35.452 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:23:35.468 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:23:35.468 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:23:35.468 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:23:35.469 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:23:35.470 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:23:35.472 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:23:35.473 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:23:35.473 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:23:35.476 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:23:35.530 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:23:35.530 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:23:35.533 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:23:35.534 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:23:35.534 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:23:35.536 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:23:35.536 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:23:35.537 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:23:35.538 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:23:35.538 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:23:35.539 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:23:35.540 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:23:35.540 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:23:35.540 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:23:35.541 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:23:35.541 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:23:35.543 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:23:35.543 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:23:35.543 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:23:35.545 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:23:35.546 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:23:35.546 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:23:35.546 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:23:35.552 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:23:35.644 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:23:35.644 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:23:35.646 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:23:35.650 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:23:35.650 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:23:35.652 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:23:35.656 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:23:35.656 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:23:35.658 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:25:06.426 [info] Handling DeleteClient action
+2025-10-26 03:25:06.426 [info] Cleaning up
+2025-10-26 03:25:06.880 [info] Handling DeleteClient action
+2025-10-26 03:25:06.898 [info] Handling DeleteClient action

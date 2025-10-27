@@ -1,0 +1,11 @@
+2025-10-26 03:03:52.947 [info] Creating Indexing Repo client:  https://repo42.cursor.sh
+2025-10-26 03:03:52.948 [info] Creating repo client with backend url: https://repo42.cursor.sh
+2025-10-26 03:03:53.097 [info] Using existing keys for an index
+2025-10-26 03:03:53.098 [info] InternalRepoInfo constructor with preferredEmbeddingModel 0
+2025-10-26 03:03:53.258 [warning] Failed to get symbolic ref: Failed to execute git
+2025-10-26 03:03:53.284 [info] Picked default branch from method 1.
+2025-10-26 03:03:53.455 [error] We currently do not allow indexing the home directory.
+2025-10-26 03:03:53.455 [info] Indexing job successfully done or aborted.
+2025-10-26 03:03:55.701 [error] Error getting submodules: A system error occurred (ENOENT: no such file or directory, open '/root/.gitmodules')
+2025-10-26 03:08:02.854 [info] multiCodebaseIndexingJob dispose
+2025-10-26 03:08:02.854 [info] Aborting indexing job.

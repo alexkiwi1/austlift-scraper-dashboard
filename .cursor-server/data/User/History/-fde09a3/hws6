@@ -1,0 +1,377 @@
+# Austlift Scraper Dashboard - Comprehensive Cursor Rules
+# Based on TypeScript (React, Next.js, Tailwind, Supabase) + Code Quality + Best Practices
+
+## Project Overview
+You are working on the Austlift Scraper Dashboard - a React TypeScript application for monitoring and controlling web scraping jobs. The project uses:
+- React 18+ with functional components and hooks
+- TypeScript for type safety
+- Tailwind CSS for styling
+- Lucide React for icons
+- Fetch API for HTTP requests
+- Docker for containerization
+
+## Core Development Principles
+
+### TypeScript Best Practices
+- Use strict TypeScript configuration
+- Prefer interfaces over types for object shapes
+- Use type inference where possible, explicit types where needed
+- Implement proper error handling with typed errors
+- Use generic types for reusable components
+- Prefer `const assertions` for immutable data
+- Use discriminated unions for state management
+- Implement proper null/undefined checks
+
+### React Development Guidelines
+- Prefer functional components over class components
+- Use React.FC for functional components with props
+- Utilize useState and useEffect hooks for state and side effects
+- Implement proper TypeScript interfaces for props and state
+- Use React.memo for performance optimization when needed
+- Implement custom hooks for reusable logic
+- Use React.lazy and Suspense for code-splitting
+- Implement error boundaries for robust error handling
+- Follow React and TypeScript best practices and naming conventions
+
+### Code Quality Standards
+- Use ESLint with TypeScript and React plugins for code quality
+- Follow DRY (Don't Repeat Yourself) principles
+- Implement SOLID principles where applicable
+- Use meaningful variable and function names
+- Write self-documenting code with clear comments
+- Implement proper error handling and logging
+- Use consistent code formatting with Prettier
+- Follow semantic versioning for releases
+
+## File Structure Guidelines
+```
+src/
+  components/
+    - Use PascalCase for component files (e.g., AustliftScraperDashboard.js)
+    - Group related components in subdirectories
+    - Use index.js files for clean imports
+  hooks/
+    - Custom hooks with 'use' prefix
+    - Separate business logic from components
+  pages/
+    - Page-level components
+  types/
+    - TypeScript type definitions
+  utils/
+    - Utility functions and helpers
+  App.tsx
+  index.tsx
+```
+
+## Component Development Rules
+
+### Component Structure
+```typescript
+// Preferred component structure
+interface ComponentProps {
+  // Define all props with proper types
+}
+
+const Component: React.FC<ComponentProps> = ({ prop1, prop2 }) => {
+  // State declarations
+  const [state, setState] = useState<StateType>(initialValue);
+  
+  // Custom hooks
+  const customHook = useCustomHook();
+  
+  // Event handlers
+  const handleEvent = useCallback((param: ParamType) => {
+    // Implementation
+  }, [dependencies]);
+  
+  // Effects
+  useEffect(() => {
+    // Side effects
+  }, [dependencies]);
+  
+  // Render
+  return (
+    <div className="tailwind-classes">
+      {/* JSX content */}
+    </div>
+  );
+};
+
+export default Component;
+```
+
+### State Management Rules
+- Use useState for local component state
+- Use useReducer for complex state logic
+- Implement proper state updates with functional updates
+- Use useCallback for event handlers to prevent unnecessary re-renders
+- Use useMemo for expensive calculations
+- Implement proper cleanup in useEffect
+
+### API Integration Rules
+- Use async/await for API calls
+- Implement proper error handling with try/catch
+- Use AbortController for request cancellation
+- Implement loading states and error boundaries
+- Use proper TypeScript types for API responses
+- Implement retry logic for failed requests
+- Use proper timeout handling
+
+## Tailwind CSS Guidelines
+
+### Class Organization
+- Group classes logically: layout, spacing, colors, typography, effects
+- Use responsive prefixes (sm:, md:, lg:, xl:)
+- Prefer utility classes over custom CSS
+- Use consistent spacing scale
+- Implement proper color schemes
+
+### Responsive Design
+- Mobile-first approach
+- Use Tailwind's responsive breakpoints
+- Implement proper touch targets
+- Ensure accessibility across devices
+
+### Component Styling
+```typescript
+// Preferred styling patterns
+const buttonClasses = `
+  px-4 py-2 
+  bg-blue-600 text-white 
+  rounded-lg hover:bg-blue-700 
+  transition-colors
+  disabled:opacity-50 disabled:cursor-not-allowed
+`;
+
+// Conditional styling
+const dynamicClasses = `
+  ${baseClasses}
+  ${isActive ? 'bg-green-500' : 'bg-gray-500'}
+  ${isDisabled ? 'opacity-50' : ''}
+`;
+```
+
+## API Development Rules
+
+### Request Handling
+- Use proper HTTP methods (GET, POST, PUT, DELETE)
+- Implement proper request headers
+- Use proper content types
+- Implement request/response interceptors
+- Use proper authentication handling
+
+### Error Handling
+```typescript
+// Preferred error handling pattern
+const apiCall = async (): Promise<ApiResponse> => {
+  try {
+    const response = await fetch('/api/endpoint', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    }
+    
+    return await response.json();
+  } catch (error) {
+    console.error('API call failed:', error);
+    throw error;
+  }
+};
+```
+
+## Performance Optimization Rules
+
+### React Performance
+- Use React.memo for expensive components
+- Implement proper dependency arrays in hooks
+- Use useCallback for event handlers
+- Use useMemo for expensive calculations
+- Implement proper key props for lists
+- Avoid unnecessary re-renders
+
+### Bundle Optimization
+- Use dynamic imports for code splitting
+- Implement proper tree shaking
+- Use proper asset optimization
+- Implement proper caching strategies
+
+## Testing Guidelines
+
+### Component Testing
+- Write unit tests for components
+- Test user interactions and state changes
+- Test error scenarios and edge cases
+- Use proper mocking for external dependencies
+
+### Integration Testing
+- Test API integrations
+- Test user workflows
+- Test error handling paths
+- Test responsive behavior
+
+## Accessibility Rules
+
+### ARIA Guidelines
+- Use proper ARIA labels and roles
+- Implement keyboard navigation
+- Ensure proper focus management
+- Use semantic HTML elements
+- Implement proper color contrast
+
+### User Experience
+- Implement proper loading states
+- Provide clear error messages
+- Use consistent interaction patterns
+- Implement proper feedback mechanisms
+
+## Security Guidelines
+
+### Frontend Security
+- Sanitize user inputs
+- Implement proper CSRF protection
+- Use secure authentication patterns
+- Implement proper session management
+- Validate data on both client and server
+
+## Docker & Deployment Rules
+
+### Containerization
+- Use multi-stage builds for optimization
+- Implement proper health checks
+- Use proper environment variable handling
+- Implement proper logging
+
+### Deployment
+- Use proper CI/CD pipelines
+- Implement proper environment configurations
+- Use proper monitoring and alerting
+- Implement proper rollback strategies
+
+## Code Review Guidelines
+
+### Review Checklist
+- [ ] TypeScript types are properly defined
+- [ ] React best practices are followed
+- [ ] Tailwind classes are properly organized
+- [ ] Error handling is implemented
+- [ ] Performance considerations are addressed
+- [ ] Accessibility requirements are met
+- [ ] Security best practices are followed
+- [ ] Tests are written and passing
+- [ ] Documentation is updated
+
+## Git Workflow Rules
+
+### Commit Messages
+- Use conventional commit format
+- Include scope when relevant
+- Use imperative mood
+- Keep messages concise but descriptive
+
+### Branch Strategy
+- Use feature branches for new development
+- Use proper branch naming conventions
+- Implement proper pull request workflows
+- Use proper code review processes
+
+## Project-Specific Rules
+
+### Austlift Scraper Dashboard Specific
+- All API calls should use relative URLs (proxy configuration)
+- Implement proper loading states for all async operations
+- Use proper error handling with user-friendly messages
+- Implement proper state management for workflow steps
+- Use consistent button styling and interactions
+- Implement proper table display with pagination
+- Use proper icon integration with Lucide React
+- Implement proper responsive design for all screen sizes
+
+### API Integration Patterns
+```typescript
+// Preferred API integration pattern
+const useApiCall = () => {
+  const [data, setData] = useState<DataType | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const execute = useCallback(async (params: ApiParams) => {
+    setLoading(true);
+    setError(null);
+    
+    try {
+      const response = await fetch('/api/endpoint', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(params),
+      });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+      
+      const result = await response.json();
+      setData(result);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Unknown error');
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  return { data, loading, error, execute };
+};
+```
+
+## Documentation Rules
+
+### Code Documentation
+- Write clear comments for complex logic
+- Document component props and return types
+- Document API endpoints and data structures
+- Keep README files updated
+- Document deployment and setup procedures
+
+### API Documentation
+- Document all API endpoints
+- Include request/response examples
+- Document error codes and messages
+- Include authentication requirements
+- Document rate limiting and usage guidelines
+
+## Monitoring and Logging Rules
+
+### Frontend Monitoring
+- Implement proper error tracking
+- Use proper performance monitoring
+- Implement proper user analytics
+- Use proper logging strategies
+- Implement proper alerting
+
+### Debugging Guidelines
+- Use proper debugging tools
+- Implement proper logging levels
+- Use proper error reporting
+- Implement proper performance profiling
+- Use proper testing strategies
+
+## Continuous Improvement
+
+### Code Quality Metrics
+- Monitor code coverage
+- Track technical debt
+- Monitor performance metrics
+- Track user experience metrics
+- Monitor security vulnerabilities
+
+### Refactoring Guidelines
+- Identify code smells and technical debt
+- Implement proper refactoring strategies
+- Use proper testing during refactoring
+- Implement proper code review processes
+- Use proper documentation updates
+
+Remember: Always prioritize code quality, user experience, and maintainability. Follow these rules consistently and adapt them as the project evolves.

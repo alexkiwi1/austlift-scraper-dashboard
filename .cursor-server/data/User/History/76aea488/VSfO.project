@@ -1,0 +1,293 @@
+# Austlift Scraper Dashboard - Project-Specific Cursor Rules
+
+## Project Context
+You are working on the Austlift Scraper Dashboard, a React TypeScript application for monitoring web scraping operations. The application features:
+- Home Dashboard with 4-step workflow
+- Category management and product scraping
+- Real-time job monitoring
+- Product table display with minimize/expand functionality
+- API integration with backend scraping service
+
+## Current Tech Stack
+- React 18+ with functional components
+- TypeScript for type safety
+- Tailwind CSS for styling
+- Lucide React for icons
+- Fetch API for HTTP requests
+- Docker containerization
+- ESLint + Prettier for code quality
+
+## File Structure
+```
+/root/
+  src/
+    components/
+      AustliftScraperDashboard.js (main component)
+    App.js
+    index.js
+  package.json
+  .cursorrules
+```
+
+## Component Development Rules
+
+### State Management Patterns
+```typescript
+// Preferred state pattern for workflow steps
+const [step1Status, setStep1Status] = useState('');
+const [step2Status, setStep2Status] = useState('');
+const [step3Status, setStep3Status] = useState('');
+const [step4Status, setStep4Status] = useState('');
+
+// Status update pattern
+const updateStepStatus = (step: number, status: string) => {
+  const setter = [setStep1Status, setStep2Status, setStep3Status, setStep4Status][step - 1];
+  setter(status);
+};
+```
+
+### API Integration Patterns
+```typescript
+// Preferred API call pattern
+const apiCall = async (endpoint: string, options: RequestInit = {}) => {
+  try {
+    const response = await fetch(endpoint, {
+      headers: { 'Content-Type': 'application/json' },
+      ...options,
+    });
+    
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    }
+    
+    return await response.json();
+  } catch (err) {
+    console.error(`API call failed: ${err.message}`);
+    throw err;
+  }
+};
+```
+
+### Button Component Pattern
+```typescript
+// Consistent button styling
+const buttonClasses = `
+  px-4 py-2 
+  rounded-lg 
+  transition-colors
+  disabled:opacity-50 disabled:cursor-not-allowed
+`;
+
+const primaryButtonClasses = `${buttonClasses} bg-blue-600 text-white hover:bg-blue-700`;
+const successButtonClasses = `${buttonClasses} bg-green-600 text-white hover:bg-green-700`;
+const warningButtonClasses = `${buttonClasses} bg-orange-600 text-white hover:bg-orange-700`;
+```
+
+## Workflow Step Implementation Rules
+
+### Step 1 - Review Categories
+- Fetch categories from `/categories/fetch`
+- Refresh categories from `/categories/refresh`
+- Update step1Status with progress messages
+- Handle errors gracefully
+
+### Step 2 - Start Scraping
+- Initialize Step 1 automatically
+- Select all categories
+- Start scraping via `/scrape` API
+- Update step2Status with job ID and status
+- Handle API errors
+
+### Step 3 - Review Products
+- Initialize previous steps
+- Load products via `/products` API
+- Show actual product count from API response
+- Update step3Status with loaded count
+
+### Step 4 - View Products Table
+- Initialize previous steps
+- Load ALL products (limit=10000)
+- Display products in scrollable table
+- Implement minimize/expand functionality
+- Show product count in header
+
+## Table Display Rules
+
+### Product Table Structure
+```typescript
+// Table header with all fields
+<thead className='bg-gray-50'>
+  <tr>
+    {Object.keys(step4Products[0]).map((field) => (
+      <th key={field} className='px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>
+        {field.replace(/_/g, ' ')}
+      </th>
+    ))}
+  </tr>
+</thead>
+
+// Table body with proper keys
+<tbody className='bg-white divide-y divide-gray-200'>
+  {step4Products.map((product, index) => (
+    <tr key={product.id || index} className='hover:bg-gray-50'>
+      {Object.entries(product).map(([fieldName, value]) => (
+        <td key={`${product.id || index}-${fieldName}`} className='px-4 py-3 text-sm text-gray-900 max-w-xs truncate'>
+          {value === null || value === undefined ? '-' : String(value)}
+        </td>
+      ))}
+    </tr>
+  ))}
+</tbody>
+```
+
+### Minimize/Expand Functionality
+- Use `isTableMinimized` state
+- Show/hide table content conditionally
+- Display appropriate messages for each state
+- Implement proper button text changes
+
+## Error Handling Rules
+
+### API Error Handling
+- Always check `response.ok` before processing
+- Throw descriptive errors with HTTP status
+- Log errors to console for debugging
+- Show user-friendly error messages in UI
+- Implement proper timeout handling
+
+### User Experience Errors
+- Show loading states during API calls
+- Display progress messages for long operations
+- Provide retry mechanisms for failed operations
+- Use consistent error message styling
+
+## Performance Optimization Rules
+
+### React Performance
+- Use `useCallback` for event handlers
+- Use `useMemo` for expensive calculations
+- Implement proper dependency arrays
+- Use proper keys for list items (avoid array indices)
+- Minimize unnecessary re-renders
+
+### API Performance
+- Use appropriate limits for API calls
+- Implement proper loading states
+- Use AbortController for request cancellation
+- Implement proper error boundaries
+
+## Code Quality Rules
+
+### TypeScript Best Practices
+- Use proper type definitions
+- Implement proper error handling
+- Use type inference where possible
+- Implement proper null/undefined checks
+- Use proper generic types
+
+### React Best Practices
+- Use functional components
+- Implement proper hooks usage
+- Use proper event handling
+- Implement proper state management
+- Use proper component composition
+
+### ESLint Compliance
+- No unused variables or imports
+- Proper arrow function usage
+- No array index keys
+- Proper quote escaping in JSX
+- Consistent code formatting
+
+## Styling Rules
+
+### Tailwind CSS Usage
+- Use consistent spacing scale
+- Implement proper responsive design
+- Use semantic color schemes
+- Implement proper hover states
+- Use consistent button styling
+
+### Component Styling
+- Use consistent padding and margins
+- Implement proper border radius
+- Use consistent shadow patterns
+- Implement proper transition effects
+- Use consistent typography
+
+## Accessibility Rules
+
+### ARIA Implementation
+- Use proper ARIA labels
+- Implement proper roles
+- Use semantic HTML elements
+- Implement proper focus management
+- Use proper color contrast
+
+### User Experience
+- Implement proper loading states
+- Provide clear feedback messages
+- Use consistent interaction patterns
+- Implement proper error recovery
+- Use proper visual hierarchy
+
+## Testing Guidelines
+
+### Component Testing
+- Test all workflow steps
+- Test error scenarios
+- Test API integration
+- Test user interactions
+- Test responsive behavior
+
+### Integration Testing
+- Test complete workflows
+- Test error handling
+- Test performance
+- Test accessibility
+- Test cross-browser compatibility
+
+## Deployment Rules
+
+### Docker Configuration
+- Use proper multi-stage builds
+- Implement proper health checks
+- Use proper environment variables
+- Implement proper logging
+- Use proper security practices
+
+### Production Considerations
+- Implement proper error monitoring
+- Use proper performance monitoring
+- Implement proper logging
+- Use proper security headers
+- Implement proper caching
+
+## Project-Specific Implementation Notes
+
+### Current API Endpoints
+- `/categories/fetch` - Get categories
+- `/categories/refresh` - Refresh categories
+- `/products` - Get products with pagination
+- `/scrape` - Start scraping job
+- `/scraping-jobs` - Get job status
+
+### Current State Variables
+- `activeSection` - Current section
+- `categories` - Category list
+- `selectedCategories` - Selected categories
+- `step1Status` to `step4Status` - Workflow step statuses
+- `showStep4Dropdown` - Table visibility
+- `step4Products` - Products for table
+- `isTableMinimized` - Table minimize state
+
+### Current Features
+- 4-step workflow process
+- Real-time status updates
+- Product table with all fields
+- Minimize/expand functionality
+- Error handling and loading states
+- Responsive design
+
+Remember: Always maintain code quality, implement proper error handling, and ensure excellent user experience. Follow these rules consistently and adapt them as the project evolves.
+

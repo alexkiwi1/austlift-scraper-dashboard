@@ -1,0 +1,100 @@
+2025-10-26 03:03:51.816 [info] Handling CreateClient action
+2025-10-26 03:03:51.816 [info] Starting new stdio process with command: npx -y @wonderwhy-er/desktop-commander@latest
+2025-10-26 03:03:51.816 [error] Client error for command A system error occurred (spawn npx ENOENT)
+2025-10-26 03:03:51.816 [info] Client closed for command
+2025-10-26 03:03:53.448 [info] Handling CreateClient action
+2025-10-26 03:03:53.448 [info] Starting new stdio process with command: npx -y @wonderwhy-er/desktop-commander@latest
+2025-10-26 03:03:53.449 [error] Client error for command A system error occurred (spawn npx ENOENT)
+2025-10-26 03:03:53.450 [info] Client closed for command
+2025-10-26 03:03:53.502 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:03:53.502 [error] No server info found
+2025-10-26 03:03:53.502 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:03:53.502 [error] No server info found
+2025-10-26 03:03:53.519 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:03:53.519 [error] No server info found
+2025-10-26 03:03:53.519 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:03:53.519 [error] No server info found
+2025-10-26 03:03:53.519 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:03:53.519 [error] No server info found
+2025-10-26 03:03:53.519 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:03:53.519 [error] No server info found
+2025-10-26 03:03:53.541 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:03:53.541 [error] No server info found
+2025-10-26 03:03:53.552 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:03:53.552 [error] No server info found
+2025-10-26 03:03:53.552 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:03:53.552 [error] No server info found
+2025-10-26 03:03:53.552 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:03:53.552 [error] No server info found
+2025-10-26 03:07:32.791 [info] Handling CreateClient action
+2025-10-26 03:07:32.791 [info] Starting new stdio process with command: npx -y @wonderwhy-er/desktop-commander@latest
+2025-10-26 03:07:32.897 [info] Handling CreateClient action
+2025-10-26 03:07:32.897 [info] Starting new stdio process with command: npx -y @wonderwhy-er/desktop-commander@latest
+2025-10-26 03:07:32.959 [info] Handling CreateClient action
+2025-10-26 03:07:32.959 [info] Starting new stdio process with command: npx -y @wonderwhy-er/desktop-commander@latest
+2025-10-26 03:07:35.543 [info] Successfully connected to stdio server
+2025-10-26 03:07:35.543 [info] Storing stdio client project-0-root-desktop-commander
+2025-10-26 03:07:35.543 [info] CreateClient completed, server stored: true
+2025-10-26 03:07:35.548 [info] Successfully connected to stdio server
+2025-10-26 03:07:35.548 [info] A second client was created while connecting, discarding it.
+2025-10-26 03:07:35.548 [info] CreateClient completed, server stored: true
+2025-10-26 03:07:35.555 [info] Successfully connected to stdio server
+2025-10-26 03:07:35.555 [info] A second client was created while connecting, discarding it.
+2025-10-26 03:07:35.555 [info] CreateClient completed, server stored: true
+2025-10-26 03:07:44.650 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:44.650 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:44.653 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:44.653 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:44.655 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:44.655 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:44.656 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:44.656 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:44.670 [info] Found 25 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:44.671 [info] Found 25 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:44.671 [info] Found 25 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:44.671 [info] Found 25 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:45.104 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:45.105 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:45.110 [info] Found 25 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:45.160 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:45.160 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:45.166 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:45.166 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:45.173 [info] Found 25 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:45.176 [info] Found 25 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:45.479 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:45.479 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:45.486 [info] Found 25 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:45.543 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:45.543 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:45.544 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:45.544 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:45.555 [info] Found 25 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:45.557 [info] Found 25 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:46.023 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:46.023 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:46.023 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:46.023 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:46.038 [info] Found 25 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:46.040 [info] Found 25 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:46.111 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:46.111 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:46.118 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:46.118 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:46.118 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:46.118 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:46.124 [info] Found 25 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:46.127 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:46.127 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:46.128 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:46.128 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:46.128 [info] Found 25 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:46.131 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:46.131 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:46.136 [info] Found 25 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:46.138 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:46.138 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:46.138 [info] Found 25 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:46.140 [info] Found 25 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:46.140 [info] Found 25 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:46.144 [info] Found 25 tools, 0 prompts, and 0 resources

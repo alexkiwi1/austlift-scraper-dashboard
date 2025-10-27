@@ -1,0 +1,1133 @@
+2025-10-26 03:12:53.429 [info] Handling CreateClient action
+2025-10-26 03:12:53.429 [info] Starting new stdio process with command: npx mcp-remote@0.1.21 http://10.100.0.39:9000/mcp --header x-lunar-consumer-tag: Claude-Cursor-i7 --allow-http
+2025-10-26 03:12:56.554 [error] [153392] Using automatically selected callback port: 13135
+[153392] Using custom headers: {"x-lunar-consumer-tag":"Claude-Cursor-i7"}
+[153392] [153392] Connecting to remote server: http://10.100.0.39:9000/mcp
+[153392] Using transport strategy: http-first
+[153392] Connected to remote server using StreamableHTTPClientTransport
+[153392] Local STDIO server running
+[153392] Proxy established successfully between local STDIO and remote StreamableHTTPClientTransport
+[153392] Press Ctrl+C to exit
+[153392] [Local→Remote] initialize
+[153392] {
+  "jsonrpc": "2.0",
+  "id": 0,
+  "method": "initialize",
+  "params": {
+    "protocolVersion": "2025-06-18",
+    "capabilities": {
+      "tools": true,
+      "prompts": true,
+      "resources": true,
+      "logging": false,
+      "elicitation": {},
+      "roots": {
+        "listChanged": false
+      }
+    },
+    "clientInfo": {
+      "name": "cursor-vscode (via mcp-remote 0.1.21)",
+      "version": "1.0.0"
+    }
+  }
+}
+[153392] [Remote→Local] 0
+
+2025-10-26 03:12:56.568 [info] Successfully connected to stdio server
+2025-10-26 03:12:56.568 [info] Storing stdio client user-mcpx
+2025-10-26 03:12:56.569 [info] CreateClient completed, server stored: true
+2025-10-26 03:12:56.637 [error] [153392] [Local→Remote] notifications/initialized
+
+2025-10-26 03:12:56.637 [error] [153392] [Local→Remote] notifications/initialized
+
+2025-10-26 03:12:58.684 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:12:58.684 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:12:58.686 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:12:58.686 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:12:58.699 [error] [153392] [Local→Remote] tools/list
+[153392] [Local→Remote] tools/list
+
+2025-10-26 03:12:58.699 [error] [153392] [Local→Remote] tools/list
+[153392] [Local→Remote] tools/list
+
+2025-10-26 03:13:00.901 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:13:00.901 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:13:01.002 [error] [153392] [Local→Remote] 0
+
+2025-10-26 03:13:01.002 [error] [153392] [Local→Remote] 0
+
+2025-10-26 03:13:01.288 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:13:01.289 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:13:01.289 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:13:01.289 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:13:01.289 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:13:01.289 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:13:01.289 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:13:01.289 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:13:01.290 [error] [153392] [Local→Remote] tools/list
+
+2025-10-26 03:13:01.290 [error] [153392] [Local→Remote] tools/list
+
+2025-10-26 03:13:01.290 [error] [153392] [Local→Remote] tools/list
+
+2025-10-26 03:13:01.290 [error] [153392] [Local→Remote] tools/list
+
+2025-10-26 03:13:01.290 [error] [153392] [Local→Remote] tools/list
+
+2025-10-26 03:13:01.290 [error] [153392] [Local→Remote] tools/list
+
+2025-10-26 03:13:01.291 [error] [153392] [Local→Remote] tools/list
+
+2025-10-26 03:13:01.291 [error] [153392] [Local→Remote] tools/list
+
+2025-10-26 03:13:01.321 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:13:01.321 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:13:01.322 [error] [153392] [Local→Remote] tools/list
+
+2025-10-26 03:13:01.322 [error] [153392] [Local→Remote] tools/list
+
+2025-10-26 03:13:01.344 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:13:01.345 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:13:01.345 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:13:01.345 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:13:01.345 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:13:01.345 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:13:01.346 [error] [153392] [Local→Remote] tools/list
+[153392] [Local→Remote] tools/list
+[153392] [Local→Remote] tools/list
+
+2025-10-26 03:13:01.346 [error] [153392] [Local→Remote] tools/list
+[153392] [Local→Remote] tools/list
+[153392] [Local→Remote] tools/list
+
+2025-10-26 03:13:05.805 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:13:05.805 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:13:05.811 [error] [153392] [Local→Remote] 1
+
+2025-10-26 03:13:05.811 [error] [153392] [Local→Remote] 1
+
+2025-10-26 03:13:06.317 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:13:06.318 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:13:06.318 [error] [153392] [Local→Remote] tools/list
+
+2025-10-26 03:13:06.318 [error] [153392] [Local→Remote] tools/list
+
+2025-10-26 03:13:08.730 [error] [153392] [Remote→Local] 1
+
+2025-10-26 03:13:08.730 [error] [153392] [Remote→Local] 1
+
+2025-10-26 03:13:08.734 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:13:08.734 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:13:08.735 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:13:08.735 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:13:08.735 [error] [153392] [Remote→Local] 2
+
+2025-10-26 03:13:08.735 [error] [153392] [Remote→Local] 2
+
+2025-10-26 03:13:11.001 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:13:11.001 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:13:11.010 [error] [153392] [Local→Remote] 2
+
+2025-10-26 03:13:11.010 [error] [153392] [Local→Remote] 2
+
+2025-10-26 03:13:11.724 [error] [153392] [Remote→Local] 10
+
+2025-10-26 03:13:11.724 [error] [153392] [Remote→Local] 10
+
+2025-10-26 03:13:11.726 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:13:11.726 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:13:11.728 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:13:11.728 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:13:11.728 [error] [153392] [Remote→Local] 3
+
+2025-10-26 03:13:11.728 [error] [153392] [Remote→Local] 3
+
+2025-10-26 03:13:11.728 [error] [153392] [Remote→Local] 4
+
+2025-10-26 03:13:11.728 [error] [153392] [Remote→Local] 4
+
+2025-10-26 03:13:11.730 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:13:11.730 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:13:11.730 [error] [153392] [Remote→Local] 9
+
+2025-10-26 03:13:11.730 [error] [153392] [Remote→Local] 9
+
+2025-10-26 03:13:11.732 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:13:11.732 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:13:11.733 [error] [153392] [Remote→Local] 8
+
+2025-10-26 03:13:11.733 [error] [153392] [Remote→Local] 8
+
+2025-10-26 03:13:11.734 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:13:11.734 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:13:11.735 [error] [153392] [Remote→Local] 7
+
+2025-10-26 03:13:11.735 [error] [153392] [Remote→Local] 7
+
+2025-10-26 03:13:11.736 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:13:11.737 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:13:11.737 [error] [153392] [Remote→Local] 6
+
+2025-10-26 03:13:11.737 [error] [153392] [Remote→Local] 6
+
+2025-10-26 03:13:11.739 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:13:11.739 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:13:11.739 [error] [153392] [Remote→Local] 5
+
+2025-10-26 03:13:11.739 [error] [153392] [Remote→Local] 5
+
+2025-10-26 03:13:11.741 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:13:11.741 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:13:15.758 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:13:15.758 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:13:15.760 [error] [153392] [Local→Remote] 3
+
+2025-10-26 03:13:15.760 [error] [153392] [Local→Remote] 3
+
+2025-10-26 03:13:16.720 [error] [153392] [Remote→Local] 11
+
+2025-10-26 03:13:16.720 [error] [153392] [Remote→Local] 11
+
+2025-10-26 03:13:16.721 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:13:16.721 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:13:20.758 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:13:20.758 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:13:20.760 [error] [153392] [Local→Remote] 4
+
+2025-10-26 03:13:20.760 [error] [153392] [Local→Remote] 4
+
+2025-10-26 03:13:25.759 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:13:25.759 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:13:25.760 [error] [153392] [Local→Remote] 5
+
+2025-10-26 03:13:25.760 [error] [153392] [Local→Remote] 5
+
+2025-10-26 03:13:30.760 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:13:30.760 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:13:30.761 [error] [153392] [Local→Remote] 6
+
+2025-10-26 03:13:30.761 [error] [153392] [Local→Remote] 6
+
+2025-10-26 03:13:35.761 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:13:35.761 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:13:35.762 [error] [153392] [Local→Remote] 7
+
+2025-10-26 03:13:35.762 [error] [153392] [Local→Remote] 7
+
+2025-10-26 03:13:40.762 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:13:40.762 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:13:40.763 [error] [153392] [Local→Remote] 8
+
+2025-10-26 03:13:40.763 [error] [153392] [Local→Remote] 8
+
+2025-10-26 03:13:45.762 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:13:45.762 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:13:45.763 [error] [153392] [Local→Remote] 9
+
+2025-10-26 03:13:45.763 [error] [153392] [Local→Remote] 9
+
+2025-10-26 03:13:50.762 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:13:50.762 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:13:50.763 [error] [153392] [Local→Remote] 10
+
+2025-10-26 03:13:50.763 [error] [153392] [Local→Remote] 10
+
+2025-10-26 03:13:55.763 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:13:55.763 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:13:55.764 [error] [153392] [Local→Remote] 11
+
+2025-10-26 03:13:55.764 [error] [153392] [Local→Remote] 11
+
+2025-10-26 03:14:00.764 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:14:00.764 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:14:00.765 [error] [153392] [Local→Remote] 12
+
+2025-10-26 03:14:00.765 [error] [153392] [Local→Remote] 12
+
+2025-10-26 03:14:05.765 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:14:05.765 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:14:05.766 [error] [153392] [Local→Remote] 13
+
+2025-10-26 03:14:05.766 [error] [153392] [Local→Remote] 13
+
+2025-10-26 03:14:10.860 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:14:10.860 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:14:10.866 [error] [153392] [Local→Remote] 14
+
+2025-10-26 03:14:10.866 [error] [153392] [Local→Remote] 14
+
+2025-10-26 03:14:16.058 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:14:16.058 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:14:16.065 [error] [153392] [Local→Remote] 15
+
+2025-10-26 03:14:16.065 [error] [153392] [Local→Remote] 15
+
+2025-10-26 03:14:21.277 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:14:21.277 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:14:21.285 [error] [153392] [Local→Remote] 16
+
+2025-10-26 03:14:21.285 [error] [153392] [Local→Remote] 16
+
+2025-10-26 03:14:26.532 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:14:26.532 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:14:26.535 [error] [153392] [Local→Remote] 17
+
+2025-10-26 03:14:26.535 [error] [153392] [Local→Remote] 17
+
+2025-10-26 03:14:31.764 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:14:31.764 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:14:31.771 [error] [153392] [Local→Remote] 18
+
+2025-10-26 03:14:31.771 [error] [153392] [Local→Remote] 18
+
+2025-10-26 03:14:37.003 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:14:37.003 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:14:37.007 [error] [153392] [Local→Remote] 19
+
+2025-10-26 03:14:37.007 [error] [153392] [Local→Remote] 19
+
+2025-10-26 03:14:40.767 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:14:40.767 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:14:40.768 [error] [153392] [Local→Remote] 20
+
+2025-10-26 03:14:40.768 [error] [153392] [Local→Remote] 20
+
+2025-10-26 03:14:45.768 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:14:45.768 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:14:45.769 [error] [153392] [Local→Remote] 21
+
+2025-10-26 03:14:45.769 [error] [153392] [Local→Remote] 21
+
+2025-10-26 03:14:50.769 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:14:50.769 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:14:50.770 [error] [153392] [Local→Remote] 22
+
+2025-10-26 03:14:50.770 [error] [153392] [Local→Remote] 22
+
+2025-10-26 03:14:55.769 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:14:55.769 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:14:55.770 [error] [153392] [Local→Remote] 23
+
+2025-10-26 03:14:55.770 [error] [153392] [Local→Remote] 23
+
+2025-10-26 03:15:00.770 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:15:00.770 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:15:00.771 [error] [153392] [Local→Remote] 24
+
+2025-10-26 03:15:00.771 [error] [153392] [Local→Remote] 24
+
+2025-10-26 03:15:05.770 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:15:05.771 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:15:05.771 [error] [153392] [Local→Remote] 25
+
+2025-10-26 03:15:05.772 [error] [153392] [Local→Remote] 25
+
+2025-10-26 03:15:10.771 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:15:10.772 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:15:10.773 [error] [153392] [Local→Remote] 26
+
+2025-10-26 03:15:10.773 [error] [153392] [Local→Remote] 26
+
+2025-10-26 03:15:15.773 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:15:15.773 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:15:15.774 [error] [153392] [Local→Remote] 27
+
+2025-10-26 03:15:15.774 [error] [153392] [Local→Remote] 27
+
+2025-10-26 03:15:20.772 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:15:20.772 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:15:20.773 [error] [153392] [Local→Remote] 28
+
+2025-10-26 03:15:20.773 [error] [153392] [Local→Remote] 28
+
+2025-10-26 03:15:25.791 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:15:25.791 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:15:25.799 [error] [153392] [Local→Remote] 29
+
+2025-10-26 03:15:25.799 [error] [153392] [Local→Remote] 29
+
+2025-10-26 03:15:31.050 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:15:31.050 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:15:31.058 [error] [153392] [Local→Remote] 30
+
+2025-10-26 03:15:31.058 [error] [153392] [Local→Remote] 30
+
+2025-10-26 03:15:36.239 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:15:36.239 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:15:36.246 [error] [153392] [Local→Remote] 31
+
+2025-10-26 03:15:36.246 [error] [153392] [Local→Remote] 31
+
+2025-10-26 03:15:41.540 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:15:41.540 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:15:41.548 [error] [153392] [Local→Remote] 32
+
+2025-10-26 03:15:41.548 [error] [153392] [Local→Remote] 32
+
+2025-10-26 03:15:46.749 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:15:46.750 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:15:46.758 [error] [153392] [Local→Remote] 33
+
+2025-10-26 03:15:46.758 [error] [153392] [Local→Remote] 33
+
+2025-10-26 03:15:52.046 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:15:52.046 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:15:52.055 [error] [153392] [Local→Remote] 34
+
+2025-10-26 03:15:52.055 [error] [153392] [Local→Remote] 34
+
+2025-10-26 03:15:55.778 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:15:55.779 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:15:55.779 [error] [153392] [Local→Remote] 35
+
+2025-10-26 03:15:55.779 [error] [153392] [Local→Remote] 35
+
+2025-10-26 03:16:00.779 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:16:00.779 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:16:00.780 [error] [153392] [Local→Remote] 36
+
+2025-10-26 03:16:00.780 [error] [153392] [Local→Remote] 36
+
+2025-10-26 03:16:05.780 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:16:05.780 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:16:05.781 [error] [153392] [Local→Remote] 37
+
+2025-10-26 03:16:05.781 [error] [153392] [Local→Remote] 37
+
+2025-10-26 03:16:10.780 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:16:10.780 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:16:10.781 [error] [153392] [Local→Remote] 38
+
+2025-10-26 03:16:10.781 [error] [153392] [Local→Remote] 38
+
+2025-10-26 03:16:15.781 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:16:15.781 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:16:15.782 [error] [153392] [Local→Remote] 39
+
+2025-10-26 03:16:15.782 [error] [153392] [Local→Remote] 39
+
+2025-10-26 03:16:20.782 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:16:20.782 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:16:20.783 [error] [153392] [Local→Remote] 40
+
+2025-10-26 03:16:20.783 [error] [153392] [Local→Remote] 40
+
+2025-10-26 03:16:25.783 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:16:25.783 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:16:25.784 [error] [153392] [Local→Remote] 41
+
+2025-10-26 03:16:25.784 [error] [153392] [Local→Remote] 41
+
+2025-10-26 03:16:30.782 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:16:30.782 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:16:30.784 [error] [153392] [Local→Remote] 42
+
+2025-10-26 03:16:30.784 [error] [153392] [Local→Remote] 42
+
+2025-10-26 03:16:35.783 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:16:35.783 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:16:35.784 [error] [153392] [Local→Remote] 43
+
+2025-10-26 03:16:35.784 [error] [153392] [Local→Remote] 43
+
+2025-10-26 03:16:40.784 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:16:40.784 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:16:40.785 [error] [153392] [Local→Remote] 44
+
+2025-10-26 03:16:40.785 [error] [153392] [Local→Remote] 44
+
+2025-10-26 03:16:45.785 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:16:45.785 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:16:45.786 [error] [153392] [Local→Remote] 45
+
+2025-10-26 03:16:45.786 [error] [153392] [Local→Remote] 45
+
+2025-10-26 03:16:50.786 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:16:50.786 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:16:50.787 [error] [153392] [Local→Remote] 46
+
+2025-10-26 03:16:50.787 [error] [153392] [Local→Remote] 46
+
+2025-10-26 03:16:55.787 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:16:55.787 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:16:55.788 [error] [153392] [Local→Remote] 47
+
+2025-10-26 03:16:55.788 [error] [153392] [Local→Remote] 47
+
+2025-10-26 03:17:00.788 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:17:00.788 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:17:00.790 [error] [153392] [Local→Remote] 48
+
+2025-10-26 03:17:00.790 [error] [153392] [Local→Remote] 48
+
+2025-10-26 03:17:05.789 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:17:05.789 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:17:05.790 [error] [153392] [Local→Remote] 49
+
+2025-10-26 03:17:05.790 [error] [153392] [Local→Remote] 49
+
+2025-10-26 03:17:10.790 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:17:10.790 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:17:10.791 [error] [153392] [Local→Remote] 50
+
+2025-10-26 03:17:10.791 [error] [153392] [Local→Remote] 50
+
+2025-10-26 03:17:15.790 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:17:15.790 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:17:15.792 [error] [153392] [Local→Remote] 51
+
+2025-10-26 03:17:15.792 [error] [153392] [Local→Remote] 51
+
+2025-10-26 03:17:20.792 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:17:20.792 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:17:20.793 [error] [153392] [Local→Remote] 52
+
+2025-10-26 03:17:20.793 [error] [153392] [Local→Remote] 52
+
+2025-10-26 03:17:25.792 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:17:25.792 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:17:25.793 [error] [153392] [Local→Remote] 53
+
+2025-10-26 03:17:25.793 [error] [153392] [Local→Remote] 53
+
+2025-10-26 03:17:30.792 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:17:30.793 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:17:30.794 [error] [153392] [Local→Remote] 54
+
+2025-10-26 03:17:30.794 [error] [153392] [Local→Remote] 54
+
+2025-10-26 03:17:35.794 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:17:35.794 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:17:35.795 [error] [153392] [Local→Remote] 55
+
+2025-10-26 03:17:35.795 [error] [153392] [Local→Remote] 55
+
+2025-10-26 03:17:40.795 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:17:40.795 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:17:40.796 [error] [153392] [Local→Remote] 56
+
+2025-10-26 03:17:40.796 [error] [153392] [Local→Remote] 56
+
+2025-10-26 03:17:45.796 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:17:45.796 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:17:45.797 [error] [153392] [Local→Remote] 57
+
+2025-10-26 03:17:45.797 [error] [153392] [Local→Remote] 57
+
+2025-10-26 03:17:51.915 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:17:51.915 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:17:51.943 [error] [153392] [Local→Remote] 58
+
+2025-10-26 03:17:51.943 [error] [153392] [Local→Remote] 58
+
+2025-10-26 03:17:57.054 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:17:57.054 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:17:57.061 [error] [153392] [Local→Remote] 59
+
+2025-10-26 03:17:57.061 [error] [153392] [Local→Remote] 59
+
+2025-10-26 03:18:00.798 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:18:00.798 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:18:00.801 [error] [153392] [Local→Remote] 60
+
+2025-10-26 03:18:00.801 [error] [153392] [Local→Remote] 60
+
+2025-10-26 03:18:05.798 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:18:05.798 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:18:05.799 [error] [153392] [Local→Remote] 61
+
+2025-10-26 03:18:05.799 [error] [153392] [Local→Remote] 61
+
+2025-10-26 03:18:10.799 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:18:10.799 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:18:10.800 [error] [153392] [Local→Remote] 62
+
+2025-10-26 03:18:10.800 [error] [153392] [Local→Remote] 62
+
+2025-10-26 03:18:15.806 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:18:15.806 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:18:15.807 [error] [153392] [Local→Remote] 63
+
+2025-10-26 03:18:15.807 [error] [153392] [Local→Remote] 63
+
+2025-10-26 03:18:20.801 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:18:20.801 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:18:20.802 [error] [153392] [Local→Remote] 64
+
+2025-10-26 03:18:20.802 [error] [153392] [Local→Remote] 64
+
+2025-10-26 03:18:25.801 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:18:25.802 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:18:25.803 [error] [153392] [Local→Remote] 65
+
+2025-10-26 03:18:25.803 [error] [153392] [Local→Remote] 65
+
+2025-10-26 03:18:30.803 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:18:30.803 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:18:30.804 [error] [153392] [Local→Remote] 66
+
+2025-10-26 03:18:30.804 [error] [153392] [Local→Remote] 66
+
+2025-10-26 03:18:35.804 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:18:35.804 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:18:35.805 [error] [153392] [Local→Remote] 67
+
+2025-10-26 03:18:35.805 [error] [153392] [Local→Remote] 67
+
+2025-10-26 03:18:40.804 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:18:40.804 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:18:40.805 [error] [153392] [Local→Remote] 68
+
+2025-10-26 03:18:40.805 [error] [153392] [Local→Remote] 68
+
+2025-10-26 03:18:45.805 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:18:45.805 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:18:45.806 [error] [153392] [Local→Remote] 69
+
+2025-10-26 03:18:45.806 [error] [153392] [Local→Remote] 69
+
+2025-10-26 03:18:50.807 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:18:50.807 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:18:50.808 [error] [153392] [Local→Remote] 70
+
+2025-10-26 03:18:50.808 [error] [153392] [Local→Remote] 70
+
+2025-10-26 03:18:55.807 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:18:55.807 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:18:55.808 [error] [153392] [Local→Remote] 71
+
+2025-10-26 03:18:55.808 [error] [153392] [Local→Remote] 71
+
+2025-10-26 03:19:00.807 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:19:00.808 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:19:00.809 [error] [153392] [Local→Remote] 72
+
+2025-10-26 03:19:00.809 [error] [153392] [Local→Remote] 72
+
+2025-10-26 03:19:05.808 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:19:05.809 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:19:05.810 [error] [153392] [Local→Remote] 73
+
+2025-10-26 03:19:05.810 [error] [153392] [Local→Remote] 73
+
+2025-10-26 03:19:10.810 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:19:10.810 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:19:10.811 [error] [153392] [Local→Remote] 74
+
+2025-10-26 03:19:10.811 [error] [153392] [Local→Remote] 74
+
+2025-10-26 03:19:15.811 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:19:15.811 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:19:15.812 [error] [153392] [Local→Remote] 75
+
+2025-10-26 03:19:15.812 [error] [153392] [Local→Remote] 75
+
+2025-10-26 03:19:20.812 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:19:20.812 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:19:20.814 [error] [153392] [Local→Remote] 76
+
+2025-10-26 03:19:20.814 [error] [153392] [Local→Remote] 76
+
+2025-10-26 03:19:25.813 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:19:25.813 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:19:25.814 [error] [153392] [Local→Remote] 77
+
+2025-10-26 03:19:25.814 [error] [153392] [Local→Remote] 77
+
+2025-10-26 03:19:30.814 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:19:30.814 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:19:30.815 [error] [153392] [Local→Remote] 78
+
+2025-10-26 03:19:30.815 [error] [153392] [Local→Remote] 78
+
+2025-10-26 03:19:35.816 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:19:35.816 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:19:35.817 [error] [153392] [Local→Remote] 79
+
+2025-10-26 03:19:35.817 [error] [153392] [Local→Remote] 79
+
+2025-10-26 03:19:41.009 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:19:41.009 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:19:41.014 [error] [153392] [Local→Remote] 80
+
+2025-10-26 03:19:41.014 [error] [153392] [Local→Remote] 80
+
+2025-10-26 03:19:46.281 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:19:46.281 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:19:46.288 [error] [153392] [Local→Remote] 81
+
+2025-10-26 03:19:46.288 [error] [153392] [Local→Remote] 81
+
+2025-10-26 03:19:51.458 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:19:51.458 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:19:51.466 [error] [153392] [Local→Remote] 82
+
+2025-10-26 03:19:51.466 [error] [153392] [Local→Remote] 82
+
+2025-10-26 03:19:56.679 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:19:56.679 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:19:56.686 [error] [153392] [Local→Remote] 83
+
+2025-10-26 03:19:56.686 [error] [153392] [Local→Remote] 83
+
+2025-10-26 03:20:01.988 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:20:01.988 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:20:01.992 [error] [153392] [Local→Remote] 84
+
+2025-10-26 03:20:01.992 [error] [153392] [Local→Remote] 84
+
+2025-10-26 03:20:05.821 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:20:05.822 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:20:05.823 [error] [153392] [Local→Remote] 85
+
+2025-10-26 03:20:05.823 [error] [153392] [Local→Remote] 85
+
+2025-10-26 03:20:10.823 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:20:10.823 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:20:10.824 [error] [153392] [Local→Remote] 86
+
+2025-10-26 03:20:10.824 [error] [153392] [Local→Remote] 86
+
+2025-10-26 03:20:15.824 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:20:15.824 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:20:15.825 [error] [153392] [Local→Remote] 87
+
+2025-10-26 03:20:15.825 [error] [153392] [Local→Remote] 87
+
+2025-10-26 03:20:20.827 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:20:20.828 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:20:20.829 [error] [153392] [Local→Remote] 88
+
+2025-10-26 03:20:20.829 [error] [153392] [Local→Remote] 88
+
+2025-10-26 03:20:25.826 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:20:25.826 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:20:25.827 [error] [153392] [Local→Remote] 89
+
+2025-10-26 03:20:25.827 [error] [153392] [Local→Remote] 89
+
+2025-10-26 03:20:30.827 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:20:30.827 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:20:30.830 [error] [153392] [Local→Remote] 90
+
+2025-10-26 03:20:30.830 [error] [153392] [Local→Remote] 90
+
+2025-10-26 03:20:35.827 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:20:35.828 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:20:35.829 [error] [153392] [Local→Remote] 91
+
+2025-10-26 03:20:35.829 [error] [153392] [Local→Remote] 91
+
+2025-10-26 03:20:40.828 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:20:40.828 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:20:40.829 [error] [153392] [Local→Remote] 92
+
+2025-10-26 03:20:40.829 [error] [153392] [Local→Remote] 92
+
+2025-10-26 03:20:45.828 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:20:45.828 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:20:45.829 [error] [153392] [Local→Remote] 93
+
+2025-10-26 03:20:45.829 [error] [153392] [Local→Remote] 93
+
+2025-10-26 03:20:50.828 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:20:50.828 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:20:50.830 [error] [153392] [Local→Remote] 94
+
+2025-10-26 03:20:50.830 [error] [153392] [Local→Remote] 94
+
+2025-10-26 03:20:55.829 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:20:55.829 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:20:55.830 [error] [153392] [Local→Remote] 95
+
+2025-10-26 03:20:55.830 [error] [153392] [Local→Remote] 95
+
+2025-10-26 03:21:00.830 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:21:00.831 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:21:00.834 [error] [153392] [Local→Remote] 96
+
+2025-10-26 03:21:00.834 [error] [153392] [Local→Remote] 96
+
+2025-10-26 03:21:05.830 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:21:05.831 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:21:05.832 [error] [153392] [Local→Remote] 97
+
+2025-10-26 03:21:05.832 [error] [153392] [Local→Remote] 97
+
+2025-10-26 03:21:10.831 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:21:10.831 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:21:10.832 [error] [153392] [Local→Remote] 98
+
+2025-10-26 03:21:10.832 [error] [153392] [Local→Remote] 98
+
+2025-10-26 03:21:15.832 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:21:15.832 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:21:15.834 [error] [153392] [Local→Remote] 99
+
+2025-10-26 03:21:15.834 [error] [153392] [Local→Remote] 99
+
+2025-10-26 03:21:20.832 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:21:20.833 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:21:20.834 [error] [153392] [Local→Remote] 100
+
+2025-10-26 03:21:20.834 [error] [153392] [Local→Remote] 100
+
+2025-10-26 03:21:25.859 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:21:25.860 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:21:25.868 [error] [153392] [Local→Remote] 101
+
+2025-10-26 03:21:25.868 [error] [153392] [Local→Remote] 101
+
+2025-10-26 03:21:31.022 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:21:31.022 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:21:31.026 [error] [153392] [Local→Remote] 102
+
+2025-10-26 03:21:31.026 [error] [153392] [Local→Remote] 102
+
+2025-10-26 03:21:36.253 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:21:36.253 [error] [153392] [Remote→Local] ping
+
+2025-10-26 03:21:36.260 [error] [153392] [Local→Remote] 103
+
+2025-10-26 03:21:36.261 [error] [153392] [Local→Remote] 103
+
+2025-10-26 03:21:41.523 [info] Client closed for command
+2025-10-26 03:22:07.914 [info] Handling CreateClient action
+2025-10-26 03:22:07.914 [info] Handling CreateClient action
+2025-10-26 03:22:07.914 [info] CreateClient completed, server stored: true
+2025-10-26 03:22:07.914 [info] CreateClient completed, server stored: true
+2025-10-26 03:22:07.936 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:07.936 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:07.936 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:07.936 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:07.937 [error] Error listing tools: Not connected
+2025-10-26 03:22:07.937 [error] Error listing tools: Not connected
+2025-10-26 03:22:07.937 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:07.937 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:08.001 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:08.001 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:08.001 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:08.001 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:08.001 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:08.001 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:08.002 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:08.002 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:08.002 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:08.002 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:08.002 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:08.002 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:08.002 [error] Error listing tools: Not connected
+2025-10-26 03:22:08.002 [error] Error listing tools: Not connected
+2025-10-26 03:22:08.002 [error] Error listing tools: Not connected
+2025-10-26 03:22:08.002 [error] Error listing tools: Not connected
+2025-10-26 03:22:08.002 [error] Error listing tools: Not connected
+2025-10-26 03:22:08.002 [error] Error listing tools: Not connected
+2025-10-26 03:22:08.002 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:08.002 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:08.002 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:08.002 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:08.002 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:08.002 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:11.475 [info] Handling CreateClient action
+2025-10-26 03:22:11.475 [info] Handling CreateClient action
+2025-10-26 03:22:11.475 [info] CreateClient completed, server stored: true
+2025-10-26 03:22:11.475 [info] CreateClient completed, server stored: true
+2025-10-26 03:22:11.556 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:11.556 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:11.556 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:11.556 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:11.556 [error] Error listing tools: Not connected
+2025-10-26 03:22:11.557 [error] Error listing tools: Not connected
+2025-10-26 03:22:11.557 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:11.557 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:12.953 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:12.953 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:12.953 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:12.953 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:12.953 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:12.953 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:12.953 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:12.953 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:12.954 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:12.954 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:12.954 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:12.954 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:12.954 [error] Error listing tools: Not connected
+2025-10-26 03:22:12.954 [error] Error listing tools: Not connected
+2025-10-26 03:22:12.954 [error] Error listing tools: Not connected
+2025-10-26 03:22:12.954 [error] Error listing tools: Not connected
+2025-10-26 03:22:12.954 [error] Error listing tools: Not connected
+2025-10-26 03:22:12.954 [error] Error listing tools: Not connected
+2025-10-26 03:22:12.955 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:12.955 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:12.955 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:12.955 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:12.955 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:12.955 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:35.365 [info] Handling CreateClient action
+2025-10-26 03:22:35.365 [info] CreateClient completed, server stored: true
+2025-10-26 03:22:35.387 [info] Handling CreateClient action
+2025-10-26 03:22:35.387 [info] CreateClient completed, server stored: true
+2025-10-26 03:22:35.418 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:35.419 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:35.419 [error] Error listing tools: Not connected
+2025-10-26 03:22:35.419 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:35.436 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:35.436 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:35.436 [error] Error listing tools: Not connected
+2025-10-26 03:22:35.436 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:37.035 [info] Handling CreateClient action
+2025-10-26 03:22:37.035 [info] CreateClient completed, server stored: true
+2025-10-26 03:22:37.153 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:37.153 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:37.154 [error] Error listing tools: Not connected
+2025-10-26 03:22:37.154 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:37.232 [info] Handling CreateClient action
+2025-10-26 03:22:37.233 [info] CreateClient completed, server stored: true
+2025-10-26 03:22:37.271 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:37.271 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:37.271 [error] Error listing tools: Not connected
+2025-10-26 03:22:37.271 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:47.500 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:47.500 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:47.501 [error] Error listing tools: Not connected
+2025-10-26 03:22:47.501 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:47.506 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:47.507 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:47.507 [error] Error listing tools: Not connected
+2025-10-26 03:22:47.507 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:47.512 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:47.512 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:47.512 [error] Error listing tools: Not connected
+2025-10-26 03:22:47.512 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:47.592 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:47.593 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:47.593 [error] Error listing tools: Not connected
+2025-10-26 03:22:47.593 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:47.636 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:47.637 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:47.637 [error] Error listing tools: Not connected
+2025-10-26 03:22:47.637 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:47.657 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:47.657 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:47.658 [error] Error listing tools: Not connected
+2025-10-26 03:22:47.658 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:47.700 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:47.700 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:47.701 [error] Error listing tools: Not connected
+2025-10-26 03:22:47.701 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:47.726 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:47.726 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:47.726 [error] Error listing tools: Not connected
+2025-10-26 03:22:47.726 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:48.311 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:48.312 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:48.312 [error] Error listing tools: Not connected
+2025-10-26 03:22:48.312 [info] Found 0 tools, 0 prompts, and 0 resources

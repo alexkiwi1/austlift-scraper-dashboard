@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "mcpx": {
+      "command": "npx",
+      "args": [
+        "mcp-remote@0.1.21",
+        "http://10.100.0.39:9000/mcp",
+        "--header",
+        "x-lunar-consumer-tag: Claude-Cursor-i7",
+        "--allow-http"
+      ],
+      "env": {}
+    },
+    "test-server": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/tmp"
+      ]
+    }
+  }
+}

@@ -1,0 +1,468 @@
+2025-10-26 03:03:50.836 [info] Handling CreateClient action
+2025-10-26 03:03:50.836 [info] Starting new stdio process with command: npx mcp-remote@0.1.21 http://10.100.0.39:9000/mcp --header x-lunar-consumer-tag: Claude-Alex-M --allow-http
+2025-10-26 03:03:50.836 [error] Client error for command A system error occurred (spawn npx ENOENT)
+2025-10-26 03:03:50.836 [info] Client closed for command
+2025-10-26 03:03:51.806 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:03:51.806 [error] No server info found
+2025-10-26 03:03:51.806 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:03:51.806 [error] No server info found
+2025-10-26 03:03:52.959 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:03:52.959 [error] No server info found
+2025-10-26 03:03:52.959 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:03:52.959 [error] No server info found
+2025-10-26 03:03:52.959 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:03:52.959 [error] No server info found
+2025-10-26 03:03:52.959 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:03:52.959 [error] No server info found
+2025-10-26 03:03:53.448 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:03:53.448 [error] No server info found
+2025-10-26 03:03:53.502 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:03:53.502 [error] No server info found
+2025-10-26 03:03:53.502 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:03:53.502 [error] No server info found
+2025-10-26 03:03:53.502 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:03:53.502 [error] No server info found
+2025-10-26 03:07:25.855 [info] Handling DeleteClient action
+2025-10-26 03:07:25.856 [info] Handling DeleteClient action
+2025-10-26 03:07:25.901 [info] Handling CreateClient action
+2025-10-26 03:07:25.901 [info] Starting new stdio process with command: npx mcp-remote@0.1.21 http://10.100.0.39:9000/mcp --header x-lunar-consumer-tag: Claude-Cursor-i7 --allow-http
+2025-10-26 03:07:25.901 [info] Handling CreateClient action
+2025-10-26 03:07:25.901 [info] Starting new stdio process with command: npx mcp-remote@0.1.21 http://10.100.0.39:9000/mcp --header x-lunar-consumer-tag: Claude-Cursor-i7 --allow-http
+2025-10-26 03:07:26.105 [info] Handling CreateClient action
+2025-10-26 03:07:26.105 [info] Starting new stdio process with command: npx mcp-remote@0.1.21 http://10.100.0.39:9000/mcp --header x-lunar-consumer-tag: Claude-Cursor-i7 --allow-http
+2025-10-26 03:07:27.396 [error] [150093] Using automatically selected callback port: 13135
+[150093] Using custom headers: {"x-lunar-consumer-tag":"Claude-Cursor-i7"}
+
+2025-10-26 03:07:27.397 [error] [150093] [150093] Connecting to remote server: http://10.100.0.39:9000/mcp
+
+2025-10-26 03:07:27.397 [error] [150093] Using transport strategy: http-first
+
+2025-10-26 03:07:27.421 [error] [150103] Using automatically selected callback port: 13135
+
+2025-10-26 03:07:27.422 [error] [150103] Using custom headers: {"x-lunar-consumer-tag":"Claude-Cursor-i7"}
+
+2025-10-26 03:07:27.422 [error] [150101] Using automatically selected callback port: 13135
+
+2025-10-26 03:07:27.422 [error] [150101] Using custom headers: {"x-lunar-consumer-tag":"Claude-Cursor-i7"}
+
+2025-10-26 03:07:27.424 [error] [150101] [150101] Connecting to remote server: http://10.100.0.39:9000/mcp
+
+2025-10-26 03:07:27.424 [error] [150103] [150103] Connecting to remote server: http://10.100.0.39:9000/mcp
+
+2025-10-26 03:07:27.424 [error] [150103] Using transport strategy: http-first
+
+2025-10-26 03:07:27.424 [error] [150101] Using transport strategy: http-first
+
+2025-10-26 03:07:27.522 [error] [150093] Connected to remote server using StreamableHTTPClientTransport
+
+2025-10-26 03:07:27.522 [error] [150093] Local STDIO server running
+
+2025-10-26 03:07:27.522 [error] [150093] Proxy established successfully between local STDIO and remote StreamableHTTPClientTransport
+
+2025-10-26 03:07:27.523 [error] [150093] Press Ctrl+C to exit
+
+2025-10-26 03:07:27.524 [error] [150093] [Local→Remote] initialize
+
+2025-10-26 03:07:27.524 [error] [150093] {
+  "jsonrpc": "2.0",
+  "id": 0,
+  "method": "initialize",
+  "params": {
+    "protocolVersion": "2025-06-18",
+    "capabilities": {
+      "tools": true,
+      "prompts": true,
+      "resources": true,
+      "logging": false,
+      "elicitation": {},
+      "roots": {
+        "listChanged": false
+      }
+    },
+    "clientInfo": {
+      "name": "cursor-vscode (via mcp-remote 0.1.21)",
+      "version": "1.0.0"
+    }
+  }
+}
+
+2025-10-26 03:07:27.571 [error] [150093] [Remote→Local] 0
+
+2025-10-26 03:07:27.584 [info] Successfully connected to stdio server
+2025-10-26 03:07:27.584 [info] Storing stdio client user-mcpx
+2025-10-26 03:07:27.584 [info] CreateClient completed, server stored: true
+2025-10-26 03:07:27.584 [error] [150093] [Local→Remote] notifications/initialized
+
+2025-10-26 03:07:27.584 [error] [150093] [Local→Remote] notifications/initialized
+
+2025-10-26 03:07:27.610 [error] [150101] Connected to remote server using StreamableHTTPClientTransport
+
+2025-10-26 03:07:27.611 [error] [150101] Local STDIO server running
+
+2025-10-26 03:07:27.611 [error] [150101] Proxy established successfully between local STDIO and remote StreamableHTTPClientTransport
+[150101] Press Ctrl+C to exit
+
+2025-10-26 03:07:27.612 [error] [150103] Connected to remote server using StreamableHTTPClientTransport
+
+2025-10-26 03:07:27.613 [error] [150103] Local STDIO server running
+[150103] Proxy established successfully between local STDIO and remote StreamableHTTPClientTransport
+[150103] Press Ctrl+C to exit
+
+2025-10-26 03:07:27.614 [error] [150101] [Local→Remote] initialize
+
+2025-10-26 03:07:27.614 [error] [150101] {
+  "jsonrpc": "2.0",
+  "id": 0,
+  "method": "initialize",
+  "params": {
+    "protocolVersion": "2025-06-18",
+    "capabilities": {
+      "tools": true,
+      "prompts": true,
+      "resources": true,
+      "logging": false,
+      "elicitation": {},
+      "roots": {
+        "listChanged": false
+      }
+    },
+    "clientInfo": {
+      "name": "cursor-vscode (via mcp-remote 0.1.21)",
+      "version": "1.0.0"
+    }
+  }
+}
+
+2025-10-26 03:07:27.615 [error] [150103] [Local→Remote] initialize
+
+2025-10-26 03:07:27.615 [error] [150103] {
+  "jsonrpc": "2.0",
+  "id": 0,
+  "method": "initialize",
+  "params": {
+    "protocolVersion": "2025-06-18",
+    "capabilities": {
+      "tools": true,
+      "prompts": true,
+      "resources": true,
+      "logging": false,
+      "elicitation": {},
+      "roots": {
+        "listChanged": false
+      }
+    },
+    "clientInfo": {
+      "name": "cursor-vscode (via mcp-remote 0.1.21)",
+      "version": "1.0.0"
+    }
+  }
+}
+
+2025-10-26 03:07:27.647 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:27.648 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:27.652 [error] [150093] [Local→Remote] tools/list
+
+2025-10-26 03:07:27.652 [error] [150093] [Local→Remote] tools/list
+
+2025-10-26 03:07:27.653 [error] [150101] [Remote→Local] 0
+
+2025-10-26 03:07:27.667 [info] Successfully connected to stdio server
+2025-10-26 03:07:27.667 [info] A second client was created while connecting, discarding it.
+2025-10-26 03:07:27.667 [info] CreateClient completed, server stored: true
+2025-10-26 03:07:27.667 [error] [150101] [Local→Remote] notifications/initialized
+
+2025-10-26 03:07:27.667 [error] [150101] [Local→Remote] notifications/initialized
+
+2025-10-26 03:07:27.683 [error] [150103] [Remote→Local] 0
+
+2025-10-26 03:07:27.686 [info] Successfully connected to stdio server
+2025-10-26 03:07:27.686 [info] A second client was created while connecting, discarding it.
+2025-10-26 03:07:27.686 [info] CreateClient completed, server stored: true
+2025-10-26 03:07:27.689 [error] [150103] [Local→Remote] notifications/initialized
+
+2025-10-26 03:07:27.690 [error] [150103] [Local→Remote] notifications/initialized
+
+2025-10-26 03:07:27.696 [error] [150101] 
+Shutting down...
+
+2025-10-26 03:07:27.696 [error] [150101] 
+Shutting down...
+
+2025-10-26 03:07:27.703 [error] [150101] Error from remote server: DOMException [AbortError]: This operation was aborted
+    at node:internal/deps/undici/undici:14900:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async StreamableHTTPClientTransport._startOrAuthSse (file:///root/.npm/_npx/fc1f25fe71a5a35c/node_modules/mcp-remote/dist/chunk-BCWNEBAL.js:13289:24)
+
+2025-10-26 03:07:27.703 [error] [150101] Error from remote server: DOMException [AbortError]: This operation was aborted
+    at node:internal/deps/undici/undici:14900:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async StreamableHTTPClientTransport._startOrAuthSse (file:///root/.npm/_npx/fc1f25fe71a5a35c/node_modules/mcp-remote/dist/chunk-BCWNEBAL.js:13289:24)
+
+2025-10-26 03:07:27.703 [error] [150101] Error from remote server: DOMException [AbortError]: This operation was aborted
+    at node:internal/deps/undici/undici:14900:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async StreamableHTTPClientTransport._startOrAuthSse (file:///root/.npm/_npx/fc1f25fe71a5a35c/node_modules/mcp-remote/dist/chunk-BCWNEBAL.js:13289:24)
+
+2025-10-26 03:07:27.704 [error] [150101] Error from remote server: DOMException [AbortError]: This operation was aborted
+    at node:internal/deps/undici/undici:14900:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async StreamableHTTPClientTransport._startOrAuthSse (file:///root/.npm/_npx/fc1f25fe71a5a35c/node_modules/mcp-remote/dist/chunk-BCWNEBAL.js:13289:24)
+
+2025-10-26 03:07:27.718 [error] [150103] 
+Shutting down...
+
+2025-10-26 03:07:27.718 [error] [150103] 
+Shutting down...
+
+2025-10-26 03:07:27.744 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:27.745 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:27.753 [error] [150093] [Local→Remote] tools/list
+
+2025-10-26 03:07:27.753 [error] [150093] [Local→Remote] tools/list
+
+2025-10-26 03:07:27.781 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:27.785 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:27.788 [error] [150093] [Local→Remote] tools/list
+
+2025-10-26 03:07:27.788 [error] [150093] [Local→Remote] tools/list
+
+2025-10-26 03:07:30.740 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:30.745 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:30.746 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:30.748 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:30.748 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:30.748 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:30.768 [error] [150093] [Local→Remote] tools/list
+[150093] [Local→Remote] tools/list
+[150093] [Local→Remote] tools/list
+
+2025-10-26 03:07:30.768 [error] [150093] [Local→Remote] tools/list
+[150093] [Local→Remote] tools/list
+[150093] [Local→Remote] tools/list
+
+2025-10-26 03:07:32.565 [error] [150093] [Remote→Local] ping
+
+2025-10-26 03:07:32.565 [error] [150093] [Remote→Local] ping
+
+2025-10-26 03:07:32.568 [error] [150093] [Local→Remote] 0
+
+2025-10-26 03:07:32.568 [error] [150093] [Local→Remote] 0
+
+2025-10-26 03:07:32.678 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:32.680 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:32.680 [error] [150093] [Local→Remote] tools/list
+
+2025-10-26 03:07:32.682 [error] [150093] [Local→Remote] tools/list
+
+2025-10-26 03:07:32.790 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:32.791 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:32.800 [error] [150093] [Local→Remote] tools/list
+
+2025-10-26 03:07:32.800 [error] [150093] [Local→Remote] tools/list
+
+2025-10-26 03:07:32.896 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:32.897 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:32.904 [error] [150093] [Local→Remote] tools/list
+
+2025-10-26 03:07:32.904 [error] [150093] [Local→Remote] tools/list
+
+2025-10-26 03:07:32.958 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:32.959 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:32.969 [error] [150093] [Local→Remote] tools/list
+
+2025-10-26 03:07:32.969 [error] [150093] [Local→Remote] tools/list
+
+2025-10-26 03:07:35.789 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:35.789 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:35.790 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:35.790 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:35.790 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:35.790 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:35.790 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:35.790 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:35.790 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:07:35.791 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:35.791 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:35.791 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:35.791 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:35.791 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:35.791 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:35.791 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:35.791 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:35.791 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:07:35.791 [error] [150093] [Local→Remote] tools/list
+[150093] [Local→Remote] tools/list
+[150093] [Local→Remote] tools/list
+[150093] [Local→Remote] tools/list
+[150093] [Local→Remote] tools/list
+
+2025-10-26 03:07:35.791 [error] [150093] [Local→Remote] tools/list
+[150093] [Local→Remote] tools/list
+[150093] [Local→Remote] tools/list
+[150093] [Local→Remote] tools/list
+[150093] [Local→Remote] tools/list
+
+2025-10-26 03:07:35.791 [error] [150093] [Local→Remote] tools/list
+[150093] [Local→Remote] tools/list
+
+2025-10-26 03:07:35.791 [error] [150093] [Local→Remote] tools/list
+[150093] [Local→Remote] tools/list
+
+2025-10-26 03:07:35.792 [error] [150093] [Local→Remote] tools/list
+
+2025-10-26 03:07:35.792 [error] [150093] [Local→Remote] tools/list
+
+2025-10-26 03:07:35.792 [error] [150093] [Local→Remote] tools/list
+
+2025-10-26 03:07:35.792 [error] [150093] [Local→Remote] tools/list
+
+2025-10-26 03:07:37.565 [error] [150093] [Remote→Local] ping
+
+2025-10-26 03:07:37.566 [error] [150093] [Remote→Local] ping
+
+2025-10-26 03:07:37.567 [error] [150093] [Local→Remote] 1
+
+2025-10-26 03:07:37.567 [error] [150093] [Local→Remote] 1
+
+2025-10-26 03:07:37.921 [error] [150093] [Remote→Local] 1
+
+2025-10-26 03:07:37.921 [error] [150093] [Remote→Local] 1
+
+2025-10-26 03:07:37.924 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:07:37.924 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:37.925 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:07:37.925 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:37.925 [error] [150093] [Remote→Local] 2
+[150093] [Remote→Local] 3
+
+2025-10-26 03:07:37.925 [error] [150093] [Remote→Local] 2
+[150093] [Remote→Local] 3
+
+2025-10-26 03:07:37.927 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:07:37.929 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:40.917 [error] [150093] [Remote→Local] 4
+
+2025-10-26 03:07:40.917 [error] [150093] [Remote→Local] 4
+
+2025-10-26 03:07:40.918 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:07:40.918 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:40.918 [error] [150093] [Remote→Local] 5
+
+2025-10-26 03:07:40.918 [error] [150093] [Remote→Local] 5
+
+2025-10-26 03:07:40.919 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:07:40.919 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:40.920 [error] [150093] [Remote→Local] 6
+
+2025-10-26 03:07:40.920 [error] [150093] [Remote→Local] 6
+
+2025-10-26 03:07:40.921 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:07:40.921 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:43.445 [error] [150093] [Remote→Local] ping
+[150093] [Remote→Local] 7
+[150093] [Remote→Local] 8
+[150093] [Remote→Local] 9
+[150093] [Remote→Local] 10
+
+2025-10-26 03:07:43.445 [error] [150093] [Remote→Local] ping
+[150093] [Remote→Local] 7
+[150093] [Remote→Local] 8
+[150093] [Remote→Local] 9
+[150093] [Remote→Local] 10
+
+2025-10-26 03:07:43.447 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:07:43.448 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:07:43.448 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:07:43.448 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:07:43.448 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:43.448 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:43.448 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:43.448 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:43.455 [error] [150093] [Local→Remote] 2
+
+2025-10-26 03:07:43.456 [error] [150093] [Local→Remote] 2
+
+2025-10-26 03:07:45.910 [error] [150093] [Remote→Local] 19
+
+2025-10-26 03:07:45.910 [error] [150093] [Remote→Local] 19
+
+2025-10-26 03:07:45.912 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:07:45.912 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:45.912 [error] [150093] [Remote→Local] 11
+
+2025-10-26 03:07:45.913 [error] [150093] [Remote→Local] 11
+
+2025-10-26 03:07:45.914 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:07:45.914 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:45.915 [error] [150093] [Remote→Local] 12
+
+2025-10-26 03:07:45.915 [error] [150093] [Remote→Local] 12
+
+2025-10-26 03:07:45.916 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:07:45.916 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:45.917 [error] [150093] [Remote→Local] 16
+
+2025-10-26 03:07:45.917 [error] [150093] [Remote→Local] 16
+
+2025-10-26 03:07:45.918 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:07:45.918 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:45.918 [error] [150093] [Remote→Local] 13
+
+2025-10-26 03:07:45.918 [error] [150093] [Remote→Local] 13
+
+2025-10-26 03:07:45.919 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:07:45.920 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:45.920 [error] [150093] [Remote→Local] 14
+[150093] [Remote→Local] 15
+
+2025-10-26 03:07:45.920 [error] [150093] [Remote→Local] 14
+[150093] [Remote→Local] 15
+
+2025-10-26 03:07:45.922 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:07:45.922 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:07:45.922 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:45.922 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:45.923 [error] [150093] [Remote→Local] 17
+
+2025-10-26 03:07:45.923 [error] [150093] [Remote→Local] 17
+
+2025-10-26 03:07:45.925 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:07:45.925 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:45.925 [error] [150093] [Remote→Local] 18
+
+2025-10-26 03:07:45.925 [error] [150093] [Remote→Local] 18
+
+2025-10-26 03:07:45.926 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:07:45.926 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:07:47.617 [error] [150093] [Remote→Local] ping
+
+2025-10-26 03:07:47.617 [error] [150093] [Remote→Local] ping
+
+2025-10-26 03:07:47.618 [error] [150093] [Local→Remote] 3
+
+2025-10-26 03:07:47.618 [error] [150093] [Local→Remote] 3
+
+2025-10-26 03:07:52.565 [error] [150093] [Remote→Local] ping
+
+2025-10-26 03:07:52.565 [error] [150093] [Remote→Local] ping
+
+2025-10-26 03:07:52.566 [error] [150093] [Local→Remote] 4
+
+2025-10-26 03:07:52.566 [error] [150093] [Local→Remote] 4
+
+2025-10-26 03:07:57.565 [error] [150093] [Remote→Local] ping
+
+2025-10-26 03:07:57.565 [error] [150093] [Remote→Local] ping
+
+2025-10-26 03:07:57.566 [error] [150093] [Local→Remote] 5
+
+2025-10-26 03:07:57.566 [error] [150093] [Local→Remote] 5
+
+2025-10-26 03:08:02.566 [error] [150093] [Remote→Local] ping
+
+2025-10-26 03:08:02.566 [error] [150093] [Remote→Local] ping
+
+2025-10-26 03:08:02.567 [error] [150093] [Local→Remote] 6
+
+2025-10-26 03:08:02.567 [error] [150093] [Local→Remote] 6
+

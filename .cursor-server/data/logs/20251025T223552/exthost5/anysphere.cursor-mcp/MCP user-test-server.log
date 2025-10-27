@@ -1,0 +1,71 @@
+2025-10-26 03:22:35.439 [info] Handling CreateClient action
+2025-10-26 03:22:35.440 [info] Starting new stdio process with command: npx -y @modelcontextprotocol/server-filesystem /tmp
+2025-10-26 03:22:35.440 [info] Handling CreateClient action
+2025-10-26 03:22:35.440 [info] Starting new stdio process with command: npx -y @modelcontextprotocol/server-filesystem /tmp
+2025-10-26 03:22:35.441 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:22:35.441 [error] No server info found
+2025-10-26 03:22:35.452 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:22:35.452 [error] No server info found
+2025-10-26 03:22:37.153 [info] Handling CreateClient action
+2025-10-26 03:22:37.153 [info] Starting new stdio process with command: npx -y @modelcontextprotocol/server-filesystem /tmp
+2025-10-26 03:22:37.220 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:22:37.220 [error] No server info found
+2025-10-26 03:22:37.271 [info] Handling CreateClient action
+2025-10-26 03:22:37.271 [info] Starting new stdio process with command: npx -y @modelcontextprotocol/server-filesystem /tmp
+2025-10-26 03:22:37.295 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:22:37.295 [error] No server info found
+2025-10-26 03:22:46.296 [error] Secure MCP Filesystem Server running on stdio
+
+2025-10-26 03:22:46.297 [info] Successfully connected to stdio server
+2025-10-26 03:22:46.297 [info] Storing stdio client user-test-server
+2025-10-26 03:22:46.297 [info] CreateClient completed, server stored: true
+2025-10-26 03:22:46.351 [info] ListRootsRequest received
+2025-10-26 03:22:46.351 [error] Secure MCP Filesystem Server running on stdio
+
+2025-10-26 03:22:46.572 [error] Updated allowed directories from MCP roots: 1 valid directories
+
+2025-10-26 03:22:46.572 [error] Updated allowed directories from MCP roots: 1 valid directories
+
+2025-10-26 03:22:46.574 [info] Successfully connected to stdio server
+2025-10-26 03:22:46.574 [info] A second client was created while connecting, discarding it.
+2025-10-26 03:22:46.574 [info] CreateClient completed, server stored: true
+2025-10-26 03:22:46.575 [error] Secure MCP Filesystem Server running on stdio
+
+2025-10-26 03:22:46.588 [info] Successfully connected to stdio server
+2025-10-26 03:22:46.588 [info] A second client was created while connecting, discarding it.
+2025-10-26 03:22:46.588 [info] CreateClient completed, server stored: true
+2025-10-26 03:22:46.652 [info] ListRootsRequest received
+2025-10-26 03:22:46.654 [info] ListRootsRequest received
+2025-10-26 03:22:47.175 [error] Secure MCP Filesystem Server running on stdio
+
+2025-10-26 03:22:47.193 [info] Successfully connected to stdio server
+2025-10-26 03:22:47.193 [info] A second client was created while connecting, discarding it.
+2025-10-26 03:22:47.193 [info] CreateClient completed, server stored: true
+2025-10-26 03:22:47.252 [info] ListRootsRequest received
+2025-10-26 03:22:47.636 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:47.637 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:47.657 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:47.657 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:47.665 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:47.671 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:47.700 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:47.700 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:47.709 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:47.726 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:47.726 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:47.728 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:47.728 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:47.733 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:47.733 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:47.740 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:47.740 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:47.745 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:47.745 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:47.750 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:47.750 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:47.757 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:47.757 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:47.767 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:48.328 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:48.328 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:48.334 [info] Found 14 tools, 0 prompts, and 0 resources

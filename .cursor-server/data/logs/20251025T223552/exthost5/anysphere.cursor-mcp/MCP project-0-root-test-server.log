@@ -1,0 +1,67 @@
+2025-10-26 03:22:46.302 [info] Handling CreateClient action
+2025-10-26 03:22:46.302 [info] Starting new stdio process with command: npx -y @modelcontextprotocol/server-filesystem /tmp
+2025-10-26 03:22:46.302 [info] Handling ReloadClient action
+2025-10-26 03:22:46.302 [info] Starting new stdio process with command: npx 
+2025-10-26 03:22:47.304 [error] sh: 1: {method:initialize,params:{protocolVersion:2025-06-18,capabilities:{tools:true,prompts:true,resources:true,logging:false,elicitation:{},roots:{listChanged:false}},clientInfo:{name:cursor-vscode,version:1.0.0}},jsonrpc:2.0,id:0}: not found
+
+2025-10-26 03:22:47.637 [info] Handling CreateClient action
+2025-10-26 03:22:47.637 [info] Starting new stdio process with command: npx -y @modelcontextprotocol/server-filesystem /tmp
+2025-10-26 03:22:47.657 [info] Handling CreateClient action
+2025-10-26 03:22:47.657 [info] Starting new stdio process with command: npx -y @modelcontextprotocol/server-filesystem /tmp
+2025-10-26 03:22:47.700 [info] Handling CreateClient action
+2025-10-26 03:22:47.700 [info] Starting new stdio process with command: npx -y @modelcontextprotocol/server-filesystem /tmp
+2025-10-26 03:22:47.726 [info] Handling CreateClient action
+2025-10-26 03:22:47.726 [info] Starting new stdio process with command: npx -y @modelcontextprotocol/server-filesystem /tmp
+2025-10-26 03:22:47.755 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:22:47.755 [error] No server info found
+2025-10-26 03:22:47.755 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:22:47.755 [error] No server info found
+2025-10-26 03:22:47.776 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:22:47.776 [error] No server info found
+2025-10-26 03:22:47.780 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:22:47.780 [error] No server info found
+2025-10-26 03:22:47.781 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:22:47.781 [error] No server info found
+2025-10-26 03:22:47.789 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:22:47.789 [error] No server info found
+2025-10-26 03:22:47.789 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:22:47.789 [error] No server info found
+2025-10-26 03:22:47.797 [info] Handling ListOfferings action, server stored: false
+2025-10-26 03:22:47.797 [error] No server info found
+2025-10-26 03:22:48.269 [error] Secure MCP Filesystem Server running on stdio
+
+2025-10-26 03:22:48.276 [info] Successfully connected to stdio server
+2025-10-26 03:22:48.276 [info] Storing stdio client project-0-root-test-server
+2025-10-26 03:22:48.276 [info] CreateClient completed, server stored: true
+2025-10-26 03:22:48.288 [info] ListRootsRequest received
+2025-10-26 03:22:48.302 [error] Updated allowed directories from MCP roots: 1 valid directories
+
+2025-10-26 03:22:48.302 [error] Updated allowed directories from MCP roots: 1 valid directories
+
+2025-10-26 03:22:48.411 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:22:48.411 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:22:48.419 [info] Found 14 tools, 0 prompts, and 0 resources
+2025-10-26 03:22:51.190 [error] Secure MCP Filesystem Server running on stdio
+
+2025-10-26 03:22:51.191 [info] Successfully connected to stdio server
+2025-10-26 03:22:51.191 [info] A second client was created while connecting, discarding it.
+2025-10-26 03:22:51.191 [info] CreateClient completed, server stored: true
+2025-10-26 03:22:51.191 [error] Secure MCP Filesystem Server running on stdio
+
+2025-10-26 03:22:51.191 [error] Secure MCP Filesystem Server running on stdio
+
+2025-10-26 03:22:51.192 [info] Successfully connected to stdio server
+2025-10-26 03:22:51.192 [info] A second client was created while connecting, discarding it.
+2025-10-26 03:22:51.192 [info] CreateClient completed, server stored: true
+2025-10-26 03:22:51.193 [info] Successfully connected to stdio server
+2025-10-26 03:22:51.193 [info] A second client was created while connecting, discarding it.
+2025-10-26 03:22:51.193 [info] CreateClient completed, server stored: true
+2025-10-26 03:22:51.193 [error] Secure MCP Filesystem Server running on stdio
+
+2025-10-26 03:22:51.194 [info] Successfully connected to stdio server
+2025-10-26 03:22:51.194 [info] A second client was created while connecting, discarding it.
+2025-10-26 03:22:51.194 [info] CreateClient completed, server stored: true
+2025-10-26 03:22:51.205 [info] ListRootsRequest received
+2025-10-26 03:22:51.205 [info] ListRootsRequest received
+2025-10-26 03:22:51.206 [info] ListRootsRequest received
+2025-10-26 03:22:51.206 [info] ListRootsRequest received

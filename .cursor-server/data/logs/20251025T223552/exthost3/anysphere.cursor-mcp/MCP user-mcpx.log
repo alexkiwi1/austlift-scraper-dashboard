@@ -1,0 +1,315 @@
+2025-10-26 03:08:41.151 [info] Handling CreateClient action
+2025-10-26 03:08:41.151 [info] Starting new stdio process with command: npx mcp-remote@0.1.21 http://10.100.0.39:9000/mcp --header x-lunar-consumer-tag: Claude-Cursor-i7 --allow-http
+2025-10-26 03:08:41.151 [info] Handling CreateClient action
+2025-10-26 03:08:41.151 [info] Starting new stdio process with command: npx mcp-remote@0.1.21 http://10.100.0.39:9000/mcp --header x-lunar-consumer-tag: Claude-Cursor-i7 --allow-http
+2025-10-26 03:08:43.455 [error] [151097] Using automatically selected callback port: 13135
+[151097] Using custom headers: {"x-lunar-consumer-tag":"Claude-Cursor-i7"}
+[151097] [151097] Connecting to remote server: http://10.100.0.39:9000/mcp
+[151097] Using transport strategy: http-first
+[151097] Connected to remote server using StreamableHTTPClientTransport
+[151097] Local STDIO server running
+[151097] Proxy established successfully between local STDIO and remote StreamableHTTPClientTransport
+[151097] Press Ctrl+C to exit
+[151097] [Local→Remote] initialize
+[151097] {
+  "jsonrpc": "2.0",
+  "id": 0,
+  "method": "initialize",
+  "params": {
+    "protocolVersion": "2025-06-18",
+    "capabilities": {
+      "tools": true,
+      "prompts": true,
+      "resources": true,
+      "logging": false,
+      "elicitation": {},
+      "roots": {
+        "listChanged": false
+      }
+    },
+    "clientInfo": {
+      "name": "cursor-vscode (via mcp-remote 0.1.21)",
+      "version": "1.0.0"
+    }
+  }
+}
+[151097] [Remote→Local] 0
+
+2025-10-26 03:08:43.455 [error] [151090] Using automatically selected callback port: 13135
+[151090] Using custom headers: {"x-lunar-consumer-tag":"Claude-Cursor-i7"}
+[151090] [151090] Connecting to remote server: http://10.100.0.39:9000/mcp
+[151090] Using transport strategy: http-first
+[151090] Connected to remote server using StreamableHTTPClientTransport
+[151090] Local STDIO server running
+[151090] Proxy established successfully between local STDIO and remote StreamableHTTPClientTransport
+[151090] Press Ctrl+C to exit
+[151090] [Local→Remote] initialize
+[151090] {
+  "jsonrpc": "2.0",
+  "id": 0,
+  "method": "initialize",
+  "params": {
+    "protocolVersion": "2025-06-18",
+    "capabilities": {
+      "tools": true,
+      "prompts": true,
+      "resources": true,
+      "logging": false,
+      "elicitation": {},
+      "roots": {
+        "listChanged": false
+      }
+    },
+    "clientInfo": {
+      "name": "cursor-vscode (via mcp-remote 0.1.21)",
+      "version": "1.0.0"
+    }
+  }
+}
+[151090] [Remote→Local] 0
+
+2025-10-26 03:08:43.462 [info] Successfully connected to stdio server
+2025-10-26 03:08:43.462 [info] Storing stdio client user-mcpx
+2025-10-26 03:08:43.462 [info] CreateClient completed, server stored: true
+2025-10-26 03:08:43.467 [info] Successfully connected to stdio server
+2025-10-26 03:08:43.467 [info] A second client was created while connecting, discarding it.
+2025-10-26 03:08:43.467 [info] CreateClient completed, server stored: true
+2025-10-26 03:08:43.506 [error] [151097] [Local→Remote] notifications/initialized
+
+2025-10-26 03:08:43.506 [error] [151097] [Local→Remote] notifications/initialized
+
+2025-10-26 03:08:43.507 [error] [151090] [Local→Remote] notifications/initialized
+
+2025-10-26 03:08:43.507 [error] [151090] [Local→Remote] notifications/initialized
+
+2025-10-26 03:08:43.532 [error] [151097] 
+Shutting down...
+
+2025-10-26 03:08:43.532 [error] [151097] 
+Shutting down...
+
+2025-10-26 03:08:45.009 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:08:45.010 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:08:45.011 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:08:45.011 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:08:45.016 [error] [151090] [Local→Remote] tools/list
+[151090] [Local→Remote] tools/list
+
+2025-10-26 03:08:45.016 [error] [151090] [Local→Remote] tools/list
+[151090] [Local→Remote] tools/list
+
+2025-10-26 03:08:47.187 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:08:47.189 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:08:47.191 [error] [151090] [Local→Remote] tools/list
+
+2025-10-26 03:08:47.191 [error] [151090] [Local→Remote] tools/list
+
+2025-10-26 03:08:47.269 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:08:47.270 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:08:47.271 [error] [151090] [Local→Remote] tools/list
+
+2025-10-26 03:08:47.271 [error] [151090] [Local→Remote] tools/list
+
+2025-10-26 03:08:48.264 [error] [151090] [Remote→Local] ping
+
+2025-10-26 03:08:48.264 [error] [151090] [Remote→Local] ping
+
+2025-10-26 03:08:48.266 [error] [151090] [Local→Remote] 0
+
+2025-10-26 03:08:48.266 [error] [151090] [Local→Remote] 0
+
+2025-10-26 03:08:49.037 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:08:49.042 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:08:49.043 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:08:49.043 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:08:49.052 [error] [151090] [Local→Remote] tools/list
+[151090] [Local→Remote] tools/list
+
+2025-10-26 03:08:49.052 [error] [151090] [Local→Remote] tools/list
+[151090] [Local→Remote] tools/list
+
+2025-10-26 03:08:50.903 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:08:50.903 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:08:50.904 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:08:50.904 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:08:50.904 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:08:50.904 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:08:50.904 [error] [151090] [Local→Remote] tools/list
+
+2025-10-26 03:08:50.904 [error] [151090] [Local→Remote] tools/list
+
+2025-10-26 03:08:50.905 [error] [151090] [Local→Remote] tools/list
+[151090] [Local→Remote] tools/list
+
+2025-10-26 03:08:50.905 [error] [151090] [Local→Remote] tools/list
+[151090] [Local→Remote] tools/list
+
+2025-10-26 03:08:50.943 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:08:50.943 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:08:50.943 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:08:50.943 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:08:50.944 [error] [151090] [Local→Remote] tools/list
+
+2025-10-26 03:08:50.944 [error] [151090] [Local→Remote] tools/list
+
+2025-10-26 03:08:50.945 [error] [151090] [Local→Remote] tools/list
+
+2025-10-26 03:08:50.945 [error] [151090] [Local→Remote] tools/list
+
+2025-10-26 03:08:53.299 [error] [151090] [Remote→Local] ping
+
+2025-10-26 03:08:53.299 [error] [151090] [Remote→Local] ping
+
+2025-10-26 03:08:53.305 [error] [151090] [Local→Remote] 1
+
+2025-10-26 03:08:53.305 [error] [151090] [Local→Remote] 1
+
+2025-10-26 03:08:54.015 [error] [151090] [Remote→Local] 8
+
+2025-10-26 03:08:54.015 [error] [151090] [Remote→Local] 8
+
+2025-10-26 03:08:54.018 [info] Found 8 tools, 0 prompts, and 0 resources
+2025-10-26 03:08:54.020 [info] Found 8 tools, 0 prompts, and 0 resources
+2025-10-26 03:08:54.020 [error] [151090] [Remote→Local] 9
+[151090] [Remote→Local] 7
+
+2025-10-26 03:08:54.020 [error] [151090] [Remote→Local] 9
+[151090] [Remote→Local] 7
+
+2025-10-26 03:08:54.021 [info] Found 8 tools, 0 prompts, and 0 resources
+2025-10-26 03:08:54.083 [error] [151090] [Remote→Local] 11
+[151090] [Remote→Local] 10
+
+2025-10-26 03:08:54.084 [error] [151090] [Remote→Local] 11
+[151090] [Remote→Local] 10
+
+2025-10-26 03:08:54.087 [info] Found 8 tools, 0 prompts, and 0 resources
+2025-10-26 03:08:54.088 [info] Found 8 tools, 0 prompts, and 0 resources
+2025-10-26 03:08:54.205 [error] [151090] [Remote→Local] 6
+
+2025-10-26 03:08:54.205 [error] [151090] [Remote→Local] 6
+
+2025-10-26 03:08:54.206 [info] Found 8 tools, 0 prompts, and 0 resources
+2025-10-26 03:08:54.207 [error] [151090] [Remote→Local] 5
+
+2025-10-26 03:08:54.207 [error] [151090] [Remote→Local] 5
+
+2025-10-26 03:08:54.208 [info] Found 8 tools, 0 prompts, and 0 resources
+2025-10-26 03:08:54.397 [error] [151090] [Remote→Local] 3
+
+2025-10-26 03:08:54.397 [error] [151090] [Remote→Local] 3
+
+2025-10-26 03:08:54.398 [info] Found 8 tools, 0 prompts, and 0 resources
+2025-10-26 03:08:54.466 [error] [151090] [Remote→Local] 4
+
+2025-10-26 03:08:54.466 [error] [151090] [Remote→Local] 4
+
+2025-10-26 03:08:54.467 [info] Found 8 tools, 0 prompts, and 0 resources
+2025-10-26 03:08:55.346 [error] [151090] [Remote→Local] 1
+
+2025-10-26 03:08:55.346 [error] [151090] [Remote→Local] 1
+
+2025-10-26 03:08:55.350 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:08:55.350 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:08:55.350 [error] [151090] [Remote→Local] 2
+
+2025-10-26 03:08:55.350 [error] [151090] [Remote→Local] 2
+
+2025-10-26 03:08:55.351 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:08:55.351 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:08:58.316 [error] [151090] [Remote→Local] ping
+
+2025-10-26 03:08:58.316 [error] [151090] [Remote→Local] ping
+
+2025-10-26 03:08:58.317 [error] [151090] [Local→Remote] 2
+
+2025-10-26 03:08:58.317 [error] [151090] [Local→Remote] 2
+
+2025-10-26 03:09:03.296 [error] [151090] [Remote→Local] ping
+
+2025-10-26 03:09:03.296 [error] [151090] [Remote→Local] ping
+
+2025-10-26 03:09:03.297 [error] [151090] [Local→Remote] 3
+
+2025-10-26 03:09:03.297 [error] [151090] [Local→Remote] 3
+
+2025-10-26 03:09:08.296 [error] [151090] [Remote→Local] ping
+
+2025-10-26 03:09:08.296 [error] [151090] [Remote→Local] ping
+
+2025-10-26 03:09:08.298 [error] [151090] [Local→Remote] 4
+
+2025-10-26 03:09:08.298 [error] [151090] [Local→Remote] 4
+
+2025-10-26 03:09:13.297 [error] [151090] [Remote→Local] ping
+
+2025-10-26 03:09:13.297 [error] [151090] [Remote→Local] ping
+
+2025-10-26 03:09:13.299 [error] [151090] [Local→Remote] 5
+
+2025-10-26 03:09:13.299 [error] [151090] [Local→Remote] 5
+
+2025-10-26 03:09:18.298 [error] [151090] [Remote→Local] ping
+
+2025-10-26 03:09:18.298 [error] [151090] [Remote→Local] ping
+
+2025-10-26 03:09:18.300 [error] [151090] [Local→Remote] 6
+
+2025-10-26 03:09:18.300 [error] [151090] [Local→Remote] 6
+
+2025-10-26 03:09:23.298 [error] [151090] [Remote→Local] ping
+
+2025-10-26 03:09:23.299 [error] [151090] [Remote→Local] ping
+
+2025-10-26 03:09:23.300 [error] [151090] [Local→Remote] 7
+
+2025-10-26 03:09:23.300 [error] [151090] [Local→Remote] 7
+
+2025-10-26 03:09:28.298 [error] [151090] [Remote→Local] ping
+
+2025-10-26 03:09:28.299 [error] [151090] [Remote→Local] ping
+
+2025-10-26 03:09:28.300 [error] [151090] [Local→Remote] 8
+
+2025-10-26 03:09:28.300 [error] [151090] [Local→Remote] 8
+
+2025-10-26 03:09:33.299 [error] [151090] [Remote→Local] ping
+
+2025-10-26 03:09:33.299 [error] [151090] [Remote→Local] ping
+
+2025-10-26 03:09:33.300 [error] [151090] [Local→Remote] 9
+
+2025-10-26 03:09:33.300 [error] [151090] [Local→Remote] 9
+
+2025-10-26 03:09:38.299 [error] [151090] [Remote→Local] ping
+
+2025-10-26 03:09:38.300 [error] [151090] [Remote→Local] ping
+
+2025-10-26 03:09:38.301 [error] [151090] [Local→Remote] 10
+
+2025-10-26 03:09:38.301 [error] [151090] [Local→Remote] 10
+
+2025-10-26 03:09:43.299 [error] [151090] [Remote→Local] ping
+
+2025-10-26 03:09:43.300 [error] [151090] [Remote→Local] ping
+
+2025-10-26 03:09:43.301 [error] [151090] [Local→Remote] 11
+
+2025-10-26 03:09:43.301 [error] [151090] [Local→Remote] 11
+
+2025-10-26 03:09:48.299 [error] [151090] [Remote→Local] ping
+
+2025-10-26 03:09:48.299 [error] [151090] [Remote→Local] ping
+
+2025-10-26 03:09:48.301 [error] [151090] [Local→Remote] 12
+
+2025-10-26 03:09:48.301 [error] [151090] [Local→Remote] 12
+
+2025-10-26 03:09:53.300 [error] [151090] [Remote→Local] ping
+
+2025-10-26 03:09:53.300 [error] [151090] [Remote→Local] ping
+
+2025-10-26 03:09:53.302 [error] [151090] [Local→Remote] 13
+
+2025-10-26 03:09:53.302 [error] [151090] [Local→Remote] 13
+

@@ -1,0 +1,131 @@
+2025-10-26 03:10:13.326 [info] Extension host with pid 151855 started
+2025-10-26 03:10:13.344 [info] Lock '/root/.cursor-server/data/User/workspaceStorage/8e811577d6ab682015d6706b888853ba/vscode.lock': Lock acquired.
+2025-10-26 03:10:13.457 [info] ExtensionService#_doActivateExtension cursor.cursor-browser-automation, startup: false, activationEvent: 'onCommand:cursor.browserAutomation.stop'
+2025-10-26 03:10:13.475 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: false, activationEvent: '*', root cause: vscode.git
+2025-10-26 03:10:13.475 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-10-26 03:10:13.476 [info] ExtensionService#_doActivateExtension ms-azuretools.vscode-containers, startup: false, activationEvent: 'onLanguage:dockerfile'
+2025-10-26 03:10:13.479 [info] ExtensionService#_doActivateExtension anysphere.cursor-browser-connect, startup: false, activationEvent: 'onStartupFinished'
+2025-10-26 03:10:13.480 [info] ExtensionService#_doActivateExtension anysphere.cursor-mcp, startup: false, activationEvent: 'onStartupFinished'
+2025-10-26 03:10:13.481 [info] ExtensionService#_doActivateExtension anysphere.cursor-shadow-workspace, startup: false, activationEvent: 'onStartupFinished'
+2025-10-26 03:10:13.482 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-10-26 03:10:13.482 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-10-26 03:10:14.833 [info] ExtensionService#_doActivateExtension vscode.npm, startup: true, activationEvent: 'workspaceContains:package.json'
+2025-10-26 03:10:14.990 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:javascript'
+2025-10-26 03:10:15.310 [info] ExtensionService#_doActivateExtension vscode.html-language-features, startup: false, activationEvent: 'onLanguage:html'
+2025-10-26 03:10:15.461 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:markdown'
+2025-10-26 03:10:15.461 [info] ExtensionService#_doActivateExtension vscode.markdown-language-features, startup: false, activationEvent: 'onLanguage:markdown'
+2025-10-26 03:10:15.688 [info] ExtensionService#_doActivateExtension vscode.css-language-features, startup: false, activationEvent: 'onLanguage:css'
+2025-10-26 03:10:15.958 [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: '*'
+2025-10-26 03:10:15.958 [info] ExtensionService#_doActivateExtension vscode.github, startup: false, activationEvent: '*'
+2025-10-26 03:10:16.830 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:json'
+2025-10-26 03:10:16.831 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:json'
+2025-10-26 03:10:19.223 [info] ExtensionService#_doActivateExtension anysphere.cursor-retrieval, startup: false, activationEvent: 'onStartupFinished'
+2025-10-26 03:10:20.359 [info] Eager extensions activated
+2025-10-26 03:10:21.754 [warning] [Decorations] CAPPING events from decorations provider vscode.git 5792
+2025-10-26 03:10:24.564 [warning] [Decorations] CAPPING events from decorations provider vscode.git 5798
+2025-10-26 03:10:26.324 [warning] [Decorations] CAPPING events from decorations provider vscode.git 5796
+2025-10-26 03:10:31.568 [warning] [Decorations] CAPPING events from decorations provider vscode.git 5802
+2025-10-26 03:10:36.799 [warning] [Decorations] CAPPING events from decorations provider vscode.git 5800
+2025-10-26 03:10:42.036 [warning] [Decorations] CAPPING events from decorations provider vscode.git 5800
+2025-10-26 03:10:59.705 [warning] [Decorations] CAPPING events from decorations provider vscode.git 5800
+2025-10-26 03:11:04.938 [warning] [Decorations] CAPPING events from decorations provider vscode.git 5800
+2025-10-26 03:11:58.057 [warning] [Decorations] CAPPING events from decorations provider vscode.git 5800
+2025-10-26 03:12:28.099 [info] Extension host terminating: received terminate message from renderer
+2025-10-26 03:12:28.100 [info] Lock '/root/.cursor-server/data/User/workspaceStorage/8e811577d6ab682015d6706b888853ba/vscode.lock': Marking the lockfile as scheduled to be released in 6000 ms.
+2025-10-26 03:12:28.223 [error] Canceled: Canceled
+	at new QMe (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:44:164021)
+	at mwe._remoteCall (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:44:170352)
+	at r.<computed>.a.charCodeAt.r.<computed> (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:44:167106)
+	at Bfe._doExecuteCommand (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:134:48918)
+	at Bfe.executeCommand (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:134:48357)
+	at t.registerCommand.description (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:134:47621)
+	at Bfe._executeContributedCommand (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:134:49488)
+	at Bfe._doExecuteCommand (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:134:48490)
+	at Bfe.executeCommand (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:134:48357)
+	at Object.executeCommand (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:196:140121)
+	at Xse.H [as value] (/root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/extensions/git/dist/main.js:2:107370)
+	at J._deliver (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:27:2961)
+	at J._deliverQueue (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:27:3052)
+	at J.fire (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:27:3389)
+	at Object.f [as dispose] (/root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/extensions/git/dist/main.js:2:173231)
+	at /root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/extensions/git/dist/main.js:2:179517
+	at Array.forEach (<anonymous>)
+	at C.dispose (/root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/extensions/git/dist/main.js:2:179504)
+	at Hde.<anonymous> (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:129:10090)
+	at Hde.dispose (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:129:10186)
+	at Hde.<anonymous> (/root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/extensions/git/dist/main.js:2:109847)
+	at Hde.dispose (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:129:10186)
+	at ui (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:25:706)
+	at file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:138:18912
+	at file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:25:1019
+	at Object.dispose (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:8:713)
+	at Gqt._deactivate (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:138:15086)
+	at file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:138:12369
+	at Array.map (<anonymous>)
+	at Gqt._deactivateAll (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:138:12357)
+	at Gqt.terminate (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:138:12711)
+	at Nqe.terminate (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:139:1617)
+	at lr (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:671:15436)
+	at Xse.value (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:671:13561)
+	at J._deliver (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:27:2961)
+	at J.fire (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:27:3282)
+	at Jo.fire (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:44:10988)
+	at Bue._receiveMessage (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:44:15941)
+	at Xse.value (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:44:13302)
+	at J._deliver (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:27:2961)
+	at J.fire (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:27:3282)
+	at y1e.acceptChunk (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:44:8782)
+	at Xse.value (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:44:7910)
+	at J._deliver (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:27:2961)
+	at J.fire (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:27:3282)
+	at G6e._processReadQueue (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:44:27432) setContext undefined
+2025-10-26 03:12:28.224 [error] Canceled: Canceled
+	at new QMe (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:44:164021)
+	at mwe._remoteCall (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:44:170352)
+	at r.<computed>.a.charCodeAt.r.<computed> (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:44:167106)
+	at Bfe._doExecuteCommand (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:134:48918)
+	at Bfe.executeCommand (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:134:48357)
+	at t.registerCommand.description (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:134:47621)
+	at Bfe._executeContributedCommand (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:134:49488)
+	at Bfe._doExecuteCommand (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:134:48490)
+	at Bfe.executeCommand (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:134:48357)
+	at Object.executeCommand (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:196:140121)
+	at set hasGitHubRepositories [as hasGitHubRepositories] (/root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/extensions/github/dist/extension.js:2:270497)
+	at /root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/extensions/github/dist/extension.js:2:271447
+	at Xse.value (/root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/extensions/git/dist/main.js:2:567666)
+	at J._deliver (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:27:2961)
+	at J._deliverQueue (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:27:3052)
+	at J.fire (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:27:3389)
+	at Object.f [as dispose] (/root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/extensions/git/dist/main.js:2:173231)
+	at /root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/extensions/git/dist/main.js:2:179517
+	at Array.forEach (<anonymous>)
+	at C.dispose (/root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/extensions/git/dist/main.js:2:179504)
+	at Hde.<anonymous> (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:129:10090)
+	at Hde.dispose (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:129:10186)
+	at Hde.<anonymous> (/root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/extensions/git/dist/main.js:2:109847)
+	at Hde.dispose (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:129:10186)
+	at ui (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:25:706)
+	at file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:138:18912
+	at file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:25:1019
+	at Object.dispose (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:8:713)
+	at Gqt._deactivate (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:138:15086)
+	at file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:138:12369
+	at Array.map (<anonymous>)
+	at Gqt._deactivateAll (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:138:12357)
+	at Gqt.terminate (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:138:12711)
+	at Nqe.terminate (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:139:1617)
+	at lr (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:671:15436)
+	at Xse.value (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:671:13561)
+	at J._deliver (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:27:2961)
+	at J.fire (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:27:3282)
+	at Jo.fire (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:44:10988)
+	at Bue._receiveMessage (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:44:15941)
+	at Xse.value (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:44:13302)
+	at J._deliver (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:27:2961)
+	at J.fire (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:27:3282)
+	at y1e.acceptChunk (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:44:8782)
+	at Xse.value (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:44:7910)
+	at J._deliver (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:27:2961)
+	at J.fire (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:27:3282)
+	at G6e._processReadQueue (file:///root/.cursor-server/bin/5c17eb2968a37f66bc6662f48d6356a100b67be0/out/vs/workbench/api/node/extensionHostProcess.js:44:27432) setContext undefined
+2025-10-26 03:12:28.245 [info] Extension host with pid 151855 exiting with code 0

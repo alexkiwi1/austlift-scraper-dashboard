@@ -1,0 +1,384 @@
+2025-10-26 03:10:20.608 [info] Handling CreateClient action
+2025-10-26 03:10:20.608 [info] Starting new stdio process with command: npx mcp-remote@0.1.21 http://10.100.0.39:9000/mcp --header x-lunar-consumer-tag: Claude-Cursor-i7 --allow-http
+2025-10-26 03:10:24.074 [error] [152133] Using automatically selected callback port: 13135
+[152133] Using custom headers: {"x-lunar-consumer-tag":"Claude-Cursor-i7"}
+[152133] [152133] Connecting to remote server: http://10.100.0.39:9000/mcp
+[152133] Using transport strategy: http-first
+[152133] Connected to remote server using StreamableHTTPClientTransport
+[152133] Local STDIO server running
+[152133] Proxy established successfully between local STDIO and remote StreamableHTTPClientTransport
+[152133] Press Ctrl+C to exit
+[152133] [Local→Remote] initialize
+[152133] {
+  "jsonrpc": "2.0",
+  "id": 0,
+  "method": "initialize",
+  "params": {
+    "protocolVersion": "2025-06-18",
+    "capabilities": {
+      "tools": true,
+      "prompts": true,
+      "resources": true,
+      "logging": false,
+      "elicitation": {},
+      "roots": {
+        "listChanged": false
+      }
+    },
+    "clientInfo": {
+      "name": "cursor-vscode (via mcp-remote 0.1.21)",
+      "version": "1.0.0"
+    }
+  }
+}
+[152133] [Remote→Local] 0
+
+2025-10-26 03:10:24.088 [info] Successfully connected to stdio server
+2025-10-26 03:10:24.088 [info] Storing stdio client user-mcpx
+2025-10-26 03:10:24.088 [info] CreateClient completed, server stored: true
+2025-10-26 03:10:24.193 [error] [152133] [Local→Remote] notifications/initialized
+
+2025-10-26 03:10:24.193 [error] [152133] [Local→Remote] notifications/initialized
+
+2025-10-26 03:10:26.157 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:10:26.158 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:10:26.162 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:10:26.162 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:10:26.182 [error] [152133] [Local→Remote] tools/list
+[152133] [Local→Remote] tools/list
+
+2025-10-26 03:10:26.182 [error] [152133] [Local→Remote] tools/list
+[152133] [Local→Remote] tools/list
+
+2025-10-26 03:10:28.317 [error] [152133] [Remote→Local] ping
+
+2025-10-26 03:10:28.317 [error] [152133] [Remote→Local] ping
+
+2025-10-26 03:10:28.318 [error] [152133] [Local→Remote] 0
+
+2025-10-26 03:10:28.318 [error] [152133] [Local→Remote] 0
+
+2025-10-26 03:10:28.397 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:10:28.397 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:10:28.397 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:10:28.397 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:10:28.398 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:10:28.398 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:10:28.398 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:10:28.398 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:10:28.398 [error] [152133] [Local→Remote] tools/list
+
+2025-10-26 03:10:28.398 [error] [152133] [Local→Remote] tools/list
+
+2025-10-26 03:10:28.398 [error] [152133] [Local→Remote] tools/list
+
+2025-10-26 03:10:28.398 [error] [152133] [Local→Remote] tools/list
+
+2025-10-26 03:10:28.398 [error] [152133] [Local→Remote] tools/list
+
+2025-10-26 03:10:28.398 [error] [152133] [Local→Remote] tools/list
+
+2025-10-26 03:10:28.399 [error] [152133] [Local→Remote] tools/list
+
+2025-10-26 03:10:28.399 [error] [152133] [Local→Remote] tools/list
+
+2025-10-26 03:10:28.444 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:10:28.445 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:10:28.445 [error] [152133] [Local→Remote] tools/list
+
+2025-10-26 03:10:28.446 [error] [152133] [Local→Remote] tools/list
+
+2025-10-26 03:10:28.462 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:10:28.462 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:10:28.462 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:10:28.463 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:10:28.463 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:10:28.463 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:10:28.463 [error] [152133] [Local→Remote] tools/list
+[152133] [Local→Remote] tools/list
+
+2025-10-26 03:10:28.463 [error] [152133] [Local→Remote] tools/list
+[152133] [Local→Remote] tools/list
+
+2025-10-26 03:10:28.463 [error] [152133] [Local→Remote] tools/list
+
+2025-10-26 03:10:28.464 [error] [152133] [Local→Remote] tools/list
+
+2025-10-26 03:10:28.818 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:10:28.818 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:10:28.819 [error] [152133] [Local→Remote] tools/list
+
+2025-10-26 03:10:28.819 [error] [152133] [Local→Remote] tools/list
+
+2025-10-26 03:10:29.953 [info] Handling ListOfferings action, server stored: true
+2025-10-26 03:10:29.953 [info] Connected to stdio server, fetching offerings
+2025-10-26 03:10:29.954 [error] [152133] [Local→Remote] tools/list
+
+2025-10-26 03:10:29.954 [error] [152133] [Local→Remote] tools/list
+
+2025-10-26 03:10:33.316 [error] [152133] [Remote→Local] ping
+
+2025-10-26 03:10:33.316 [error] [152133] [Remote→Local] ping
+
+2025-10-26 03:10:33.317 [error] [152133] [Local→Remote] 1
+
+2025-10-26 03:10:33.318 [error] [152133] [Local→Remote] 1
+
+2025-10-26 03:10:36.475 [error] [152133] [Remote→Local] 1
+
+2025-10-26 03:10:36.475 [error] [152133] [Remote→Local] 1
+
+2025-10-26 03:10:36.477 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:10:36.478 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:10:36.479 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:10:36.479 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:10:36.479 [error] [152133] [Remote→Local] 2
+
+2025-10-26 03:10:36.479 [error] [152133] [Remote→Local] 2
+
+2025-10-26 03:10:38.315 [error] [152133] [Remote→Local] ping
+
+2025-10-26 03:10:38.315 [error] [152133] [Remote→Local] ping
+
+2025-10-26 03:10:38.316 [error] [152133] [Local→Remote] 2
+
+2025-10-26 03:10:38.316 [error] [152133] [Local→Remote] 2
+
+2025-10-26 03:10:38.467 [error] [152133] [Remote→Local] 3
+
+2025-10-26 03:10:38.467 [error] [152133] [Remote→Local] 3
+
+2025-10-26 03:10:38.469 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:10:38.469 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:10:38.470 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:10:38.470 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:10:38.470 [error] [152133] [Remote→Local] 5
+
+2025-10-26 03:10:38.470 [error] [152133] [Remote→Local] 5
+
+2025-10-26 03:10:38.471 [error] [152133] [Remote→Local] 4
+
+2025-10-26 03:10:38.471 [error] [152133] [Remote→Local] 4
+
+2025-10-26 03:10:38.472 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:10:38.472 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:10:38.473 [error] [152133] [Remote→Local] 6
+
+2025-10-26 03:10:38.473 [error] [152133] [Remote→Local] 6
+
+2025-10-26 03:10:38.473 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:10:38.473 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:10:38.474 [error] [152133] [Remote→Local] 7
+
+2025-10-26 03:10:38.474 [error] [152133] [Remote→Local] 7
+
+2025-10-26 03:10:38.475 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:10:38.476 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:10:38.965 [error] [152133] [Remote→Local] 11
+
+2025-10-26 03:10:38.966 [error] [152133] [Remote→Local] 11
+
+2025-10-26 03:10:38.967 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:10:38.967 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:10:38.967 [error] [152133] [Remote→Local] 10
+
+2025-10-26 03:10:38.967 [error] [152133] [Remote→Local] 10
+
+2025-10-26 03:10:38.969 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:10:38.969 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:10:38.972 [error] [152133] [Remote→Local] 9
+
+2025-10-26 03:10:38.972 [error] [152133] [Remote→Local] 9
+
+2025-10-26 03:10:38.974 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:10:38.974 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:10:38.974 [error] [152133] [Remote→Local] 8
+
+2025-10-26 03:10:38.974 [error] [152133] [Remote→Local] 8
+
+2025-10-26 03:10:38.975 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:10:38.975 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:10:39.963 [error] [152133] [Remote→Local] 12
+
+2025-10-26 03:10:39.963 [error] [152133] [Remote→Local] 12
+
+2025-10-26 03:10:39.965 [error] Error listing tools: MCP error -32000: MCP error -32000: fetch failed
+2025-10-26 03:10:39.965 [info] Found 0 tools, 0 prompts, and 0 resources
+2025-10-26 03:10:43.348 [error] [152133] [Remote→Local] ping
+
+2025-10-26 03:10:43.348 [error] [152133] [Remote→Local] ping
+
+2025-10-26 03:10:43.355 [error] [152133] [Local→Remote] 3
+
+2025-10-26 03:10:43.355 [error] [152133] [Local→Remote] 3
+
+2025-10-26 03:10:48.317 [error] [152133] [Remote→Local] ping
+
+2025-10-26 03:10:48.317 [error] [152133] [Remote→Local] ping
+
+2025-10-26 03:10:48.320 [error] [152133] [Local→Remote] 4
+
+2025-10-26 03:10:48.320 [error] [152133] [Local→Remote] 4
+
+2025-10-26 03:10:53.316 [error] [152133] [Remote→Local] ping
+
+2025-10-26 03:10:53.316 [error] [152133] [Remote→Local] ping
+
+2025-10-26 03:10:53.317 [error] [152133] [Local→Remote] 5
+
+2025-10-26 03:10:53.317 [error] [152133] [Local→Remote] 5
+
+2025-10-26 03:10:58.316 [error] [152133] [Remote→Local] ping
+
+2025-10-26 03:10:58.316 [error] [152133] [Remote→Local] ping
+
+2025-10-26 03:10:58.317 [error] [152133] [Local→Remote] 6
+
+2025-10-26 03:10:58.317 [error] [152133] [Local→Remote] 6
+
+2025-10-26 03:11:03.316 [error] [152133] [Remote→Local] ping
+
+2025-10-26 03:11:03.316 [error] [152133] [Remote→Local] ping
+
+2025-10-26 03:11:03.317 [error] [152133] [Local→Remote] 7
+
+2025-10-26 03:11:03.317 [error] [152133] [Local→Remote] 7
+
+2025-10-26 03:11:08.316 [error] [152133] [Remote→Local] ping
+
+2025-10-26 03:11:08.316 [error] [152133] [Remote→Local] ping
+
+2025-10-26 03:11:08.317 [error] [152133] [Local→Remote] 8
+
+2025-10-26 03:11:08.317 [error] [152133] [Local→Remote] 8
+
+2025-10-26 03:11:13.316 [error] [152133] [Remote→Local] ping
+
+2025-10-26 03:11:13.317 [error] [152133] [Remote→Local] ping
+
+2025-10-26 03:11:13.318 [error] [152133] [Local→Remote] 9
+
+2025-10-26 03:11:13.318 [error] [152133] [Local→Remote] 9
+
+2025-10-26 03:11:18.316 [error] [152133] [Remote→Local] ping
+
+2025-10-26 03:11:18.316 [error] [152133] [Remote→Local] ping
+
+2025-10-26 03:11:18.317 [error] [152133] [Local→Remote] 10
+
+2025-10-26 03:11:18.317 [error] [152133] [Local→Remote] 10
+
+2025-10-26 03:11:23.317 [error] [152133] [Remote→Local] ping
+
+2025-10-26 03:11:23.317 [error] [152133] [Remote→Local] ping
+
+2025-10-26 03:11:23.318 [error] [152133] [Local→Remote] 11
+
+2025-10-26 03:11:23.318 [error] [152133] [Local→Remote] 11
+
+2025-10-26 03:11:28.316 [error] [152133] [Remote→Local] ping
+
+2025-10-26 03:11:28.316 [error] [152133] [Remote→Local] ping
+
+2025-10-26 03:11:28.317 [error] [152133] [Local→Remote] 12
+
+2025-10-26 03:11:28.317 [error] [152133] [Local→Remote] 12
+
+2025-10-26 03:11:33.317 [error] [152133] [Remote→Local] ping
+
+2025-10-26 03:11:33.317 [error] [152133] [Remote→Local] ping
+
+2025-10-26 03:11:33.318 [error] [152133] [Local→Remote] 13
+
+2025-10-26 03:11:33.318 [error] [152133] [Local→Remote] 13
+
+2025-10-26 03:11:38.041 [error] [152133] Error from remote server: Error: SSE stream disconnected: TypeError: terminated
+    at processStream (file:///root/.npm/_npx/fc1f25fe71a5a35c/node_modules/mcp-remote/dist/chunk-BCWNEBAL.js:13386:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+2025-10-26 03:11:38.041 [error] [152133] Error from remote server: Error: SSE stream disconnected: TypeError: terminated
+    at processStream (file:///root/.npm/_npx/fc1f25fe71a5a35c/node_modules/mcp-remote/dist/chunk-BCWNEBAL.js:13386:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+2025-10-26 03:11:39.045 [error] [152133] Error from remote server: TypeError: fetch failed
+    at node:internal/deps/undici/undici:14900:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async StreamableHTTPClientTransport._startOrAuthSse (file:///root/.npm/_npx/fc1f25fe71a5a35c/node_modules/mcp-remote/dist/chunk-BCWNEBAL.js:13289:24) {
+  [cause]: Error: connect ECONNREFUSED 10.100.0.39:9000
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '10.100.0.39',
+    port: 9000
+  }
+}
+
+2025-10-26 03:11:39.045 [error] [152133] Error from remote server: TypeError: fetch failed
+    at node:internal/deps/undici/undici:14900:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async StreamableHTTPClientTransport._startOrAuthSse (file:///root/.npm/_npx/fc1f25fe71a5a35c/node_modules/mcp-remote/dist/chunk-BCWNEBAL.js:13289:24) {
+  [cause]: Error: connect ECONNREFUSED 10.100.0.39:9000
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '10.100.0.39',
+    port: 9000
+  }
+}
+
+2025-10-26 03:11:39.048 [error] [152133] Error from remote server: Error: Failed to reconnect SSE stream: fetch failed
+    at file:///root/.npm/_npx/fc1f25fe71a5a35c/node_modules/mcp-remote/dist/chunk-BCWNEBAL.js:13349:83
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+2025-10-26 03:11:39.048 [error] [152133] Error from remote server: Error: Failed to reconnect SSE stream: fetch failed
+    at file:///root/.npm/_npx/fc1f25fe71a5a35c/node_modules/mcp-remote/dist/chunk-BCWNEBAL.js:13349:83
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+2025-10-26 03:11:40.550 [error] [152133] Error from remote server: TypeError: fetch failed
+    at node:internal/deps/undici/undici:14900:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async StreamableHTTPClientTransport._startOrAuthSse (file:///root/.npm/_npx/fc1f25fe71a5a35c/node_modules/mcp-remote/dist/chunk-BCWNEBAL.js:13289:24) {
+  [cause]: Error: connect ECONNREFUSED 10.100.0.39:9000
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '10.100.0.39',
+    port: 9000
+  }
+}
+
+2025-10-26 03:11:40.550 [error] [152133] Error from remote server: TypeError: fetch failed
+    at node:internal/deps/undici/undici:14900:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async StreamableHTTPClientTransport._startOrAuthSse (file:///root/.npm/_npx/fc1f25fe71a5a35c/node_modules/mcp-remote/dist/chunk-BCWNEBAL.js:13289:24) {
+  [cause]: Error: connect ECONNREFUSED 10.100.0.39:9000
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '10.100.0.39',
+    port: 9000
+  }
+}
+
+2025-10-26 03:11:40.551 [error] [152133] Error from remote server: Error: Failed to reconnect SSE stream: fetch failed
+    at file:///root/.npm/_npx/fc1f25fe71a5a35c/node_modules/mcp-remote/dist/chunk-BCWNEBAL.js:13349:83
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+2025-10-26 03:11:40.551 [error] [152133] Error from remote server: Error: Failed to reconnect SSE stream: fetch failed
+    at file:///root/.npm/_npx/fc1f25fe71a5a35c/node_modules/mcp-remote/dist/chunk-BCWNEBAL.js:13349:83
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+2025-10-26 03:11:40.551 [error] [152133] Error from remote server: Error: Maximum reconnection attempts (2) exceeded.
+    at StreamableHTTPClientTransport._scheduleReconnection (file:///root/.npm/_npx/fc1f25fe71a5a35c/node_modules/mcp-remote/dist/chunk-BCWNEBAL.js:13342:78)
+    at file:///root/.npm/_npx/fc1f25fe71a5a35c/node_modules/mcp-remote/dist/chunk-BCWNEBAL.js:13350:14
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+2025-10-26 03:11:40.551 [error] [152133] Error from remote server: Error: Maximum reconnection attempts (2) exceeded.
+    at StreamableHTTPClientTransport._scheduleReconnection (file:///root/.npm/_npx/fc1f25fe71a5a35c/node_modules/mcp-remote/dist/chunk-BCWNEBAL.js:13342:78)
+    at file:///root/.npm/_npx/fc1f25fe71a5a35c/node_modules/mcp-remote/dist/chunk-BCWNEBAL.js:13350:14
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+

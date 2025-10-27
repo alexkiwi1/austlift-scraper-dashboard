@@ -1,0 +1,166 @@
+# Austlift Scraper Dashboard - Optimized Cursor Rules
+# Based on TypeScript (React, Tailwind) + Code Quality + Best Practices
+
+## Project Overview
+React TypeScript dashboard for monitoring web scraping operations with 4-step workflow, real-time status updates, and product table display.
+
+## Core Rules
+
+### TypeScript & React
+- Use functional components with React.FC
+- Implement proper TypeScript interfaces for props
+- Use useState and useEffect hooks properly
+- Implement useCallback for event handlers
+- Use proper dependency arrays in hooks
+- Prefer type inference, explicit types when needed
+- Use proper error handling with typed errors
+- Implement proper null/undefined checks
+
+### Code Quality
+- Follow DRY principles
+- Use meaningful variable names
+- Write self-documenting code
+- Implement proper error handling
+- Use consistent formatting
+- Follow ESLint rules strictly
+- No unused variables or imports
+- Use proper arrow functions
+- Avoid array index keys
+- Escape quotes properly in JSX
+
+### API Integration
+- Use async/await for API calls
+- Implement proper error handling with try/catch
+- Use AbortController for request cancellation
+- Implement loading states and error boundaries
+- Use proper TypeScript types for API responses
+- Use relative URLs (proxy configuration)
+- Implement proper timeout handling
+
+### Component Structure
+```typescript
+interface ComponentProps {
+  // Define all props with proper types
+}
+
+const Component: React.FC<ComponentProps> = ({ prop1, prop2 }) => {
+  // State declarations
+  const [state, setState] = useState<StateType>(initialValue);
+  
+  // Event handlers with useCallback
+  const handleEvent = useCallback((param: ParamType) => {
+    // Implementation
+  }, [dependencies]);
+  
+  // Effects with proper dependencies
+  useEffect(() => {
+    // Side effects
+  }, [dependencies]);
+  
+  return (
+    <div className="tailwind-classes">
+      {/* JSX content */}
+    </div>
+  );
+};
+```
+
+### Tailwind CSS
+- Use consistent spacing scale
+- Implement responsive design (mobile-first)
+- Use semantic color schemes
+- Group classes logically: layout, spacing, colors, typography
+- Use proper hover states and transitions
+- Implement proper focus states
+
+### Error Handling Pattern
+```typescript
+const apiCall = async (): Promise<ApiResponse> => {
+  try {
+    const response = await fetch('/api/endpoint', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    }
+    
+    return await response.json();
+  } catch (error) {
+    console.error('API call failed:', error);
+    throw error;
+  }
+};
+```
+
+### Performance Optimization
+- Use React.memo for expensive components
+- Implement proper dependency arrays
+- Use useCallback for event handlers
+- Use useMemo for expensive calculations
+- Implement proper key props for lists
+- Avoid unnecessary re-renders
+
+### Accessibility
+- Use proper ARIA labels and roles
+- Implement keyboard navigation
+- Ensure proper focus management
+- Use semantic HTML elements
+- Implement proper color contrast
+
+### Project-Specific Rules
+
+#### Workflow Steps
+- Step 1: Fetch and refresh categories
+- Step 2: Start scraping with job ID tracking
+- Step 3: Load products with real count
+- Step 4: Display ALL products in table with minimize/expand
+
+#### State Management
+- Use separate state for each step status
+- Implement proper loading states
+- Use proper error state management
+- Implement proper cleanup
+
+#### Table Display
+- Show all product fields
+- Implement proper keys (use field names, not indices)
+- Use proper responsive design
+- Implement minimize/expand functionality
+- Show proper loading states
+
+#### API Endpoints
+- `/categories/fetch` - Get categories
+- `/categories/refresh` - Refresh categories  
+- `/products` - Get products with pagination
+- `/scrape` - Start scraping job
+- `/scraping-jobs` - Get job status
+
+### Git Workflow
+- Use conventional commit messages
+- Include scope when relevant
+- Use imperative mood
+- Keep messages concise but descriptive
+
+### Testing
+- Write unit tests for components
+- Test user interactions and state changes
+- Test error scenarios and edge cases
+- Test API integrations
+- Test responsive behavior
+
+### Security
+- Sanitize user inputs
+- Implement proper CSRF protection
+- Use secure authentication patterns
+- Validate data properly
+
+### Documentation
+- Write clear comments for complex logic
+- Document component props and return types
+- Document API endpoints and data structures
+- Keep README files updated
+
+Remember: Prioritize code quality, user experience, and maintainability. Follow these rules consistently and adapt them as the project evolves.

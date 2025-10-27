@@ -1,0 +1,16 @@
+node_modules/
+build/
+dist/
+coverage/
+.nyc_output/
+*.min.js
+*.bundle.js
+public/
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+
+
