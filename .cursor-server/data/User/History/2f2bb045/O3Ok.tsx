@@ -786,12 +786,13 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
                               {backupCreated ? '✅' : '1️⃣'} Create JSON backup
                             </li>
                             <li
-                              className={(() => {
-                                if (backupCreated && showDeleteConfirm)
-                                  return 'text-yellow-600 font-medium';
-                                if (backupCreated) return '';
-                                return 'text-gray-400';
-                              })()}
+                              className={
+                                backupCreated
+                                  ? showDeleteConfirm
+                                    ? 'text-yellow-600 font-medium'
+                                    : ''
+                                  : 'text-gray-400'
+                              }
                             >
                               {showDeleteConfirm ? '⚠️' : '2️⃣'} Confirm deletion
                             </li>
@@ -839,25 +840,18 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
                         return 'bg-blue-500 hover:bg-blue-600 text-white';
                       })()} disabled:bg-gray-300 disabled:cursor-not-allowed`}
                     >
-                      {(() => {
-                        if (step0Status.status === 'loading') {
-                          return (
-                            <div className='flex items-center gap-2'>
-                              <div className='animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full' />
-                              {backupCreated
-                                ? 'Deleting...'
-                                : 'Creating Backup...'}
-                            </div>
-                          );
-                        }
-                        if (showDeleteConfirm) {
-                          return '🔴 CLICK AGAIN';
-                        }
-                        if (backupCreated) {
-                          return '🗑️ Delete Products';
-                        }
-                        return '💾 Create Backup & Clear';
-                      })()}
+                      {step0Status.status === 'loading' ? (
+                        <div className='flex items-center gap-2'>
+                          <div className='animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full' />
+                          {backupCreated ? 'Deleting...' : 'Creating Backup...'}
+                        </div>
+                      ) : showDeleteConfirm ? (
+                        '🔴 CLICK AGAIN'
+                      ) : backupCreated ? (
+                        '🗑️ Delete Products'
+                      ) : (
+                        '💾 Create Backup & Clear'
+                      )}
                     </button>
                   </div>
 

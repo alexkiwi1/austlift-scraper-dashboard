@@ -844,9 +844,7 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
                           return (
                             <div className='flex items-center gap-2'>
                               <div className='animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full' />
-                              {backupCreated
-                                ? 'Deleting...'
-                                : 'Creating Backup...'}
+                              {backupCreated ? 'Deleting...' : 'Creating Backup...'}
                             </div>
                           );
                         }

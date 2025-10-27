@@ -1,9 +1,12 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { Home, XCircle } from 'lucide-react';
+import ProductsTable from './ProductsTable';
 import type {
   Category,
-  Product,
+  ProductsByCategoryEndpoint,
+  ProductsByCategoryResponse,
   ScrapeResponse,
+  ScrapeJob,
   StepState,
   ErrorState,
 } from '../types';
@@ -11,11 +14,19 @@ import type {
 /**
  * Main dashboard component for the Austlift Scraper
  * Manages the 4-step workflow for product data management
- * @returns {JSX.Element} JSX element containing the complete dashboard interface
+ * @returns {React.JSX.Element} JSX element containing the complete dashboard interface
  */
-const AustliftScraperDashboard: React.FC = (): JSX.Element => {
+const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
   const [activeSection, setActiveSection] = useState<string>('home');
   const [categories, setCategories] = useState<Category[]>([]);
+  const [step0Status, setStep0Status] = useState<StepState>({
+    status: 'idle',
+    message: '',
+  });
+  const [productCount, setProductCount] = useState<number>(0);
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState<boolean>(false);
+  const [backupCreated, setBackupCreated] = useState<boolean>(false);
+  const [backupFilename, setBackupFilename] = useState<string>('');
   const [step1Status, setStep1Status] = useState<StepState>({
     status: 'idle',
     message: '',
@@ -33,8 +44,19 @@ const AustliftScraperDashboard: React.FC = (): JSX.Element => {
     message: '',
   });
   const [showStep4Dropdown, setShowStep4Dropdown] = useState<boolean>(false);
-  const [step4Products, setStep4Products] = useState<Product[]>([]);
+  const [step4Products, setStep4Products] = useState<
+    ProductsByCategoryEndpoint[]
+  >([]);
   const [isTableMinimized, setIsTableMinimized] = useState<boolean>(false);
+  const [error, setError] = useState<ErrorState>({
+    hasError: false,
+    message: '',
+  });
+  const [scrapingJobs, setScrapingJobs] = useState<{
+    [jobId: string]: ScrapeJob;
+  }>({});
+  const [minimizedJobs, setMinimizedJobs] = useState<Set<string>>(new Set());
+
   /**
    * Gets the appropriate CSS class for step status
    * @param {StepState} status - The step status
@@ -48,18 +70,78 @@ const AustliftScraperDashboard: React.FC = (): JSX.Element => {
   };
 
   /**
+   * Gets the appropriate CSS class for job status badge
+   * @param {string} status - The job status
+   * @returns {string} CSS class string for status badge
+   */
+  const getJobStatusClass = (status: string): string => {
+    if (status === 'completed') return 'bg-green-100 text-green-700';
+    if (status === 'failed') return 'bg-red-100 text-red-700';
+    return 'bg-blue-100 text-blue-700';
+  };
+
+  /**
+   * Parses the job message to extract scraped product counts
+   * @param {string} message - The job message string
+   * @returns {object} Object with scraped products and variations counts
+   */
+  const parseJobMessage = (
+    message?: string
+  ): { scraped: number; parents: number; variations: number } => {
+    if (!message) return { scraped: 0, parents: 0, variations: 0 };
+
+    // Parse "V1: Scraped 269 products (0 parents, 269 variations)"
+    const match = message.match(
+      /Scraped (\d+) products \((\d+) parents, (\d+) variations\)/
+    );
+    if (match) {
+      return {
+        scraped: parseInt(match[1], 10),
+        parents: parseInt(match[2], 10),
+        variations: parseInt(match[3], 10),
+      };
+    }
+
+    // Fallback for other message formats
+    return { scraped: 0, parents: 0, variations: 0 };
+  };
+
+  /**
+   * Toggles the minimized state of a job card
+   * @param {string} jobId - The job ID to toggle
+   */
+  const toggleJobMinimize = (jobId: string): void => {
+    setMinimizedJobs(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(jobId)) {
+        newSet.delete(jobId);
+      } else {
+        newSet.add(jobId);
+      }
+      return newSet;
+    });
+  };
+
+  /**
    * Fetches categories from the API
    * @returns {Promise<void>} Promise that resolves when categories are loaded
    * @throws {Error} When API request fails
    */
   const fetchCategories = useCallback(async (): Promise<void> => {
     try {
+      console.log('fetchCategories called');
       setError({ hasError: false, message: '' });
       const response = await fetch('/categories/fetch');
+      console.log('Fetch response status:', response.status);
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }
       const data = await response.json();
+      console.log(
+        'Categories fetched:',
+        data.categories?.length || 0,
+        'categories'
+      );
       setCategories(data.categories || []);
     } catch (err) {
       const errorMessage =
@@ -69,11 +151,51 @@ const AustliftScraperDashboard: React.FC = (): JSX.Element => {
     }
   }, []);
 
+  // Fetch categories on component mount
+  useEffect(() => {
+    console.log('Fetching categories on mount...');
+    fetchCategories();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  /**
+   * Polls a scraping job for progress updates
+   * @param {string} jobId - The job ID to poll
+   * @returns {Promise<void>} Promise that resolves when polling completes or job finishes
+   */
+  const pollJobProgress = useCallback(async (jobId: string): Promise<void> => {
+    try {
+      const response = await fetch(`/jobs/${jobId}`);
+      if (!response.ok) {
+        console.error(`Failed to fetch job ${jobId}: ${response.status}`);
+        return;
+      }
+
+      const jobStatus: ScrapeJob = await response.json();
+
+      // Update job status in state
+      setScrapingJobs(prev => ({
+        ...prev,
+        [jobId]: jobStatus,
+      }));
+
+      // Continue polling if job is still running
+      if (jobStatus.status === 'running' || jobStatus.status === 'started') {
+        setTimeout(() => {
+          pollJobProgress(jobId);
+        }, 2000); // Poll every 2 seconds
+      }
+    } catch (err) {
+      console.error(`Error polling job progress for ${jobId}:`, err);
+    }
+  }, []);
+
   /**
    * Refreshes categories from the API
    * @returns {Promise<void>} Promise that resolves when categories are refreshed
    * @throws {Error} When API request fails
    */
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const refreshCategories = useCallback(async (): Promise<void> => {
     try {
       setError({ hasError: false, message: '' });
@@ -100,13 +222,30 @@ const AustliftScraperDashboard: React.FC = (): JSX.Element => {
    * @returns {Promise<void>} Promise that resolves when step is complete
    */
   const handleStep1 = async (): Promise<void> => {
-    setStep1Status({ status: 'loading', message: 'Fetching categories...' });
-    await fetchCategories();
-    setStep1Status({ status: 'loading', message: 'Refreshing categories...' });
-    await refreshCategories();
+    // If categories already loaded, skip fetch and refresh
+    if (categories.length > 0) {
+      setStep1Status({
+        status: 'success',
+        message: `✅ Step 1 Complete! ${categories.length} categories loaded`,
+      });
+      return;
+    }
+
+    // Wait for categories to load (from useEffect)
+    if (categories.length === 0) {
+      setStep1Status({
+        status: 'loading',
+        message: 'Waiting for categories to load...',
+      });
+      // Wait a moment for useEffect to complete
+      await new Promise<void>(resolve => {
+        setTimeout(() => resolve(), 500);
+      });
+    }
+
     setStep1Status({
       status: 'success',
-      message: '✅ Step 1 Complete! Categories loaded successfully',
+      message: `✅ Step 1 Complete! ${categories.length} categories loaded`,
     });
   };
 
@@ -121,30 +260,51 @@ const AustliftScraperDashboard: React.FC = (): JSX.Element => {
 
     setStep2Status({
       status: 'loading',
-      message: 'Selecting all categories...',
+      message: 'Starting scraping for all 10 categories...',
     });
-    // Note: Category selection is handled by the API call
 
-    setStep2Status({ status: 'loading', message: 'Starting scraping...' });
     try {
-      const response = await fetch('/scrape', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          category_url: categories[0]?.url,
-          max_pages: 1,
-          scrape_variations: true,
-        }),
-      });
+      const jobIds: string[] = [];
+      let completedCategories = 0;
 
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      // Scrape all categories sequentially
+      // eslint-disable-next-line no-restricted-syntax
+      for (const [index, category] of categories.entries()) {
+        setStep2Status({
+          status: 'loading',
+          message: `Scraping category ${index + 1}/${categories.length}: ${category.name}...`,
+        });
+
+        // eslint-disable-next-line no-await-in-loop
+        const response = await fetch('/scrape', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            category_url: category.url,
+            max_pages: 100, // Scrape all pages per category
+            scrape_variations: true,
+            use_auth: true,
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error(
+            `HTTP ${response.status}: ${response.statusText} for ${category.name}`
+          );
+        }
+
+        // eslint-disable-next-line no-await-in-loop
+        const data: ScrapeResponse = await response.json();
+        jobIds.push(data.job_id);
+        completedCategories += 1;
+
+        // Start polling progress for this job
+        pollJobProgress(data.job_id);
       }
 
-      const data: ScrapeResponse = await response.json();
       setStep2Status({
         status: 'success',
-        message: `✅ Complete! Steps 1 & 2 finished successfully! Job ID: ${data.job_id}`,
+        message: `✅ Complete! Started scraping all ${completedCategories} categories. Monitoring progress...`,
       });
     } catch (err) {
       const errorMessage =
@@ -157,7 +317,7 @@ const AustliftScraperDashboard: React.FC = (): JSX.Element => {
 
   /**
    * Handles Step 3 - Review Products
-   * Initializes previous steps and loads products
+   * Initializes previous steps and loads products from all categories
    * @returns {Promise<void>} Promise that resolves when step is complete
    */
   const handleStep3 = async (): Promise<void> => {
@@ -165,18 +325,42 @@ const AustliftScraperDashboard: React.FC = (): JSX.Element => {
       status: 'loading',
       message: 'Initializing previous steps...',
     });
-    await handleStep2();
 
-    setStep3Status({ status: 'loading', message: 'Loading products...' });
+    // Only run handleStep2 if it hasn't been completed yet
+    if (step2Status.status !== 'success') {
+      await handleStep2();
+    }
+
+    setStep3Status({
+      status: 'loading',
+      message: 'Loading products from all categories...',
+    });
     try {
-      const response = await fetch('/products?limit=10&offset=0');
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      const allProducts: ProductsByCategoryEndpoint[] = [];
+      let totalProducts = 0;
+
+      // Fetch products from each category to get complete data
+      // eslint-disable-next-line no-restricted-syntax
+      for (const category of categories) {
+        // eslint-disable-next-line no-await-in-loop
+        const response = await fetch(
+          `/products/by-category/${category.id}?limit=1000&offset=0`
+        );
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        // eslint-disable-next-line no-await-in-loop
+        const data: ProductsByCategoryResponse = await response.json();
+        allProducts.push(...data.products);
+        totalProducts += data.total;
       }
-      const data = await response.json();
+
+      // Store products for Step 4 to reuse
+      setStep4Products(allProducts);
+
       setStep3Status({
         status: 'success',
-        message: `✅ Complete! Loaded ${data.total || 0} products`,
+        message: `✅ Complete! Found ${totalProducts} products across ${categories.length} categories`,
       });
     } catch (err) {
       const errorMessage =
@@ -200,20 +384,46 @@ const AustliftScraperDashboard: React.FC = (): JSX.Element => {
       status: 'loading',
       message: 'Initializing previous steps...',
     });
-    await handleStep3();
+
+    // Only run handleStep3 if it hasn't been completed yet
+    if (step3Status.status !== 'success') {
+      await handleStep3();
+    }
+
+    // If products are already loaded from Step 3, reuse them
+    if (step4Products.length > 0) {
+      setStep4Status({
+        status: 'success',
+        message: `✅ Reusing existing data! Showing ${step4Products.length} products from ${categories.length} categories`,
+      });
+      setShowStep4Dropdown(true);
+      setIsTableMinimized(false);
+      return;
+    }
 
     setStep4Status({
       status: 'loading',
-      message: 'Loading ALL products for table display...',
+      message: 'Loading products from all categories...',
     });
     try {
-      const response = await fetch('/products?limit=10000&offset=0');
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-      }
-      const data = await response.json();
+      const allProducts: ProductsByCategoryEndpoint[] = [];
 
-      if (!data.products || data.products.length === 0) {
+      // Fetch products from all categories to get complete data with images
+      // eslint-disable-next-line no-restricted-syntax
+      for (const category of categories) {
+        // eslint-disable-next-line no-await-in-loop
+        const response = await fetch(
+          `/products/by-category/${category.id}?limit=1000&offset=0`
+        );
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        // eslint-disable-next-line no-await-in-loop
+        const data: ProductsByCategoryResponse = await response.json();
+        allProducts.push(...data.products);
+      }
+
+      if (allProducts.length === 0) {
         setStep4Products([]);
         setStep4Status({
           status: 'error',
@@ -222,10 +432,10 @@ const AustliftScraperDashboard: React.FC = (): JSX.Element => {
         return;
       }
 
-      setStep4Products(data.products);
+      setStep4Products(allProducts);
       setStep4Status({
         status: 'success',
-        message: `✅ ALL products loaded! Showing ${data.products.length} products`,
+        message: `✅ ALL products loaded! Showing ${allProducts.length} products from ${categories.length} categories`,
       });
       setShowStep4Dropdown(true);
       setIsTableMinimized(false);
@@ -353,7 +563,8 @@ const AustliftScraperDashboard: React.FC = (): JSX.Element => {
                           Scrape Product Lists
                         </h4>
                         <p className='text-sm text-gray-600'>
-                          Start scraping all products from selected categories
+                          Start scraping all 10 categories (up to 100 pages
+                          each)
                         </p>
                         {step2Status.message && (
                           <p
@@ -372,6 +583,115 @@ const AustliftScraperDashboard: React.FC = (): JSX.Element => {
                       Start Scraping
                     </button>
                   </div>
+
+                  {/* Progress Display for Active Jobs */}
+                  {Object.keys(scrapingJobs).length > 0 && (
+                    <div className='mt-4 space-y-3'>
+                      <h5 className='font-medium text-gray-700'>
+                        Scraping Progress
+                      </h5>
+                      {Object.entries(scrapingJobs).map(([jobId, job]) => {
+                        const isMinimized = minimizedJobs.has(jobId);
+                        const stats = parseJobMessage(job.message);
+
+                        return (
+                          <div
+                            key={jobId}
+                            className='border rounded-lg bg-gray-50'
+                          >
+                            {/* Header - Always visible */}
+                            <div
+                              className='flex justify-between items-center p-3 cursor-pointer hover:bg-gray-100 transition-colors'
+                              onClick={() => toggleJobMinimize(jobId)}
+                              onKeyDown={e => {
+                                if (e.key === 'Enter' || e.key === ' ') {
+                                  toggleJobMinimize(jobId);
+                                }
+                              }}
+                              role='button'
+                              tabIndex={0}
+                            >
+                              <div className='flex items-center space-x-2'>
+                                <span className='text-xs text-gray-500'>
+                                  {isMinimized ? '▶' : '▼'}
+                                </span>
+                                <span className='text-sm font-medium text-gray-700'>
+                                  Job {jobId.substring(0, 8)}...
+                                </span>
+                                <span
+                                  className={`text-xs font-bold px-2 py-1 rounded ${getJobStatusClass(job.status)}`}
+                                >
+                                  {job.status.toUpperCase()}
+                                </span>
+                              </div>
+                              {job.status === 'completed' && (
+                                <span className='text-xs font-semibold text-green-700'>
+                                  {stats.scraped} products scraped
+                                </span>
+                              )}
+                            </div>
+
+                            {/* Details - Hidden when minimized */}
+                            {!isMinimized && (
+                              <div className='px-3 pb-3'>
+                                {job.total_products > 0 ? (
+                                  <>
+                                    <div className='w-full bg-gray-200 rounded-full h-2 mb-2'>
+                                      <div
+                                        className='bg-blue-600 h-2 rounded-full transition-all duration-300'
+                                        style={{
+                                          width: `${job.progress_percentage}%`,
+                                        }}
+                                      />
+                                    </div>
+                                    <div className='flex justify-between text-xs text-gray-600'>
+                                      <span>
+                                        {job.current_product} /{' '}
+                                        {job.total_products} products
+                                      </span>
+                                      <span>
+                                        {job.progress_percentage.toFixed(1)}%
+                                      </span>
+                                    </div>
+                                  </>
+                                ) : (
+                                  <div className='text-xs text-gray-600'>
+                                    {job.message || 'Initializing...'}
+                                  </div>
+                                )}
+
+                                {job.status === 'completed' &&
+                                  stats.scraped > 0 && (
+                                    <div className='mt-2 p-2 bg-green-50 rounded border border-green-200'>
+                                      <div className='text-xs text-green-700'>
+                                        ✅ Successfully scraped:
+                                      </div>
+                                      <div className='text-xs text-green-600 mt-1'>
+                                        • {stats.scraped} total products
+                                      </div>
+                                      <div className='text-xs text-green-600'>
+                                        • {stats.variations} variations
+                                      </div>
+                                    </div>
+                                  )}
+
+                                {job.status === 'failed' && (
+                                  <div className='mt-2 p-2 bg-red-50 rounded border border-red-200'>
+                                    <div className='text-xs text-red-700'>
+                                      ❌{' '}
+                                      {job.error_message ||
+                                        job.message ||
+                                        'Scraping failed'}
+                                    </div>
+                                  </div>
+                                )}
+                              </div>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  )}
 
                   {/* Step 3 */}
                   <div className='flex items-center justify-between p-4 border border-gray-200 rounded-lg'>
@@ -462,61 +782,15 @@ const AustliftScraperDashboard: React.FC = (): JSX.Element => {
                     </div>
                   </div>
 
-                  {!isTableMinimized && step4Products.length > 0 && (
-                    <div className='overflow-x-auto'>
-                      <table className='min-w-full divide-y divide-gray-200'>
-                        <thead className='bg-gray-50'>
-                          <tr>
-                            {Object.keys(step4Products[0]).map(field => (
-                              <th
-                                key={field}
-                                className='px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'
-                              >
-                                {field.replace(/_/g, ' ')}
-                              </th>
-                            ))}
-                          </tr>
-                        </thead>
-                        <tbody className='bg-white divide-y divide-gray-200'>
-                          {step4Products.map((product, index) => (
-                            <tr
-                              key={product.id || `product-${index}`}
-                              className='hover:bg-gray-50'
-                            >
-                              {Object.entries(product).map(
-                                ([fieldName, value]) => (
-                                  <td
-                                    key={`${product.id || `product-${index}`}-${fieldName}`}
-                                    className='px-4 py-3 text-sm text-gray-900 max-w-xs truncate'
-                                    title={String(value)}
-                                  >
-                                    {value === null || value === undefined
-                                      ? '-'
-                                      : String(value)}
-                                  </td>
-                                )
-                              )}
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  )}
-
-                  {step4Products.length === 0 && (
-                    <div className='text-center py-8'>
-                      <p className='text-gray-500'>No products found</p>
-                    </div>
-                  )}
-
-                  {isTableMinimized && step4Products.length > 0 && (
-                    <div className='text-center py-4 bg-gray-50 rounded-lg'>
-                      <p className='text-gray-600'>
-                        Table minimized - Click &quot;Expand&quot; to view
-                        products
-                      </p>
-                    </div>
-                  )}
+                  <ProductsTable
+                    products={step4Products}
+                    isMinimized={isTableMinimized}
+                    onToggleMinimize={() =>
+                      setIsTableMinimized(!isTableMinimized)
+                    }
+                    onClose={() => setShowStep4Dropdown(false)}
+                    columns={[]}
+                  />
                 </div>
               )}
             </div>

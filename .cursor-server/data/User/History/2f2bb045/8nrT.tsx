@@ -151,26 +151,6 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
     }
   }, []);
 
-  /**
-   * Fetches the current product count from the database
-   * @returns {Promise<void>} Promise that resolves when count is fetched
-   */
-  const fetchProductCount = useCallback(async (): Promise<void> => {
-    console.debug('[Step 0] Fetching product count...');
-    try {
-      const response = await fetch('/products/count');
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-      }
-      const data = await response.json();
-      setProductCount(data.count);
-      console.debug('[Step 0] Product count:', data.count);
-    } catch (err) {
-      console.error('[Step 0] Error fetching product count:', err);
-      setProductCount(0);
-    }
-  }, []);
-
   // Fetch categories and product count on component mount
   useEffect(() => {
     console.log('Fetching categories on mount...');
@@ -238,6 +218,26 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
   }, []);
 
   /**
+   * Fetches the current product count from the database
+   * @returns {Promise<void>} Promise that resolves when count is fetched
+   */
+  const fetchProductCount = useCallback(async (): Promise<void> => {
+    console.debug('[Step 0] Fetching product count...');
+    try {
+      const response = await fetch('/products/count');
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+      const data = await response.json();
+      setProductCount(data.count);
+      console.debug('[Step 0] Product count:', data.count);
+    } catch (err) {
+      console.error('[Step 0] Error fetching product count:', err);
+      setProductCount(0);
+    }
+  }, []);
+
+  /**
    * Creates a backup of all products and downloads as JSON file
    * @returns {Promise<boolean>} Promise that resolves to true if backup succeeds
    */
@@ -254,31 +254,26 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
       // Fetch all products from all categories
       const allProducts: ProductsByCategoryEndpoint[] = [];
 
-      // eslint-disable-next-line no-restricted-syntax
       for (const category of categories) {
-        // eslint-disable-next-line no-await-in-loop
         const response = await fetch(
           `/products/by-category/${category.id}?limit=10000&offset=0`
         );
         if (!response.ok) {
           throw new Error(`Failed to fetch category ${category.name}`);
         }
-        // eslint-disable-next-line no-await-in-loop
         const data: ProductsByCategoryResponse = await response.json();
         allProducts.push(...data.products);
       }
 
       const duration = Date.now() - startTime;
-      console.debug(
-        `[Step 0] Fetched ${allProducts.length} products in ${duration}ms`
-      );
+      console.debug(`[Step 0] Fetched ${allProducts.length} products in ${duration}ms`);
 
       // Create backup object with metadata
       const backup = {
         metadata: {
           backup_date: new Date().toISOString(),
           product_count: allProducts.length,
-          categories: categories.map(c => ({ id: c.id, name: c.name })),
+          categories: categories.map((c) => ({ id: c.id, name: c.name })),
           version: '1.0',
         },
         products: allProducts,
@@ -290,10 +285,7 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
       const url = URL.createObjectURL(blob);
 
       // Generate filename with timestamp
-      const timestamp = new Date()
-        .toISOString()
-        .replace(/[:.]/g, '-')
-        .slice(0, -5);
+      const timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, -5);
       const filename = `austlift-products-backup-${timestamp}.json`;
 
       // Trigger download
@@ -367,7 +359,6 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
     console.debug('[Step 0] Second click - proceeding with deletion');
 
     // Step 3: Final confirmation (browser confirm)
-    // eslint-disable-next-line no-alert
     const confirmed = window.confirm(
       `🚨 FINAL WARNING 🚨\n\n` +
         `This will PERMANENTLY delete ALL ${productCount} products from the database.\n\n` +
@@ -739,128 +730,6 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
                   Product Data Management Workflow
                 </h3>
                 <div className='space-y-4'>
-                  {/* Step 0: Clear All Products (Optional) */}
-                  <div className='flex items-start justify-between p-4 border-2 border-red-200 rounded-lg bg-white'>
-                    <div className='flex items-start space-x-3 flex-1'>
-                      <div className='w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0'>
-                        <span className='text-red-600 font-semibold'>⚠️ 0</span>
-                      </div>
-                      <div className='flex-1'>
-                        <div className='flex items-center gap-2 mb-1'>
-                          <h4 className='font-medium text-gray-900'>
-                            Clear All Products (with Backup)
-                          </h4>
-                          <span className='px-2 py-1 bg-yellow-100 text-yellow-800 text-xs font-semibold rounded'>
-                            OPTIONAL - DESTRUCTIVE
-                          </span>
-                        </div>
-                        <p className='text-sm text-gray-600'>
-                          Create a backup and delete all existing products from
-                          the database
-                        </p>
-                        <div className='mt-2 space-y-1'>
-                          <p className='text-sm text-gray-700'>
-                            📊 Current products:{' '}
-                            <strong>{productCount.toLocaleString()}</strong>
-                          </p>
-                          {backupCreated && (
-                            <p className='text-sm text-green-700'>
-                              ✅ Backup created:{' '}
-                              <strong>{backupFilename}</strong>
-                            </p>
-                          )}
-                        </div>
-                        {/* Process Flow Indicator */}
-                        <div className='mt-3 p-2 bg-gray-50 border border-gray-200 rounded text-xs'>
-                          <p className='font-semibold text-gray-700 mb-1'>
-                            Process Flow:
-                          </p>
-                          <ol className='text-gray-600 space-y-0.5 list-decimal list-inside'>
-                            <li
-                              className={
-                                backupCreated
-                                  ? 'text-green-600 font-medium'
-                                  : ''
-                              }
-                            >
-                              {backupCreated ? '✅' : '1️⃣'} Create JSON backup
-                            </li>
-                            <li
-                              className={(() => {
-                                if (backupCreated && showDeleteConfirm)
-                                  return 'text-yellow-600 font-medium';
-                                if (backupCreated) return '';
-                                return 'text-gray-400';
-                              })()}
-                            >
-                              {showDeleteConfirm ? '⚠️' : '2️⃣'} Confirm deletion
-                            </li>
-                            <li className='text-gray-400'>
-                              3️⃣ Delete products
-                            </li>
-                          </ol>
-                        </div>
-                        {/* Status Message */}
-                        {step0Status.message && (
-                          <div
-                            className={`mt-2 p-2 rounded text-xs ${(() => {
-                              if (step0Status.status === 'success')
-                                return 'bg-green-50 text-green-800 border border-green-200';
-                              if (step0Status.status === 'error')
-                                return 'bg-red-50 text-red-800 border border-red-200';
-                              if (step0Status.status === 'loading')
-                                return 'bg-blue-50 text-blue-800 border border-blue-200';
-                              return 'bg-yellow-50 text-yellow-800 border border-yellow-200';
-                            })()}`}
-                          >
-                            {step0Status.message}
-                          </div>
-                        )}
-                        {/* Warning Notice */}
-                        <div className='mt-2 p-2 bg-red-50 border border-red-200 rounded text-xs'>
-                          <p className='text-red-800'>
-                            <strong>⚠️ WARNING:</strong> Deletion is
-                            IRREVERSIBLE. Backup JSON file will be downloaded.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <button
-                      type='button'
-                      onClick={handleStep0}
-                      disabled={
-                        step0Status.status === 'loading' || productCount === 0
-                      }
-                      className={`ml-4 px-4 py-2 rounded-lg font-semibold transition-colors whitespace-nowrap flex-shrink-0 ${(() => {
-                        if (showDeleteConfirm)
-                          return 'bg-red-600 hover:bg-red-700 text-white animate-pulse';
-                        if (backupCreated)
-                          return 'bg-red-500 hover:bg-red-600 text-white';
-                        return 'bg-blue-500 hover:bg-blue-600 text-white';
-                      })()} disabled:bg-gray-300 disabled:cursor-not-allowed`}
-                    >
-                      {(() => {
-                        if (step0Status.status === 'loading') {
-                          return (
-                            <div className='flex items-center gap-2'>
-                              <div className='animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full' />
-                              {backupCreated
-                                ? 'Deleting...'
-                                : 'Creating Backup...'}
-                            </div>
-                          );
-                        }
-                        if (showDeleteConfirm) {
-                          return '🔴 CLICK AGAIN';
-                        }
-                        if (backupCreated) {
-                          return '🗑️ Delete Products';
-                        }
-                        return '💾 Create Backup & Clear';
-                      })()}
-                    </button>
-                  </div>
-
                   {/* Step 1 */}
                   <div className='flex items-center justify-between p-4 border border-gray-200 rounded-lg'>
                     <div className='flex items-center space-x-3'>

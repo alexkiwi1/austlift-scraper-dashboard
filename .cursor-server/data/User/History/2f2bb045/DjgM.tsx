@@ -238,6 +238,26 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
   }, []);
 
   /**
+   * Fetches the current product count from the database
+   * @returns {Promise<void>} Promise that resolves when count is fetched
+   */
+  const fetchProductCount = useCallback(async (): Promise<void> => {
+    console.debug('[Step 0] Fetching product count...');
+    try {
+      const response = await fetch('/products/count');
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+      const data = await response.json();
+      setProductCount(data.count);
+      console.debug('[Step 0] Product count:', data.count);
+    } catch (err) {
+      console.error('[Step 0] Error fetching product count:', err);
+      setProductCount(0);
+    }
+  }, []);
+
+  /**
    * Creates a backup of all products and downloads as JSON file
    * @returns {Promise<boolean>} Promise that resolves to true if backup succeeds
    */
@@ -786,12 +806,13 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
                               {backupCreated ? '✅' : '1️⃣'} Create JSON backup
                             </li>
                             <li
-                              className={(() => {
-                                if (backupCreated && showDeleteConfirm)
-                                  return 'text-yellow-600 font-medium';
-                                if (backupCreated) return '';
-                                return 'text-gray-400';
-                              })()}
+                              className={
+                                backupCreated
+                                  ? showDeleteConfirm
+                                    ? 'text-yellow-600 font-medium'
+                                    : ''
+                                  : 'text-gray-400'
+                              }
                             >
                               {showDeleteConfirm ? '⚠️' : '2️⃣'} Confirm deletion
                             </li>
@@ -803,15 +824,15 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
                         {/* Status Message */}
                         {step0Status.message && (
                           <div
-                            className={`mt-2 p-2 rounded text-xs ${(() => {
-                              if (step0Status.status === 'success')
-                                return 'bg-green-50 text-green-800 border border-green-200';
-                              if (step0Status.status === 'error')
-                                return 'bg-red-50 text-red-800 border border-red-200';
-                              if (step0Status.status === 'loading')
-                                return 'bg-blue-50 text-blue-800 border border-blue-200';
-                              return 'bg-yellow-50 text-yellow-800 border border-yellow-200';
-                            })()}`}
+                            className={`mt-2 p-2 rounded text-xs ${
+                              step0Status.status === 'success'
+                                ? 'bg-green-50 text-green-800 border border-green-200'
+                                : step0Status.status === 'error'
+                                  ? 'bg-red-50 text-red-800 border border-red-200'
+                                  : step0Status.status === 'loading'
+                                    ? 'bg-blue-50 text-blue-800 border border-blue-200'
+                                    : 'bg-yellow-50 text-yellow-800 border border-yellow-200'
+                            }`}
                           >
                             {step0Status.message}
                           </div>
@@ -831,33 +852,26 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
                       disabled={
                         step0Status.status === 'loading' || productCount === 0
                       }
-                      className={`ml-4 px-4 py-2 rounded-lg font-semibold transition-colors whitespace-nowrap flex-shrink-0 ${(() => {
-                        if (showDeleteConfirm)
-                          return 'bg-red-600 hover:bg-red-700 text-white animate-pulse';
-                        if (backupCreated)
-                          return 'bg-red-500 hover:bg-red-600 text-white';
-                        return 'bg-blue-500 hover:bg-blue-600 text-white';
-                      })()} disabled:bg-gray-300 disabled:cursor-not-allowed`}
+                      className={`ml-4 px-4 py-2 rounded-lg font-semibold transition-colors whitespace-nowrap flex-shrink-0 ${
+                        showDeleteConfirm
+                          ? 'bg-red-600 hover:bg-red-700 text-white animate-pulse'
+                          : backupCreated
+                            ? 'bg-red-500 hover:bg-red-600 text-white'
+                            : 'bg-blue-500 hover:bg-blue-600 text-white'
+                      } disabled:bg-gray-300 disabled:cursor-not-allowed`}
                     >
-                      {(() => {
-                        if (step0Status.status === 'loading') {
-                          return (
-                            <div className='flex items-center gap-2'>
-                              <div className='animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full' />
-                              {backupCreated
-                                ? 'Deleting...'
-                                : 'Creating Backup...'}
-                            </div>
-                          );
-                        }
-                        if (showDeleteConfirm) {
-                          return '🔴 CLICK AGAIN';
-                        }
-                        if (backupCreated) {
-                          return '🗑️ Delete Products';
-                        }
-                        return '💾 Create Backup & Clear';
-                      })()}
+                      {step0Status.status === 'loading' ? (
+                        <div className='flex items-center gap-2'>
+                          <div className='animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full' />
+                          {backupCreated ? 'Deleting...' : 'Creating Backup...'}
+                        </div>
+                      ) : showDeleteConfirm ? (
+                        '🔴 CLICK AGAIN'
+                      ) : backupCreated ? (
+                        '🗑️ Delete Products'
+                      ) : (
+                        '💾 Create Backup & Clear'
+                      )}
                     </button>
                   </div>
 
