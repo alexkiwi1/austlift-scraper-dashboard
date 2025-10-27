@@ -114,3 +114,4 @@
 2025-10-27 00:36:05.696 [info] [ExtHostShellExec] Session 41b711c4-97df-4a7a-a166-2e8756aba776: Dropped 1727840 stdout bytes, 0 stderr bytes (scrollback limit reached)
 2025-10-27 00:36:10.430 [info] [ExtHostShellExec] Session 41b711c4-97df-4a7a-a166-2e8756aba776: Dropped 1727840 stdout bytes, 0 stderr bytes (scrollback limit reached)
 2025-10-27 00:37:33.392 [warning] [Decorations] CAPPING events from decorations provider vscode.git 7131
+2025-10-27 06:01:27.847 [info] ExtensionService#_doActivateExtension vscode.markdown-math, startup: false, activationEvent: 'api', root cause: vscode.markdown-language-features
