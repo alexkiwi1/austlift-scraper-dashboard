@@ -326,7 +326,6 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
       message: 'Loading products from all categories...',
     });
     try {
-      const allProducts: Product[] = [];
       let totalProducts = 0;
 
       // Fetch products from each category to get complete data
@@ -341,12 +340,8 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
         }
         // eslint-disable-next-line no-await-in-loop
         const data: ProductsResponse = await response.json();
-        allProducts.push(...data.products);
         totalProducts += data.total;
       }
-
-      // Store products for Step 4 to reuse
-      setStep4Products(allProducts);
 
       setStep3Status({
         status: 'success',
