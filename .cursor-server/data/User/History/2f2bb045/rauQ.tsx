@@ -86,7 +86,6 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
    * @returns {Promise<void>} Promise that resolves when categories are refreshed
    * @throws {Error} When API request fails
    */
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const refreshCategories = useCallback(async (): Promise<void> => {
     try {
       setError({ hasError: false, message: '' });

@@ -86,7 +86,6 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
    * @returns {Promise<void>} Promise that resolves when categories are refreshed
    * @throws {Error} When API request fails
    */
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const refreshCategories = useCallback(async (): Promise<void> => {
     try {
       setError({ hasError: false, message: '' });
@@ -113,30 +112,13 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
    * @returns {Promise<void>} Promise that resolves when step is complete
    */
   const handleStep1 = async (): Promise<void> => {
-    // If categories already loaded, skip fetch and refresh
-    if (categories.length > 0) {
-      setStep1Status({
-        status: 'success',
-        message: `✅ Step 1 Complete! ${categories.length} categories loaded`,
-      });
-      return;
-    }
-
-    // Wait for categories to load (from useEffect)
-    if (categories.length === 0) {
-      setStep1Status({
-        status: 'loading',
-        message: 'Waiting for categories to load...',
-      });
-      // Wait a moment for useEffect to complete
-      await new Promise<void>(resolve => {
-        setTimeout(() => resolve(), 500);
-      });
-    }
-
+    setStep1Status({ status: 'loading', message: 'Fetching categories...' });
+    await fetchCategories();
+    setStep1Status({ status: 'loading', message: 'Refreshing categories...' });
+    await refreshCategories();
     setStep1Status({
       status: 'success',
-      message: `✅ Step 1 Complete! ${categories.length} categories loaded`,
+      message: '✅ Step 1 Complete! Categories loaded successfully',
     });
   };
 

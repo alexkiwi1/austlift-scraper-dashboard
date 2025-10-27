@@ -86,7 +86,6 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
    * @returns {Promise<void>} Promise that resolves when categories are refreshed
    * @throws {Error} When API request fails
    */
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const refreshCategories = useCallback(async (): Promise<void> => {
     try {
       setError({ hasError: false, message: '' });
@@ -129,9 +128,7 @@ const AustliftScraperDashboard: React.FC = (): React.JSX.Element => {
         message: 'Waiting for categories to load...',
       });
       // Wait a moment for useEffect to complete
-      await new Promise<void>(resolve => {
-        setTimeout(() => resolve(), 500);
-      });
+      await new Promise(resolve => setTimeout(resolve, 500));
     }
 
     setStep1Status({
